@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=H, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>HappyCures</title>
+    <style>
+        /* CSS */
+        *{
+            font-family: sans-serif;
+        }
+        body{
+            background-color: #ebf3ff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 100vh;
+        }
+        .container-fluid{
+            padding: 0;
+            height: 100vh;
+        }
+        .navbar{
+            min-height: 56px;
+            background-color: #063e8f;
+        }
+        .navbar-brand{
+            width: 157.8px;
+        }
+        .menu-icon{
+            width: 2rem;
+            filter: invert(1);
+        }
+        #navbarSupportedContent{
+            justify-content: end;
+        }
+        .search-icon, .help-icon, .alert-icon{
+            cursor: pointer;
+            width: 24px;
+        }
+        .profile-icon{
+            cursor: pointer;
+            width: 32px;
+        }
+        .search-icon{
+            display: block;
+        }
+        .help-icon, .alert-icon, .profile-icon{
+            margin-left: 1.5rem;
+        }
+        .search-field{
+            display: none;
+            border: none;
+            border-radius: 0.3rem;
+            height: 2rem;
+            outline: none;
+        }
+        .btn-search{
+            background-color: transparent;
+            color: #fff;
+        }
+
+        /*  */
+        .main-row{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        .side-bar{
+            /* width: 15rem; */
+            width: 16%;
+            background-color: #fff;
+            border-right: 1px solid #b9d2f6;
+            box-shadow: 1px 0 3px -1px #b9d2f6;
+        }
+        .sidebar-items{
+            cursor: pointer;
+            height: 4rem;
+            display: flex;
+            transition: .3s ease;
+        }
+        .side-bar-img{
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .side-bar-heading{
+            width: 80%;
+            display: flex;
+            align-items: center;
+        }
+        .side-bar-heading > h6{
+            margin: 0;
+            font-weight: 600;
+        }
+        .main-content{
+            width: 84%;
+        }
+
+        @media only screen and (max-width: 768px){
+            .side-bar{
+                /* width: 3rem; */
+                width: 7%;
+            }
+            .side-bar-heading{
+                display: none;
+            }
+            .side-bar-img{
+                width: 100%;
+            }
+            .main-content{
+                width: 93%;
+            }
+        }
+
+        /* overview */
+        .main-overview{
+            min-height: 70px;
+            background-color: #fff;
+            /* border-bottom: 1px solid #b9d2f6; */
+            box-shadow: 0 2px 2px -1px #b9d2f6;
+            padding-left: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .main-overview > p{
+            margin: 0;
+            color: #828487;;
+        }
+        .main-overview > h3{
+            margin: 0;
+            font-weight: 600;
+        }
+        .row-status{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            min-height: 6rem;
+            width: 100%;
+            margin: 0;
+            padding-top: 1.3rem;
+        }
+        .status-card{
+            border-radius: 0.3rem;
+            background-color: #fff;
+            width: 16rem;
+            height: 6rem;
+            margin-bottom: 1.3rem;
+        }
+
+        /* @media only screen and (max-width: 768px){
+        } */
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <img class="navbar-brand" src="../IMAGES/homePage/Logo_home@3x.png" alt="" srcset="">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <img class="menu-icon" src="../IMAGES/homePage/menu.png" alt="" srcset="">
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="form-inline my-2 my-lg-0">
+                <input class="search-field mr-sm-2" id="search-field-id" type="search" placeholder="Search" aria-label="Search">
+                <img class="search-icon" id="search-icon-id" src="../IMAGES/homePage/search@3x.png" alt="search icon" srcset="" onclick="enableSearch();">
+                <button class="btn btn-search">Search</button>
+                <img class="help-icon" src="../IMAGES/homePage/Help@3x.png" alt="help icon" srcset="">
+                <img class="alert-icon" src="../IMAGES/homePage/Alert Icon@3x.png" alt="" srcset="notifications icon">
+                <img class="profile-icon" src="../IMAGES/homePage/User@3x.png" alt="progile image" srcset="">
+              </div>
+            </div>
+          </nav>
+          <div class="row main-row">
+            <div class="side-bar">
+                <div class="sidebar-items" id="overview" onclick="sidebarToggle(this);">
+                    <div class="side-bar-img">
+                        <img style="width: 16px;" src="../IMAGES/homePage/Frame 6@3x.png" alt="">
+                    </div>
+                    <div class="side-bar-heading">
+                        <h6 id="overview-heading">Overview</h6>
+                    </div>
+                </div>
+                <div class="sidebar-items" id="hospitalMS" onclick="sidebarToggle(this);">
+                    <div class="side-bar-img">
+                        <img style="width: 16px;" src="../IMAGES/homePage/Frame 4@3x.png" alt="">
+                    </div>
+                    <div class="side-bar-heading">
+                        <h6 id="hospitalMS-heading">Hospital Mangement System</h6>
+                    </div>
+                </div>
+                <div class="sidebar-items" id="doctorMS" onclick="sidebarToggle(this);">
+                    <div class="side-bar-img">
+                        <img style="width: 16px;" src="../IMAGES/homePage/Frame 2@3x.png" alt="">
+                    </div>
+                    <div class="side-bar-heading">
+                        <h6 id="doctorMS-heading">Docter Mangement System</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="overview-dynamic-content">
+                    <div class="main-overview">
+                        <p>Overview</p>
+                        <h3>Overview</h3>
+                    </div>
+                    <div class="row row-status">
+                        <div class="status-card"></div>
+                        <div class="status-card"></div>
+                        <div class="status-card"></div>
+                        <div class="status-card"></div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+
+    <script>
+        (function(){
+            document.getElementById('overview').style.cssText = `
+            background-color: #ebfff5;
+            border-left: 4px solid #3eab75;
+            `;
+            document.getElementById('overview-heading').style.color = '#3eab75';
+            
+            document.querySelector('.navbar').addEventListener('click', (event) => {
+                // console.log(event.srcElement.classList[0]);
+                console.log(event.target.id);
+                if(event.target.id != 'search-icon-id' && event.target.id != 'search-field-id'){
+                    document.querySelector('.search-field').style.display = "none";
+                    document.querySelector('.search-icon').style.display = "block";
+                }
+            })
+        })()
+        const enableSearch = () => {
+            document.querySelector('.search-icon').style.display = "none";
+            document.querySelector('.search-field').style.display = "block";
+        }
+        const sidebarToggle = (self) => {
+            let id_list = ['overview', 'hospitalMS', 'doctorMS'];
+            id_list.forEach(item => {
+                if(item == self.id){
+                    document.getElementById(item).style.cssText = `
+                    background-color: #ebfff5;
+                    border-left: 4px solid #3eab75;
+                    `;
+                    document.getElementById(item + '-heading').style.color = '#3eab75';
+                }else{
+                    document.getElementById(item).style.cssText = `
+                    background-color: #fff;
+                    border: none;
+                    `;
+                    document.getElementById(item + '-heading').style.color = '#000';
+                }
+            })
+        }
+    </script>
+</body>
+</html>
