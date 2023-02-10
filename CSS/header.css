@@ -1,0 +1,128 @@
+.navbar {
+    min-height: 56px;
+    background-color: #063e8f;
+}
+
+.navbar-brand {
+    width: 157.8px;
+}
+
+.menu-icon {
+    width: 2rem;
+    filter: invert(1);
+}
+
+#navbarSupportedContent {
+    justify-content: end;
+}
+
+.search-icon,
+.help-icon,
+.alert-icon {
+    cursor: pointer;
+    width: 24px;
+}
+
+.profile-icon {
+    cursor: pointer;
+    width: 32px;
+}
+
+.search-icon {
+    display: block;
+}
+
+.help-icon,
+.alert-icon,
+.profile-icon {
+    margin-left: 1.5rem;
+}
+
+.search-field {
+    display: none;
+    border: none;
+    border-radius: 0.3rem;
+    height: 2rem;
+    outline: none;
+}
+
+.btn-search {
+    background-color: transparent;
+    color: #fff;
+}
+
+/*  */
+.main-row {
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.side-bar {
+    /* width: 15rem; */
+    width: 16%;
+    background-color: #fff;
+    border-right: 1px solid #b9d2f6;
+    box-shadow: 1px 0 3px -1px #b9d2f6;
+}
+
+/* #overview:hover {
+    background-color: rgb(235, 255, 245);
+}
+
+#hospitalMS:hover {
+    background-color: rgb(235, 255, 245);
+}
+
+#doctorMS:hover {
+    background-color: rgb(235, 255, 245);
+} */
+
+.sidebar-items {
+    cursor: pointer;
+    height: 4rem;
+    display: flex;
+    transition: .3s ease;
+}
+
+.side-bar-img {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-bar-heading {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.side-bar-heading>h6 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.main-content {
+    width: 84%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .side-bar {
+        /* width: 3rem; */
+        width: 7%;
+    }
+
+    .side-bar-heading {
+        display: none;
+    }
+
+    .side-bar-img {
+        width: 100%;
+    }
+
+    .main-content {
+        width: 93%;
+    }
+}

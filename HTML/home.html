@@ -36,418 +36,16 @@
             height: 100vh;
         }
 
-        .navbar {
-            min-height: 56px;
-            background-color: #063e8f;
-        }
-
-        .navbar-brand {
-            width: 157.8px;
-        }
-
-        .menu-icon {
-            width: 2rem;
-            filter: invert(1);
-        }
-
-        #navbarSupportedContent {
-            justify-content: end;
-        }
-
-        .search-icon,
-        .help-icon,
-        .alert-icon {
-            cursor: pointer;
-            width: 24px;
-        }
-
-        .profile-icon {
-            cursor: pointer;
-            width: 32px;
-        }
-
-        .search-icon {
-            display: block;
-        }
-
-        .help-icon,
-        .alert-icon,
-        .profile-icon {
-            margin-left: 1.5rem;
-        }
-
-        .search-field {
-            display: none;
-            border: none;
-            border-radius: 0.3rem;
-            height: 2rem;
-            outline: none;
-        }
-
-        .btn-search {
-            background-color: transparent;
-            color: #fff;
-        }
-
-        /*  */
-        .main-row {
-            min-height: 100%;
-            width: 100%;
-            margin: 0;
-        }
-
-        .side-bar {
-            /* width: 15rem; */
-            width: 16%;
-            background-color: #fff;
-            border-right: 1px solid #b9d2f6;
-            box-shadow: 1px 0 3px -1px #b9d2f6;
-        }
-
-        .sidebar-items {
-            cursor: pointer;
-            height: 4rem;
-            display: flex;
-            transition: .3s ease;
-        }
-
-        .side-bar-img {
-            width: 20%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .side-bar-heading {
-            width: 80%;
-            display: flex;
-            align-items: center;
-        }
-
-        .side-bar-heading>h6 {
-            margin: 0;
-            font-weight: 600;
-        }
-
-        .main-content {
-            width: 84%;
-        }
-
-        @media only screen and (max-width: 768px) {
-            .side-bar {
-                /* width: 3rem; */
-                width: 7%;
-            }
-
-            .side-bar-heading {
-                display: none;
-            }
-
-            .side-bar-img {
-                width: 100%;
-            }
-
-            .main-content {
-                width: 93%;
-            }
-        }
-
-        /* overview */
-        /* .overview-dynamic-content {
-            display: none;
-        } */
-
-        .main-overview {
-            min-height: 70px;
-            background-color: #fff;
-            /* border-bottom: 1px solid #b9d2f6; */
-            box-shadow: 0 2px 2px -1px #b9d2f6;
-            padding-left: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .main-overview>p {
-            margin: 0;
-            color: #828487;
-            ;
-        }
-
-        .main-overview>h3 {
-            margin: 0;
-            font-weight: 600;
-        }
-
-        .row-status {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            min-height: 6rem;
-            width: 100%;
-            margin: 0;
-            padding-top: 1.3rem;
-        }
-
-        .status-card {
-            display: flex;
-            border-radius: 0.3rem;
-            background-color: #fff;
-            width: 16rem;
-            height: 6rem;
-            margin-bottom: 1.3rem;
-            padding: 1.4% 0 0 1%;
-        }
-
-        .status-card>img {
-            width: 40px;
-            height: 40px;
-            margin-right: 1rem;
-        }
-
-        .row-content {
-            width: 100%;
-            height: 487px;
-            margin: 0;
-        }
-
-        .graph-455 {
-            display: flex;
-            /* justify-content: end;
-            padding-right: 2.2rem; */
-            width: 75.4%;
-        }
-
-        .bookings-cancellations {
-            display: flex;
-            justify-content: space-around;
-            height: 38.2118px;
-        }
-
-        .bookings-cancellations>div {
-            width: 100%;
-            display: flex;
-            align-items: center;
-        }
-
-        .bookings-cancellations>div>h6 {
-            margin: 0;
-        }
-
-        .green-red {
-            width: 0.5rem;
-            height: 0.5rem;
-            border-radius: 0.5rem;
-            margin-right: .5rem;
-        }
-
-        .green {
-            background-color: green;
-        }
-
-        .red {
-            background-color: red;
-        }
-
-        .graph-parent {
-            /* background-color: #fff;
-            width: 96.4%;
-            height: 96%;
-            border-radius: .3rem;
-            display: flex;
-            justify-content: center;
-            align-items: end; */
-            background-color: #fff;
-            width: 94.9%;
-            margin-left: 1.4rem;
-            height: 96%;
-            border-radius: 0.3rem;
-            display: flex;
-            justify-content: center;
-            align-items: end;
-        }
-
-        .graph-677 {
-            width: 24.6%;
-            height: 96%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .empty-patches {
-            width: 100%;
-            height: 47.5%;
-            margin: 0;
-            background-color: #fff;
-            border-radius: .3rem;
-        }
-
-        .dropdown-toggle {
-            background-color: transparent;
-            border-color: #d5d5d5;
-        }
-
-        .dropdown-toggle::after {
-            /* content: '^';
-            background-image: url(../IMAGES/homePage/arrow_down@3x.png);
-            top: 28px;
-            left: 10rem;
-            position: absolute;
-            border: none;
-            transform: rotate(180deg);
-            color: green; */
-            color: rgb(62, 171, 117);
-        }
-
-        .happy-footer {
-            width: 100%;
-            height: 48px;
-            margin: 0;
-            background-color: #181e28;
-            position: relative;
-            z-index: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-        }
-
-        .happy-footer>div {
-            display: flex;
-        }
-
-        /* .footer-left {
-            margin-left: 1.5rem;
-        }
-
-        .footer-right {
-            margin-right: 1.5rem;
-        } */
-
-        .footer-left>h6,
-        .footer-right>h6 {
-            margin: 0 1.5rem;
-        }
-
-        @media only screen and (max-width: 1440px) {
-            .graph-455 {
-                width: 75.9%;
-            }
-
-            .graph-parent {
-                width: 91.8%;
-                margin-left: 2.37rem;
-            }
-
-            .graph-677 {
-                width: 21.1%;
-            }
-        }
-
-        @media only screen and (max-width: 1024px) {
-            .status-card {
-                padding: 1.8% 0 0 2%;
-            }
-
-            .bookings-cancellations {
-                display: block;
-            }
-
-            #chai-chart {
-                width: 34.5rem;
-            }
-
-            .graph-parent,
-            .graph-677 {
-                height: 74%;
-            }
-
-            .graph-parent {
-                width: 91.8%;
-                margin-left: 1.37rem;
-            }
-        }
-
-        @media only screen and (max-width: 768px) {
-            .status-card {
-                padding: 2% 0 0 2%;
-            }
-
-            .graph-455,
-            .graph-677 {
-                width: 100%;
-            }
-
-            .graph-677 {
-                flex-direction: row;
-                justify-content: space-evenly;
-                height: 22%;
-            }
-
-            .graph-parent {
-                height: 21rem;
-            }
-
-            .empty-patches {
-                width: 45.4%;
-                height: auto;
-            }
-
-        }
-
-        @media only screen and (max-width: 425px) {
-
-            .status-card {
-                width: 23.6rem;
-                padding: 3.8% 0 0 10%;
-            }
-
-            .graph-parent {
-                margin-left: 0.6rem;
-            }
-
-            #chai-chart {
-                width: 22rem;
-            }
-
-            .happy-footer {
-                height: auto;
-            }
-
-            .empty-patches {
-                width: 46%;
-            }
-        }
-
-        @media only screen and (max-width: 375px) {
-            .status-card {
-                padding: 3.8% 0 0 4%;
-                width: 20.6rem;
-            }
-
-            #chai-chart {
-                width: 19rem;
-            }
-
-            .footer-left>h6,
-            .footer-right>h6 {
-                font-size: 11px;
-            }
-
-            .happy-footer>div {
-                justify-content: space-between;
-                width: 100%;
-            }
-
-        }
-
         /* Hopital Management System */
-        .hospitalMS-dynamic-content,
+        /* .hospitalMS-dynamic-content, */
         .doctorMS-dynamic-content {
             display: none;
         }
     </style>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/overview.css">
+    <link rel="stylesheet" href="../CSS/hospital.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
 </head>
 
 <body>
@@ -476,7 +74,8 @@
         </nav>
         <div class="row main-row">
             <div class="side-bar">
-                <div class="sidebar-items" id="overview" onclick="sidebarToggle(this);">
+                <div class="sidebar-items" id="overview" onmouseover="sideHoverIn(this)" onmouseout="sideHoverOut(this)"
+                    onclick="sidebarToggle(this);">
                     <div class="side-bar-img">
                         <img style="width: 16px;" src="../IMAGES/homePage/Frame 6@3x.png" alt="">
                     </div>
@@ -484,7 +83,8 @@
                         <h6 id="overview-heading">Overview</h6>
                     </div>
                 </div>
-                <div class="sidebar-items" id="hospitalMS" onclick="sidebarToggle(this);">
+                <div class="sidebar-items" id="hospitalMS" onmouseover="sideHoverIn(this)"
+                    onmouseout="sideHoverOut(this)" onclick="sidebarToggle(this);">
                     <div class="side-bar-img">
                         <img style="width: 16px;" src="../IMAGES/homePage/Frame 4@3x.png" alt="">
                     </div>
@@ -492,7 +92,8 @@
                         <h6 id="hospitalMS-heading">Hospital Mangement System</h6>
                     </div>
                 </div>
-                <div class="sidebar-items" id="doctorMS" onclick="sidebarToggle(this);">
+                <div class="sidebar-items" id="doctorMS" onmouseover="sideHoverIn(this)" onmouseout="sideHoverOut(this)"
+                    onclick="sidebarToggle(this);">
                     <div class="side-bar-img">
                         <img style="width: 16px;" src="../IMAGES/homePage/Frame 2@3x.png" alt="">
                     </div>
@@ -500,9 +101,19 @@
                         <h6 id="doctorMS-heading">Docter Mangement System</h6>
                     </div>
                 </div>
+                <div class="sidebar-items" id="configurations" onmouseover="sideHoverIn(this)"
+                    onmouseout="sideHoverOut(this)" onclick="sidebarToggle(this);">
+                    <div class="side-bar-img">
+                        <img style="width: 16px;" src="../IMAGES/homePage/configurations@3x.png" alt="">
+                    </div>
+                    <div class="side-bar-heading">
+                        <h6 id="configurations-heading">configurations</h6>
+                    </div>
+                </div>
             </div>
             <div class="main-content">
-                <div class="overview-dynamic-content">
+                <!-- Overview -->
+                <div class="overview-dynamic-content" style="display: none;">
                     <div class="main-overview">
                         <p>Overview</p>
                         <h3>Overview</h3>
@@ -581,9 +192,82 @@
                         </div>
                     </div>
                 </div>
+                <!-- Overview End -->
 
-                <div class="hospitalMS-dynamic-content"></div>
+                <!-- Hospital Management System -->
+                <div class="hospitalMS-dynamic-content">
+
+                    <!-- Hopital View -->
+                    <div style="
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 100%;
+                        background-color: #fff;
+                        width: 40rem;
+                        box-shadow: -3px 0 6px -4px black;
+                    "></div>
+
+                    <div class="main-hospitalMS">
+                        <div>
+                            <p onclick="sidebarToggle('overview')">Overview</p>
+                            <span>/</span>
+                            <p>Hospital Management System</p>
+                        </div>
+                        <h3>Hospital Management System</h3>
+                    </div>
+                    <div class="row hospital-row">
+                        <div class="dropdown">
+                            <h6 id="sort-by">Sort By : </h6>
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                Hospital ID
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" id="hms-item-1" href="#" onmouseover="dropHoverIn(this)"
+                                    onmouseout="dropHoverOut(this)">Hospital ID</a>
+                                <a class="dropdown-item" id="hms-item-2" href="#" onmouseover="dropHoverIn(this)"
+                                    onmouseout="dropHoverOut(this)">Hospital ID</a>
+                            </div>
+                        </div>
+                        <div class="right-items-hms">
+                            <img style="cursor: pointer; width: 24px;" src="../IMAGES/homePage/hms_search@3x.png" alt=""
+                                srcset="">
+                            <img style="cursor: pointer; width: 24px;" src="../IMAGES/homePage/Filters@3x.png" alt=""
+                                srcset="">
+                            <button type="button" class="btn btn-success" style="min-height: 2.4rem;
+                            width: 11rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;"><img style="width: 24px;" src="../IMAGES/homePage/add_hms@3x.png"
+                                    alt="" srcset=""><span>Add New Hospital</span></button>
+                        </div>
+                    </div>
+                    <div class="row hospital-content">
+                        <div class="hms-table-content">
+                            <div class="hms-table-header">
+                                <h6 style="width: 12%;">Hospital ID</h6>
+                                <h6 style="width: 24%;">Hospital Name</h6>
+                                <h6>Date Registered</h6>
+                                <h6>Phone</h6>
+                                <h6>Email</h6>
+                                <h6 style="width: 12%;">Status</h6>
+                            </div>
+                            <!-- <div class="hms-table-row" style="padding: 0.4rem 0;">
+                                <h6 style="width: 12%; color: #068f4b;">HS00HYD001</h6>
+                                <h6 style="width: 24%;">JIH Hospitals Hyderabad</h6>
+                                <h6>23rd Mar 2021</h6>
+                                <h6>+91 - 9876543210</h6>
+                                <h6>hr@jihhospital.com</h6>
+                                <h6 style="width: 12%;">Active</h6>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Hospital Management System End -->
+
+                <!-- Docter Management System -->
                 <div class="doctorMS-dynamic-content"></div>
+                <!-- Docter Management System End -->
             </div>
         </div>
         <div class="row happy-footer">
@@ -599,6 +283,7 @@
     </div>
 
     <script>
+        // When doucment and styles loads the below IIFE will trigger automatically
         (function () {
             document.getElementById('overview').style.cssText = `
             background-color: #ebfff5;
@@ -613,15 +298,40 @@
                     document.querySelector('.search-icon').style.display = "block";
                 }
             })
+
+            /* HMS Table Content */
+            for (let i = 0; i < 11; i++) {
+                document.querySelector('.hms-table-content').innerHTML += `
+                <div class="hms-table-row" style="padding: 0.4rem 0;">
+                    <h6 style="width: 12%; color: #068f4b; text-decoration: underline;">HS00HYD001</h6>
+                    <h6 style="width: 24%;">JIH Hospitals Hyderabad</h6>
+                    <h6>23rd Mar 2021</h6>
+                    <h6>+91 - 9876543210</h6>
+                    <h6>hr@jihhospital.com</h6>
+                    <h6 style="width: 12%;">Active</h6>
+                </div>
+                `;
+            }
+            document.querySelector('.hms-table-content').innerHTML += `
+            <ul class="pagination pagination-sm align-items-center" style="margin: 20px 0 20px 20px;">
+                <li class="page-item"><a class="page-link" href="#"><img style="width: 18px;" src="../IMAGES/homePage/Pagination Arrow Left@3x.png"></a></li>
+                <li class="page-item"><a class="page-link" href="#" style="background-color: #068f4b; color: #fff;">1</a></li>
+                <li class="page-item"><a class="page-link" href="#" style="color: #068f4b;">2</a></li>
+                <li class="page-item"><a class="page-link" href="#" style="color: #068f4b;">3</a></li>
+                <li class="page-item"><a class="page-link" href="#"><img style="width: 18px;" src="../IMAGES/homePage/Pagination Arrow Right@3x.png"></a></li>
+            </ul>`;
         })()
+        // Header Search Logic
         const enableSearch = () => {
             document.querySelector('.search-icon').style.display = "none";
             document.querySelector('.search-field').style.display = "block";
         }
+        // Sidebar toggling logic
         const sidebarToggle = (self) => {
-            let id_list = ['overview', 'hospitalMS', 'doctorMS'];
+            let id_to_use = (self.id == undefined) ? self : self.id
+            let id_list = ['overview', 'hospitalMS', 'doctorMS', 'configurations'];
             id_list.forEach(item => {
-                if (item == self.id) {
+                if (item == id_to_use) {
                     document.getElementById(item).style.cssText = `
                     background-color: #ebfff5;
                     border-left: 4px solid #3eab75;
@@ -637,6 +347,19 @@
                     document.querySelector('.' + item + '-dynamic-content').style.display = 'none';
                 }
             })
+        }
+        // Sidebar Hovering Effect
+        const sideHoverIn = (self) => {
+            document.getElementById(self.id).style.backgroundColor = '#ebfff5';
+        }
+        const sideHoverOut = (self) => {
+            document.getElementById(self.id).style.backgroundColor = '#fff';
+        }
+        const dropHoverIn = (self) => {
+            document.getElementById(self.id).style.backgroundColor = '#ebf3ff';
+        }
+        const dropHoverOut = (self) => {
+            document.getElementById(self.id).style.backgroundColor = '#fff';
         }
     </script>
 </body>

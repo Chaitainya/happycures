@@ -1,0 +1,29 @@
+.happy-footer {
+    width: 100%;
+    height: 48px;
+    margin: 0;
+    background-color: #181e28;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.happy-footer>div {
+    display: flex;
+}
+
+/* .footer-left {
+            margin-left: 1.5rem;
+        }
+
+        .footer-right {
+            margin-right: 1.5rem;
+        } */
+
+.footer-left>h6,
+.footer-right>h6 {
+    margin: 0 1.5rem;
+}
