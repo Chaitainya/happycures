@@ -34,17 +34,20 @@
         .container-fluid {
             padding: 0;
             height: 100vh;
+            /* position: relative; */
         }
 
         /* Hopital Management System */
-        /* .hospitalMS-dynamic-content, */
-        .doctorMS-dynamic-content {
+        .hospitalMS-dynamic-content,
+        .doctorMS-dynamic-content,
+        .configurations-dynamic-content {
             display: none;
         }
     </style>
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/overview.css">
     <link rel="stylesheet" href="../CSS/hospital.css">
+    <link rel="stylesheet" href="../CSS/doctor.css">
     <link rel="stylesheet" href="../CSS/footer.css">
 </head>
 
@@ -73,6 +76,36 @@
             </div>
         </nav>
         <div class="row main-row">
+
+            <!-- HMS POPUP ALERT -->
+            <div class="hms-pop-edit-alert">
+                <div class="hms-pop-edit-alert-main">
+                    <h6>Edit Page?</h6>
+                    <h6 style="color: #626466; font-size: 14px;">All unsaved changes will be removed. Are you sure to
+                        proceed?</h6>
+                    <div style="float: right; margin-top: 2rem;">
+                        <button class="btn popup-cancel" onclick="saveOrClose('popup-cancel')">Cancel</button>
+                        <button class="btn popup-save-exit" onclick="saveOrClose('popup-save')">Save & Exit</button>
+                    </div>
+                </div>
+            </div>
+            <!-- HMS POPUP ALERT END -->
+
+            <!-- DOCTER BANNER DEACTIVATE ALERT -->
+            <div class="doctor-banner-alert">
+                <div class="doctor-banner-alert-main">
+                    <h6>Deactivate Banner?</h6>
+                    <h6 style="color: #626466; font-size: 14px;">The banner image wont be displayed until activated
+                        again. Are you sure to deactivate banner?</h6>
+                    <div style="float: right; margin-top: 2rem;">
+                        <button class="btn popup-cancel" onclick="deactivateBanner('cancel')">Cancel</button>
+                        <button class="btn popup-save-exit" onclick="deactivateBanner('deactivate')">Save &
+                            Exit</button>
+                    </div>
+                </div>
+            </div>
+            <!-- DOCTER BANNER DEACTIVATE END -->
+
             <div class="side-bar">
                 <div class="sidebar-items" id="overview" onmouseover="sideHoverIn(this)" onmouseout="sideHoverOut(this)"
                     onclick="sidebarToggle(this);">
@@ -107,13 +140,13 @@
                         <img style="width: 16px;" src="../IMAGES/homePage/configurations@3x.png" alt="">
                     </div>
                     <div class="side-bar-heading">
-                        <h6 id="configurations-heading">configurations</h6>
+                        <h6 id="configurations-heading">Configurations</h6>
                     </div>
                 </div>
             </div>
             <div class="main-content">
                 <!-- Overview -->
-                <div class="overview-dynamic-content" style="display: none;">
+                <div class="overview-dynamic-content">
                     <div class="main-overview">
                         <p>Overview</p>
                         <h3>Overview</h3>
@@ -198,7 +231,8 @@
                 <div class="hospitalMS-dynamic-content">
 
                     <!-- Hopital View -->
-                    <div class="hms-popup-parent">
+                    <div class="hms-popup-parent" style="display: none;">
+                        <!-- HMS POPUP -->
                         <div class="hms-popup">
                             <div class="row first-row">
                                 <h5>JIH Hospitals Hyderabad</h5>
@@ -206,9 +240,17 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-between;">
-                                    <button type="button" class="btn" style="padding: 0; background-color: #fff;"><img style="width: 1rem; margin: 0 6px 2px 0;" src="../IMAGES/homePage/edit@3x.png" alt="" srcset="">Edit</button>
-                                    <button type="button" class="btn" style="border: 2px solid #068f4b; color: #068f4b; background-color: #fff;">More<img style="width: 1rem" src="../IMAGES/homePage/Vector@3x.png" alt="" srcset=""></button>
-                                    <img style="width: 24px; cursor: pointer;" src="../IMAGES/homePage/popup_close@3x.png" alt="" srcset="" onclick="hmsPopUp('hide');">
+                                    <button type="button" class="btn hms-edit-btn"
+                                        style="padding: 0; background-color: #fff;"
+                                        onclick="editHospitalDetails();"><img style="width: 1rem; margin: 0 6px 2px 0;"
+                                            src="../IMAGES/homePage/edit@3x.png" alt="" srcset="">Edit</button>
+                                    <button type="button" class="btn hms-more-btn"
+                                        style="border: 2px solid #068f4b; color: #068f4b; background-color: #fff;">More<img
+                                            style="width: 1rem" src="../IMAGES/homePage/Vector@3x.png" alt=""
+                                            srcset=""></button>
+                                    <img style="width: 24px; cursor: pointer;"
+                                        src="../IMAGES/homePage/popup_close@3x.png" alt="" srcset=""
+                                        onclick="hmsPopUp('hide');">
                                 </div>
                             </div>
                             <div class="row second-row">
@@ -226,12 +268,16 @@
                                     <h6>Phone</h6>
                                     <h6>+91 - 9876543210</h6>
                                 </div>
-                                <div style="width: 1px; border-right: 1px solid #d7dbe0; height: 3.5rem; margin-top: 0.5rem;"></div>
+                                <div
+                                    style="width: 1px; border-right: 1px solid #d7dbe0; height: 3.5rem; margin-top: 0.5rem;">
+                                </div>
                                 <div>
                                     <h6>Email</h6>
                                     <h6>support@jihhospitals.com</h6>
                                 </div>
-                                <div style="width: 1px; border-right: 1px solid #d7dbe0; height: 3.5rem; margin-top: 0.5rem;"></div>
+                                <div
+                                    style="width: 1px; border-right: 1px solid #d7dbe0; height: 3.5rem; margin-top: 0.5rem;">
+                                </div>
                                 <div>
                                     <h6>Website</h6>
                                     <h6>www.jihhospitals.com</h6>
@@ -239,17 +285,309 @@
                             </div>
                             <div class="row fourth-row">
                                 <h6>Picture</h6>
-                                <img style="width: 488px;" src="../IMAGES/homePage/Rectangle 16@3x.png" alt="" srcset="">
+                                <img style="width: 488px;" src="../IMAGES/homePage/Rectangle 16@3x.png" alt=""
+                                    srcset="">
                             </div>
                             <div class="row fifth-row">
                                 <h6>About Hospital</h6>
-                                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero tincidunt, facilisis felis sed, mattis purus. Vestibulum quis euismod nunc. In varius quis nulla sed facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla posuere consectetur rutrum.</h6>
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero tincidunt,
+                                    facilisis felis sed, mattis purus. Vestibulum quis euismod nunc. In varius quis
+                                    nulla sed facilisis. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos. Nulla posuere consectetur rutrum.</h6>
                             </div>
                             <div class="row sixth-row">
-                                <h6>About Hospital</h6>
-                                <div></div>
+                                <h6>Services Offered</h6>
+                                <div style="padding-left: 2rem;">
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <div class="blue-dot"></div>
+                                        <h6 class="blue-dot-item">Pediatric Intensive Care Unit</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <div class="blue-dot"></div>
+                                        <h6 class="blue-dot-item">Intensive Care Unit</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <div class="blue-dot"></div>
+                                        <h6 class="blue-dot-item">Cardiology Department</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <div class="blue-dot"></div>
+                                        <h6 class="blue-dot-item">Emergency Department</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <div class="blue-dot"></div>
+                                        <h6 class="blue-dot-item">Pediatric Intensive Care Unit</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <div class="blue-dot"></div>
+                                        <h6 class="blue-dot-item">Cardiovascular Intensive Care Unit</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <div class="blue-dot"></div>
+                                        <h6 class="blue-dot-item">Physical Therapy</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row seventh-row">
+                                <h6>Amenities</h6>
+                                <div style="padding-left: 1rem; display: flex; flex-wrap: wrap;">
+                                    <div class="amenities-btns">
+                                        <img style="width: 16px;" src="../IMAGES/homePage/general@3x.png" alt=""
+                                            srcset="">
+                                        <h6>General</h6>
+                                    </div>
+                                    <div class="amenities-btns">
+                                        <img style="width: 16px;" src="../IMAGES/homePage/emergency@3x.png" alt=""
+                                            srcset="">
+                                        <h6>Emergency</h6>
+                                    </div>
+                                    <div class="amenities-btns">
+                                        <img style="width: 16px;" src="../IMAGES/homePage/pharmacy@3x.png" alt=""
+                                            srcset="">
+                                        <h6>Pharmacy</h6>
+                                    </div>
+                                    <div class="amenities-btns">
+                                        <img style="width: 16px;" src="../IMAGES/homePage/ambulance@3x.png" alt=""
+                                            srcset="">
+                                        <h6>Ambulance</h6>
+                                    </div>
+                                    <div class="amenities-btns">
+                                        <img style="width: 16px;" src="../IMAGES/homePage/advancedLabs@3x.png" alt=""
+                                            srcset="">
+                                        <h6>Advanced Labs</h6>
+                                    </div>
+                                    <div class="amenities-btns">
+                                        <img style="width: 16px;" src="../IMAGES/homePage/bloodBankFacility@3x.png"
+                                            alt="" srcset="">
+                                        <h6>Blood Bank Facility</h6>
+                                    </div>
+                                    <div class="amenities-btns">
+                                        <img style="width: 16px;"
+                                            src="../IMAGES/homePage/247EmergencyAvailability@3x.png" alt="" srcset="">
+                                        <h6>24 x 7 Emergency Availability</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <!-- HMS POPUP END -->
+                        <!-- HMS POPUP EDIT -->
+                        <div class="hms-popup-edit">
+                            <div class="row first-row">
+                                <h5>JIH Hospitals Hyderabad</h5>
+                                <div style="width: 10rem;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;">
+                                    <button type="button" class="btn saveHospital"
+                                        onclick="saveOrClose('save')">Save</button>
+                                    <button type="button" class="btn cancelHospital"
+                                        onclick="saveOrClose('cancel')">Cancel</button>
+                                </div>
+                            </div>
+                            <div class="row second-row">
+                                <label>Hospital Name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3" value="JIH Hospital Hyderabad">
+                                </div>
+                            </div>
+                            <div class="row third-row">
+                                <label>Address</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3" value="#63-242, Street Line">
+                                </div>
+                                <div class="input-group mt-2">
+                                    <input type="text" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3" value="Street Line 2 Details">
+                                </div>
+                            </div>
+                            <div class="row fourth-row">
+                                <div class="input-group">
+                                    <div class="dropdown" style="flex: 1;">
+                                        <label>Select State</label>
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            font-size: 14px;
+                                            color: #495057;">
+                                            Telangana
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Andhra Pradesh</a>
+                                            <a class="dropdown-item active" href="#">Telangana</a>
+                                            <a class="dropdown-item" href="#">Karnataka</a>
+                                        </div>
+                                    </div>
+                                    <div style="flex: 1; margin: 0 0.2rem;">
+                                        <label>Enter City</label>
+                                        <input type="text" class="form-control" id="basic-url" style="font-size: 14px;"
+                                            aria-describedby="basic-addon3" value="Hyderabad">
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <label>Enter Pin Code</label>
+                                        <input type="text" class="form-control" id="basic-url" style="font-size: 14px;"
+                                            aria-describedby="basic-addon3" value="500234">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row fifth-row">
+                                <div class="input-group">
+                                    <div style="flex: 1;">
+                                        <label>Phone</label>
+                                        <input type="text" class="form-control" id="basic-url" style="font-size: 14px;"
+                                            aria-describedby="basic-addon3" value="9876543210">
+                                    </div>
+                                    <div style="flex: 1; margin: 0 0.2rem;">
+                                        <label>Email</label>
+                                        <input type="text" class="form-control" id="basic-url" style="font-size: 14px;"
+                                            aria-describedby="basic-addon3" value="support@jihhospitals.com">
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <label>Website</label>
+                                        <input type="text" class="form-control" id="basic-url" style="font-size: 14px;"
+                                            aria-describedby="basic-addon3" value="www.jihhospitals.com">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row sixth-row">
+                                <h5>Picture</h5>
+                                <div style="position: relative; width: 488px;">
+                                    <img src="../IMAGES/homePage/Image_edit@3x.png" alt="" srcset=""
+                                        style="width: 40px; position: absolute; right: 8px; top: 8px; cursor: pointer;">
+                                    <img src="../IMAGES/homePage/Rectangle 16@3x.png" alt="" srcset=""
+                                        style="width: 488px;">
+                                </div>
+                            </div>
+                            <div class="row seventh-row">
+                                <h5>Picture</h5>
+                                <div
+                                    style="padding: 1rem; font-size: 14px; border: 1px solid #d7dbe0; border-radius: .3rem; color: #626466;">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero tincidunt,
+                                    facilisis felis sed, mattis purus. Vestibulum quis euismod nunc. In varius quis
+                                    nulla sed facilisis. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos. Nulla posuere consectetur rutrum.
+                                </div>
+                            </div>
+                            <div class="row eight-row">
+                                <h5>Services Offered</h5>
+                                <div style="padding-left: 2rem;">
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;" checked>
+                                        <h6 class="check-box-item">Pediatric Intensive Care Unit</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;" checked>
+                                        <h6 class="check-box-item">Intensive Care Unit</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;" checked>
+                                        <h6 class="check-box-item">Cardiology Department</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;">
+                                        <h6 class="check-box-item">Emergency Department</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;" checked>
+                                        <h6 class="check-box-item">Pediatric Intensive Care Unit</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;" checked>
+                                        <h6 class="check-box-item">Cardiovascular Intensive Care Unit</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;">
+                                        <h6 class="check-box-item">Physical Therapy</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row ninth-row">
+                                <h5>Amenities</h5>
+                                <div style="padding-left: 2rem;">
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;" checked>
+                                        <img style="width: 16px; margin-right: 0.2rem;"
+                                            src="../IMAGES/homePage/general@3x.png" alt="" srcset="">
+                                        <h6 class="check-box-item">General</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;" checked>
+                                        <img style="width: 16px; margin-right: 0.2rem;"
+                                            src="../IMAGES/homePage/emergency@3x.png" alt="" srcset="">
+                                        <h6 class="check-box-item">Emergency</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;" checked>
+                                        <img style="width: 16px; margin-right: 0.2rem;"
+                                            src="../IMAGES/homePage/pharmacy@3x.png" alt="" srcset="">
+                                        <h6 class="check-box-item">Pharmacy</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;" checked>
+                                        <img style="width: 16px; margin-right: 0.2rem;"
+                                            src="../IMAGES/homePage/ambulance@3x.png" alt="" srcset="">
+                                        <h6 class="check-box-item">Ambulance</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;" checked>
+                                        <img style="width: 16px; margin-right: 0.2rem;"
+                                            src="../IMAGES/homePage/advancedLabs@3x.png" alt="" srcset="">
+                                        <h6 class="check-box-item">Advanced Labs</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;" checked>
+                                        <img style="width: 16px; margin-right: 0.2rem;"
+                                            src="../IMAGES/homePage/bloodBankFacility@3x.png" alt="" srcset="">
+                                        <h6 class="check-box-item">Blood Bank Facility</h6>
+                                    </div>
+                                    <div
+                                        style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                        <input class="green-checkboxes" type="checkbox" name="" id=""
+                                            style="margin-right: .5rem;">
+                                        <img style="width: 16px; margin-right: 0.2rem;"
+                                            src="../IMAGES/homePage/247EmergencyAvailability@3x.png" alt="" srcset="">
+                                        <h6 class="check-box-item">24 x 7 Emergency Availability</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- HMS POPUP EDIT END -->
                     </div>
 
                     <div class="main-hospitalMS">
@@ -309,9 +647,43 @@
                 </div>
                 <!-- Hospital Management System End -->
 
-                <!-- Docter Management System -->
+                <!-- DOCTER MANAGEMENT -->
                 <div class="doctorMS-dynamic-content"></div>
-                <!-- Docter Management System End -->
+                <!-- DOCTER MANAGEMENT END-->
+
+                <!-- Configurations -->
+                <div class="configurations-dynamic-content">
+                    <div class="main-doctorMS">
+                        <div>
+                            <div>
+                                <p onclick="sidebarToggle('overview')">Overview</p>
+                                <span>/</span>
+                                <p>Banner Management System</p>
+                            </div>
+                            <h3>Banner Management System</h3>
+                        </div>
+                        <div>
+                            <button type="button" class="btn uploadBanner"
+                                style="color: #046635; border: 1px solid #046635">
+                                <img style="width: 16px;" src="../IMAGES/homePage/upload_banner@3x.png" alt=""
+                                    srcset="">
+                                Upload Banner
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row docter-container">
+                        <div class="row doctor-row">
+                            <div class="doctor-header">
+                                <div style="width: 50%; padding-left: .7rem;">Name</div>
+                                <div style="width: 15%; padding-left: .7rem;">Uploaded On</div>
+                                <div style="width: 15%; padding-left: .7rem;">File Size</div>
+                                <div style="width: 15%; padding-left: .7rem;">Status</div>
+                                <div style="width: 5%; padding-left: .7rem;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Configurations End -->
             </div>
         </div>
         <div class="row happy-footer">
@@ -364,6 +736,69 @@
                 <li class="page-item"><a class="page-link" href="#" style="color: #068f4b;">3</a></li>
                 <li class="page-item"><a class="page-link" href="#"><img style="width: 18px;" src="../IMAGES/homePage/Pagination Arrow Right@3x.png"></a></li>
             </ul>`;
+
+            /* Doctor Management */
+            for (let i = 0; i < 10; i++) {
+                document.querySelector('.doctor-row').innerHTML += `
+                <div style="display: flex; height: 4.6rem; width: 100%; align-items: center;">
+                    <div style="width: 50%; padding-left: .7rem; display: flex; align-items: center;">
+                        <img src="../IMAGES/homePage/placeholder@3x.png" alt="" srcset=""
+                            style="width: 120px; height: 48px; margin-right: 0.5rem;">
+                        <h6 style="margin: 0; color: #068f4b; text-docoration: underline;">CampaignBanner.png
+                        </h6>
+                    </div>
+                    <div style="width: 15%; padding-left: .7rem;">Apr 6, 2021</div>
+                    <div style="width: 15%; padding-left: .7rem;">25 KB</div>
+                    <div style="width: 15%; padding-left: .7rem; display: flex; align-items: center;">
+                        <div style="width: 0.4rem; height: 0.4rem; border-radius: 0.4rem; background-color: #08b760; margin-right: .4rem;"></div>
+                        Active
+                    </div>
+                    <div style="width: 5%; padding-left: .7rem;">
+                        <div class="btn-group">
+                            <div class="btn-group dropleft" role="group">
+                                <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="../IMAGES/homePage/left_menu@3x.png" alt="" srcset=""
+                                        style="width: 1.1rem; cursor: pointer;">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#" style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;
+                                        border-bottom: 1px solid #d7dbe0;" onclick="deactivateBanner('deactivate-step1')">
+                                        <img src="../IMAGES/homePage/deactivate_icon@3x.png" alt="" srcset=""
+                                            style="width: 1rem; margin: 0 .6rem;">
+                                        Deactivate
+                                    </a>
+                                    <a class="dropdown-item" href="#" style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;
+                                        border-bottom: 1px solid #d7dbe0;">
+                                        <img src="../IMAGES/homePage/view_details@3x.png" alt="" srcset=""
+                                            style="width: 1rem; margin: 0 .6rem;">
+                                        View Details
+                                    </a>
+                                    <a class="dropdown-item" href="#" style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;
+                                        border-bottom: 1px solid #d7dbe0;">
+                                        <img src="../IMAGES/homePage/rename_icon@3x.png" alt="" srcset=""
+                                            style="width: 1rem; margin: 0 .6rem;">
+                                        Rename
+                                    </a>
+                                    <a class="dropdown-item" href="#" style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;
+                                        border-bottom: 1px solid #d7dbe0;">
+                                        <img src="../IMAGES/homePage/download_icon@3x.png" alt="" srcset=""
+                                            style="width: 1rem; margin: 0 .6rem;">
+                                        Download
+                                    </a>
+                                    <a class="dropdown-item" href="#"
+                                        style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;">
+                                        <img src="../IMAGES/homePage/delete_icon@3x.png" alt="" srcset=""
+                                            style="width: 1rem; margin: 0 .6rem;">
+                                        Delete
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }
         })()
         // Header Search Logic
         const enableSearch = () => {
@@ -407,8 +842,46 @@
         }
 
         const hmsPopUp = (type) => {
-            if(type == 'show') document.querySelector('.hms-popup-parent').style.display = 'block';
-            else document.querySelector('.hms-popup-parent').style.display = 'none';
+            if (type == 'show') {
+                document.querySelector('.hms-popup-parent').style.display = 'block';
+                document.querySelector('.hospital-content').style.height = '56.6rem';
+            }
+            else {
+                document.querySelector('.hms-popup-parent').style.display = 'none';
+                document.querySelector('.hospital-content').style.height = '29.6rem';
+            }
+        }
+        const editHospitalDetails = () => {
+            document.querySelector('.hospital-content').style.height = '90rem';
+
+            document.querySelector('.hms-popup').style.display = 'none';
+            document.querySelector('.hms-popup-edit').style.display = 'block';
+        }
+        const saveOrClose = (type) => {
+            if (type == 'save') {
+                // call the API to save
+                document.querySelector('.hms-popup').style.display = 'block';
+                document.querySelector('.hms-popup-edit').style.display = 'none';
+            }
+            if (type == 'cancel') {
+                document.querySelector('.hms-popup').style.display = 'block';
+                document.querySelector('.hms-popup-edit').style.display = 'none';
+                document.querySelector('.hms-pop-edit-alert').style.display = 'flex';
+            }
+            if (type == 'popup-save') {
+                // call the API to save
+                document.querySelector('.hms-pop-edit-alert').style.display = 'none';
+            }
+            if (type == 'popup-cancel') {
+                // call the API to save
+                document.querySelector('.hms-pop-edit-alert').style.display = 'none';
+            }
+            document.querySelector('.hospital-content').style.height = '56.6rem';
+        }
+        const deactivateBanner = (type) => {
+            if (type == 'deactivate-step1') document.querySelector('.doctor-banner-alert').style.display = 'flex';
+            if (type == 'deactivate') document.querySelector('.doctor-banner-alert').style.display = 'none';
+            if (type == 'cancel') document.querySelector('.doctor-banner-alert').style.display = 'none';
         }
     </script>
 </body>

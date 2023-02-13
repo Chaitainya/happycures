@@ -113,7 +113,7 @@
     margin: 0;
 }
 
-.hms-popup-parent{
+.hms-popup-parent {
     position: absolute;
     top: 0;
     right: 0;
@@ -123,13 +123,13 @@
     box-shadow: -3px 0 6px -4px black;
 }
 
-.hms-popup{
+.hms-popup {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-.hms-popup>.first-row{
+.hms-popup>.first-row {
     width: 100%;
     margin: 0;
     min-height: 3.8rem;
@@ -140,55 +140,60 @@
     padding: 0 1rem;
 }
 
-.hms-popup>.first-row>h5{
+.hms-popup>.first-row>h5 {
     font-weight: 600;
     margin: 0;
 }
 
-.hms-popup>.second-row{
+.hms-edit-btn:focus,
+.hms-more-btn:focus {
+    box-shadow: 0 0 0 0.2rem rgb(18 255 0 / 25%);
+}
+
+.hms-popup>.second-row {
     width: 100%;
     margin: 0;
     height: 5rem;
 }
 
-.hms-popup>.second-row>div{
+.hms-popup>.second-row>div {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     padding: 1rem 0 0 1rem;
 }
 
-.hms-popup>.second-row>div:first-child{
+.hms-popup>.second-row>div:first-child {
     width: 40%;
     height: 100%;
 }
 
-.hms-popup>.second-row>div:last-child{
+.hms-popup>.second-row>div:last-child {
     width: 60%;
     height: 100%;
 }
 
-.hms-popup>.second-row>div>h6{
+.hms-popup>.second-row>div>h6 {
     font-size: 14px;
     margin: 0;
 }
 
-.hms-popup>.second-row>div>h6:first-child{
+.hms-popup>.second-row>div>h6:first-child {
     font-weight: 600;
     margin-bottom: .5rem;
 }
 
-.hms-popup>.second-row>div>h6:last-child{
+.hms-popup>.second-row>div>h6:last-child {
     color: #626466;
 }
 
-.hms-popup>.third-row{
+.hms-popup>.third-row {
     width: 100%;
     margin: 0;
     height: 5rem;
 }
 
-.hms-popup>.third-row>div{
+.hms-popup>.third-row>div {
     width: 30%;
     height: 100%;
 }
@@ -199,66 +204,245 @@
     padding: 1rem 0 0 1rem;
 }
 
-.hms-popup>.third-row>div>h6{
+.hms-popup>.third-row>div>h6 {
     font-size: 14px;
     margin: 0;
 }
 
-.hms-popup>.third-row>div>h6:first-child{
+.hms-popup>.third-row>div>h6:first-child {
     font-weight: 600;
     margin-bottom: .5rem;
 }
 
-.hms-popup>.third-row>div>h6:last-child{
+.hms-popup>.third-row>div>h6:last-child {
     color: #068f4b;
     text-decoration: underline;
 }
 
-.hms-popup>.fourth-row{
+.hms-popup>.fourth-row {
     width: 100%;
     margin: 0;
     height: 225px;
     flex-direction: column;
 }
 
-.hms-popup>.fourth-row>h6{
+.hms-popup>.fourth-row>h6 {
     padding-left: 1rem;
     font-weight: 600;
     font-size: 14px;
 }
 
-.hms-popup>.fourth-row>img{
+.hms-popup>.fourth-row>img {
     padding-left: 1rem;
 }
 
-.hms-popup>.fifth-row{
+.hms-popup>.fifth-row {
     width: 100%;
     margin: 0;
     margin-top: 1rem;
 }
 
-.hms-popup>.fifth-row>h6{
+.hms-popup>.fifth-row>h6 {
     padding-left: 1rem;
     font-size: 14px;
 }
 
-.hms-popup>.fifth-row>h6:first-child{
+.hms-popup>.fifth-row>h6:first-child {
     font-weight: 600;
 }
 
-.hms-popup>.fifth-row>h6:last-child{
+.hms-popup>.fifth-row>h6:last-child {
     color: #626466;
 }
 
-.hms-popup>.sixth-row{
+.hms-popup>.sixth-row {
     width: 100%;
     height: 288px;
     margin: 0;
     margin-top: 1rem;
+    flex-direction: column;
 }
 
-.hms-popup>.sixth-row>h6{
+.hms-popup>.sixth-row>h6 {
     padding-left: 1rem;
     font-size: 14px;
     font-weight: 600;
+}
+
+.blue-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    margin-right: 0.5rem;
+    background-color: #0850b7;
+}
+
+.blue-dot-item {
+    margin: 0;
+    font-size: 14px;
+    color: #626466;
+}
+
+.hms-popup>.seventh-row {
+    width: 100%;
+    height: 151px;
+    margin: 0;
+    margin-top: 1rem;
+    /* flex-direction: column; */
+}
+
+.hms-popup>.seventh-row>h6 {
+    padding-left: 1rem;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.amenities-btns {
+    /* width: 112px; */
+    min-width: 112px;
+    height: 37px;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    margin: 0 0.5rem 0.5rem 0;
+    border-radius: 100px;
+    border: solid 1px #e1e5eb;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.amenities-btns>h6 {
+    margin: 0;
+}
+
+/* HMS POPUP EDIT */
+.hms-popup-edit {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hms-popup-edit>.first-row {
+    width: 100%;
+    margin: 0;
+    min-height: 3.8rem;
+    border-bottom: 1px solid #d7dbe0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.hms-popup-edit>.first-row>h5 {
+    font-weight: 600;
+    margin: 0;
+}
+
+.saveHospital {
+    background-color: #068f4b;
+    color: #fff;
+}
+
+.cancelHospital {
+    background-color: #fff;
+    border: 1px solid #068f4b;
+    color: #068f4b;
+}
+
+.saveHospital:focus,
+.cancelHospital:focus {
+    box-shadow: 0 0 0 0.2rem rgb(18 255 0 / 25%);
+}
+
+.hms-pop-edit-alert {
+    background-color: #00000029;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.hms-pop-edit-alert-main {
+    margin-top: 2rem;
+    background-color: #fff;
+    width: 27rem;
+    height: 10rem;
+    z-index: 9999;
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+
+.hms-pop-edit-alert-main>h6:first-child {
+    font-weight: 600
+}
+
+.hms-pop-edit-alert-main>h6:last-child {
+    /* font-size: 14px; */
+    /* color: #d7dbe0; */
+}
+
+.popup-save-exit {
+    background-color: #068f4b;
+    color: #fff;
+}
+
+.popup-cancel {
+    background-color: #fff;
+    border: 1px solid #068f4b;
+    color: #068f4b;
+}
+
+.hms-popup-edit>.second-row,
+.hms-popup-edit>.third-row,
+.hms-popup-edit>.fourth-row,
+.hms-popup-edit>.fifth-row,
+.hms-popup-edit>.sixth-row,
+.hms-popup-edit>.seventh-row,
+.hms-popup-edit>.eight-row,
+.hms-popup-edit>.ninth-row {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+}
+
+.hms-popup-edit>.sixth-row,
+.hms-popup-edit>.eight-row,
+.hms-popup-edit>.ninth-row {
+    flex-direction: column;
+}
+
+.hms-popup-edit>.second-row>.input-group>input,
+.hms-popup-edit>.third-row>.input-group>input {
+    font-size: 14px;
+}
+
+.hms-popup-edit>.second-row>label,
+.hms-popup-edit>.third-row>label,
+.hms-popup-edit>.fourth-row>.input-group>div>label,
+.hms-popup-edit>.fifth-row>.input-group>div>label,
+.hms-popup-edit>.sixth-row>h5,
+.hms-popup-edit>.seventh-row>h5,
+.hms-popup-edit>.eight-row>h5,
+.hms-popup-edit>.ninth-row>h5 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.check-box-item {
+    margin: 0;
+    font-size: 14px;
+}
+
+.green-checkboxes[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+    accent-color: #068f4b;
 }
