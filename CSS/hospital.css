@@ -112,3 +112,153 @@
     width: 16%;
     margin: 0;
 }
+
+.hms-popup-parent{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #fff;
+    width: 40rem;
+    box-shadow: -3px 0 6px -4px black;
+}
+
+.hms-popup{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hms-popup>.first-row{
+    width: 100%;
+    margin: 0;
+    min-height: 3.8rem;
+    border-bottom: 1px solid #d7dbe0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.hms-popup>.first-row>h5{
+    font-weight: 600;
+    margin: 0;
+}
+
+.hms-popup>.second-row{
+    width: 100%;
+    margin: 0;
+    height: 5rem;
+}
+
+.hms-popup>.second-row>div{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding: 1rem 0 0 1rem;
+}
+
+.hms-popup>.second-row>div:first-child{
+    width: 40%;
+    height: 100%;
+}
+
+.hms-popup>.second-row>div:last-child{
+    width: 60%;
+    height: 100%;
+}
+
+.hms-popup>.second-row>div>h6{
+    font-size: 14px;
+    margin: 0;
+}
+
+.hms-popup>.second-row>div>h6:first-child{
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.hms-popup>.second-row>div>h6:last-child{
+    color: #626466;
+}
+
+.hms-popup>.third-row{
+    width: 100%;
+    margin: 0;
+    height: 5rem;
+}
+
+.hms-popup>.third-row>div{
+    width: 30%;
+    height: 100%;
+}
+
+.hms-popup>.third-row>div {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 0 1rem;
+}
+
+.hms-popup>.third-row>div>h6{
+    font-size: 14px;
+    margin: 0;
+}
+
+.hms-popup>.third-row>div>h6:first-child{
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.hms-popup>.third-row>div>h6:last-child{
+    color: #068f4b;
+    text-decoration: underline;
+}
+
+.hms-popup>.fourth-row{
+    width: 100%;
+    margin: 0;
+    height: 225px;
+    flex-direction: column;
+}
+
+.hms-popup>.fourth-row>h6{
+    padding-left: 1rem;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.hms-popup>.fourth-row>img{
+    padding-left: 1rem;
+}
+
+.hms-popup>.fifth-row{
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.hms-popup>.fifth-row>h6{
+    padding-left: 1rem;
+    font-size: 14px;
+}
+
+.hms-popup>.fifth-row>h6:first-child{
+    font-weight: 600;
+}
+
+.hms-popup>.fifth-row>h6:last-child{
+    color: #626466;
+}
+
+.hms-popup>.sixth-row{
+    width: 100%;
+    height: 288px;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.hms-popup>.sixth-row>h6{
+    padding-left: 1rem;
+    font-size: 14px;
+    font-weight: 600;
+}

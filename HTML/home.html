@@ -198,15 +198,59 @@
                 <div class="hospitalMS-dynamic-content">
 
                     <!-- Hopital View -->
-                    <div style="
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        height: 100%;
-                        background-color: #fff;
-                        width: 40rem;
-                        box-shadow: -3px 0 6px -4px black;
-                    "></div>
+                    <div class="hms-popup-parent">
+                        <div class="hms-popup">
+                            <div class="row first-row">
+                                <h5>JIH Hospitals Hyderabad</h5>
+                                <div style="width: 12rem;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;">
+                                    <button type="button" class="btn" style="padding: 0; background-color: #fff;"><img style="width: 1rem; margin: 0 6px 2px 0;" src="../IMAGES/homePage/edit@3x.png" alt="" srcset="">Edit</button>
+                                    <button type="button" class="btn" style="border: 2px solid #068f4b; color: #068f4b; background-color: #fff;">More<img style="width: 1rem" src="../IMAGES/homePage/Vector@3x.png" alt="" srcset=""></button>
+                                    <img style="width: 24px; cursor: pointer;" src="../IMAGES/homePage/popup_close@3x.png" alt="" srcset="" onclick="hmsPopUp('hide');">
+                                </div>
+                            </div>
+                            <div class="row second-row">
+                                <div>
+                                    <h6>Hospital Name</h6>
+                                    <h6>JIH Hospitals Hyderabad</h6>
+                                </div>
+                                <div>
+                                    <h6>Address</h6>
+                                    <h6>#63-242, Street Details, Address Line 02, City Name, State Name - 500234</h6>
+                                </div>
+                            </div>
+                            <div class="row third-row">
+                                <div>
+                                    <h6>Phone</h6>
+                                    <h6>+91 - 9876543210</h6>
+                                </div>
+                                <div style="width: 1px; border-right: 1px solid #d7dbe0; height: 3.5rem; margin-top: 0.5rem;"></div>
+                                <div>
+                                    <h6>Email</h6>
+                                    <h6>support@jihhospitals.com</h6>
+                                </div>
+                                <div style="width: 1px; border-right: 1px solid #d7dbe0; height: 3.5rem; margin-top: 0.5rem;"></div>
+                                <div>
+                                    <h6>Website</h6>
+                                    <h6>www.jihhospitals.com</h6>
+                                </div>
+                            </div>
+                            <div class="row fourth-row">
+                                <h6>Picture</h6>
+                                <img style="width: 488px;" src="../IMAGES/homePage/Rectangle 16@3x.png" alt="" srcset="">
+                            </div>
+                            <div class="row fifth-row">
+                                <h6>About Hospital</h6>
+                                <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et libero tincidunt, facilisis felis sed, mattis purus. Vestibulum quis euismod nunc. In varius quis nulla sed facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla posuere consectetur rutrum.</h6>
+                            </div>
+                            <div class="row sixth-row">
+                                <h6>About Hospital</h6>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="main-hospitalMS">
                         <div>
@@ -302,7 +346,7 @@
             /* HMS Table Content */
             for (let i = 0; i < 11; i++) {
                 document.querySelector('.hms-table-content').innerHTML += `
-                <div class="hms-table-row" style="padding: 0.4rem 0;">
+                <div class="hms-table-row" style="padding: 0.4rem 0; cursor: pointer;" onclick="hmsPopUp('show', 'Hospital Name');">
                     <h6 style="width: 12%; color: #068f4b; text-decoration: underline;">HS00HYD001</h6>
                     <h6 style="width: 24%;">JIH Hospitals Hyderabad</h6>
                     <h6>23rd Mar 2021</h6>
@@ -360,6 +404,11 @@
         }
         const dropHoverOut = (self) => {
             document.getElementById(self.id).style.backgroundColor = '#fff';
+        }
+
+        const hmsPopUp = (type) => {
+            if(type == 'show') document.querySelector('.hms-popup-parent').style.display = 'block';
+            else document.querySelector('.hms-popup-parent').style.display = 'none';
         }
     </script>
 </body>
