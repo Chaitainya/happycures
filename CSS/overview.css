@@ -137,7 +137,6 @@
 
 .dropdown-toggle {
     background-color: transparent;
-    border: 1px solid #d5d5d5 !important;
 }
 
 .dropdown-toggle::after {
