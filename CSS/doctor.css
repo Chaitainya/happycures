@@ -1,0 +1,39 @@
+.doctorMS-dynamic-content {
+    height: 100%;
+    position: relative;
+}
+
+.main-docter-main {
+    min-height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #b9d2f6;
+    box-shadow: 0 2px 2px -1px #b9d2f6;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-docter-main>div {
+    display: flex;
+}
+
+.main-docter-main>div>p {
+    margin: 0;
+    color: #828487;
+}
+
+.main-docter-main>div>span {
+    margin: 0 5px;
+    color: #828487;
+}
+
+.main-docter-main>div>p:first-child {
+    color: #068f4b;
+    text-decoration: underline;
+}
+
+.main-docter-main>h3 {
+    margin: 0;
+    font-weight: 600;
+}
