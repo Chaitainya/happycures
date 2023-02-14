@@ -446,3 +446,310 @@
     height: 15px;
     accent-color: #068f4b;
 }
+
+/* Hospital View */
+.hospital-full-view {
+    display: none;
+}
+
+.hospital-view {
+    display: flex;
+}
+
+.hospital-view>div {
+    flex: 1;
+    min-height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #b9d2f6;
+    box-shadow: 0 2px 2px -1px #b9d2f6;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hospital-view>div:last-child {
+    padding-right: 2rem;
+    align-items: end;
+}
+
+.hospital-view>div>div {
+    display: flex;
+}
+
+.hospital-view>div>div>p:last-child {
+    margin: 0;
+    color: #828487;
+}
+
+.hospital-view>div>div>span {
+    margin: 0 5px;
+    color: #828487;
+}
+
+.hospital-view>div>div>p {
+    color: #068f4b;
+    text-decoration: underline;
+    margin: 0;
+}
+
+.hospital-view>div>h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.hospital-view-content {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.hospital-view-content>.first-row,
+.hospital-view-content>.second-row {
+    width: 100%;
+    margin: 0;
+}
+
+.hospital-view-content>.first-row {
+    height: 15rem;
+}
+
+.hospital-view-content>.second-row {
+    min-height: 50rem;
+}
+
+.first-section-first,
+.second-section-first {
+    width: 70%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.first-section-second,
+.second-section-second {
+    width: 30%;
+    /* height: 100%; */
+    padding: 1rem 1rem 1rem 0;
+}
+
+.second-section-first,
+.second-section-second {
+    padding-top: 0;
+}
+
+.first-section-first>.row-items {
+    width: 100%;
+    margin: 0;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first-section-first>.row-items:first-child {
+    align-items: start;
+}
+
+.first-section-first>.row-items:last-child {
+    align-items: end;
+}
+
+.first-section-first>.row-items>.row-item {
+    /* margin: 0 1rem; */
+    width: 32%;
+    height: 93%;
+    border-radius: .3rem;
+    /* border: 1px solid grey; */
+    background-color: #fff;
+    display: flex;
+}
+
+.first-section-first>.row-items>.row-item>div:first-child {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    padding: 1.3rem 0.5rem;
+}
+
+.first-section-first>.row-items>.row-item>div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.first-section-second>.row-item,
+.second-section-first>.row-item,
+.second-section-second>.row-item {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid grey; */
+    background-color: #fff;
+    border-radius: .3rem;
+}
+
+.second-section-first>.row-item>.row {
+    width: 100%;
+    margin: 0;
+}
+
+.first-section-second>.row-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.first-section-second>.row-item>div {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-section-second>.row-item>div:last-child {
+    flex-direction: column;
+}
+
+.one-row {
+    height: 3rem;
+    border-bottom: 1px solid #d7dbe0;
+}
+
+.one-row>div {
+    width: 50%;
+    height: 100%;
+}
+
+.one-row>div>h6 {
+    margin: 0;
+}
+
+.one-row>div:first-child {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.one-row>div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 1rem;
+}
+
+.two-row {
+    height: 181px;
+}
+
+.two-row>div {
+    height: 100%;
+}
+
+.two-row>div:first-child {
+    width: 45%;
+}
+
+.two-row>div:last-child {
+    width: 55%;
+}
+
+.two-row-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.three-row {
+    height: 100px;
+}
+
+.three-row>div {
+    height: 100%;
+    width: 33.33%;
+    padding: 1rem;
+}
+
+.four-row {
+    height: 103px;
+    padding: 1rem;
+}
+
+.five-row {
+    height: 22rem;
+    padding: 1rem;
+}
+
+.five-row>div {
+    height: 100%;
+    width: 50%;
+}
+
+.services-offered>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: .4rem;
+}
+
+.services-offered>div>h6 {
+    margin: 0;
+}
+
+.head-division {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    border-bottom: 1px solid #d7dbe0;
+    padding: 0 1rem;
+}
+
+.head-division>h6 {
+    /* font-size: 14px; */
+    font-weight: 600;
+    margin: 0;
+}
+
+.head-division>div {
+    display: flex;
+    align-items: center;
+}
+
+.list-of-docters {
+    height: 100%;
+}
+
+.list-of-docters-main {
+    display: flex;
+    height: 4.5rem;
+    border-bottom: 1px solid #e1e5eb;
+}
+
+.list-of-docters>div {}
+
+.list-of-docters-main>div:first-child {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-of-docters-main>div:first-child>div {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 2rem;
+    background-color: #d7dbe0;
+    border: 1px solid #d7dbe0;
+}
+
+.list-of-docters-main>div:last-child {
+    padding: 0.3rem 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+/* Hospital View */

@@ -609,7 +609,7 @@
 
                     <div class="main-hospitalMS">
                         <div>
-                            <p onclick="sidebarToggle('overview')">Overview</p>
+                            <p style="cursor: pointer;" onclick="sidebarToggle('overview')">Overview</p>
                             <span>/</span>
                             <p>Hospital Management System</p>
                         </div>
@@ -651,16 +651,348 @@
                                 <h6>Email</h6>
                                 <h6 style="width: 12%;">Status</h6>
                             </div>
-                            <!-- <div class="hms-table-row" style="padding: 0.4rem 0;">
-                                <h6 style="width: 12%; color: #068f4b;">HS00HYD001</h6>
-                                <h6 style="width: 24%;">JIH Hospitals Hyderabad</h6>
-                                <h6>23rd Mar 2021</h6>
-                                <h6>+91 - 9876543210</h6>
-                                <h6>hr@jihhospital.com</h6>
-                                <h6 style="width: 12%;">Active</h6>
-                            </div> -->
                         </div>
                     </div>
+
+                    <!-- Hospital View -->
+                    <div class="hospital-full-view">
+                        <div class="hospital-view">
+                            <div>
+                                <div>
+                                    <p style="cursor: pointer;" onclick="sidebarToggle('overview')">Overview</p>
+                                    <span>/</span>
+                                    <p style="cursor: pointer;" onclick="sidebarToggle('hospitalMS')">Hospital
+                                        Management System</p>
+                                    <span>/</span>
+                                    <p>JIH Hospitals Hyderabad</p>
+                                </div>
+                                <h3>Hospital Management System</h3>
+                            </div>
+                            <div>
+                                <!-- <button type="button" class="btn">More</button> -->
+                                <button type="button" class="btn hms-more-btn"
+                                    style="border: 2px solid #068f4b; color: #068f4b; background-color: #fff; width: 6rem;">More<img
+                                        style="width: 1rem; margin-left: 1rem;" src="../IMAGES/homePage/Vector@3x.png"
+                                        alt="" srcset=""></button>
+                            </div>
+                        </div>
+                        <div class="hospital-view-content">
+                            <div class="row first-row">
+                                <div class="first-section-first">
+                                    <div class="row row-items">
+                                        <div class="row-item">
+                                            <div style="width: 30%; height: 100%;">
+                                                <img src="../IMAGES/homePage/Total Appointments@3x.png" alt="" srcset=""
+                                                    style="width: 40px;">
+                                            </div>
+                                            <div style="width: 70%; height: 100%;">
+                                                <h5 style="font-weight: 600;">1,048</h5>
+                                                <h6>Total Appointments</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row-item">
+                                            <div style="width: 30%; height: 100%;">
+                                                <img src="../IMAGES/homePage/Completed Icon@3x.png" alt="" srcset=""
+                                                    style="width: 40px;">
+                                            </div>
+                                            <div style="width: 70%; height: 100%;">
+                                                <h5 style="font-weight: 600;">848</h5>
+                                                <h6>Completed</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row-item">
+                                            <div style="width: 30%; height: 100%;">
+                                                <img src="../IMAGES/homePage/Cancel Icon@3x.png" alt="" srcset=""
+                                                    style="width: 40px;">
+                                            </div>
+                                            <div style="width: 70%; height: 100%;">
+                                                <h5 style="font-weight: 600;">212</h5>
+                                                <h6>Cancelled</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row-items">
+                                        <div class="row-item">
+                                            <div style="width: 30%; height: 100%;">
+                                                <img src="../IMAGES/homePage/Treatement Icon@3x.png" alt="" srcset=""
+                                                    style="width: 40px;">
+                                            </div>
+                                            <div style="width: 70%; height: 100%;">
+                                                <h5 style="font-weight: 600;">640</h5>
+                                                <h6>Gerneral Treatements</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row-item">
+                                            <div style="width: 30%; height: 100%;">
+                                                <img src="../IMAGES/homePage/Operation Icon@3x.png" alt="" srcset=""
+                                                    style="width: 40px;">
+                                            </div>
+                                            <div style="width: 70%; height: 100%;">
+                                                <h5 style="font-weight: 600;">208</h5>
+                                                <h6>Operations</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row-item">
+                                            <div style="width: 30%; height: 100%;">
+                                                <img src="../IMAGES/homePage/Patients@3x.png" alt="" srcset=""
+                                                    style="width: 40px;">
+                                            </div>
+                                            <div style="width: 70%; height: 100%;">
+                                                <h5 style="font-weight: 600;">504</h5>
+                                                <h6>New Patients</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="first-section-second">
+                                    <div class="row-item" style="background-color: #08b760;">
+                                        <div>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false" style="width: 128px;
+                                                    background-color: #d6ffeb;
+                                                    color: #05753d;
+                                                    font-size: 1.1rem;
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                    align-items: center;">
+                                                    2022
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">2022</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="../IMAGES/homePage/indian_paise@3x.png" alt="" srcset=""
+                                                style="width: 26px;">
+                                        </div>
+                                        <div>
+                                            <h5 style="font-weight: 600; color: #ebfff5;">5.60 L</h5>
+                                            <h6 style="font-size: 14px; color: #ebfff5;">Total Earnings</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row second-row">
+                                <div class="second-section-first">
+                                    <div class="row-item">
+                                        <div class="row one-row">
+                                            <div>
+                                                <h6 style="font-weight: 600;">Hospital Details</h6>
+                                            </div>
+                                            <div>
+                                                <img src=" ../IMAGES/homePage/edit_black@3x.png" alt=""
+                                                    style="cursor: pointer; width: 18.2px;">
+                                                <img src="../IMAGES/homePage/left_menu@3x.png" alt="" style="cursor: pointer; width: 18.2px; margin-left: 1.2rem;
+                                                    ">
+                                            </div>
+                                        </div>
+                                        <div class="row two-row">
+                                            <div class="two-row-left">
+                                                <div>
+                                                    <h6 style="font-size: 14px; font-weight: 600;">Hospital Name</h6>
+                                                    <h6 style="font-size: 14px; color: #626466;">JIH Hospitals Hyderabad
+                                                    </h6>
+                                                </div>
+                                                <div>
+                                                    <h6 style="font-size: 14px; font-weight: 600;">Address</h6>
+                                                    <h6 style="font-size: 14px; color: #626466;">#63-242, Street
+                                                        Details, Address Line
+                                                        02, City Name, State Name
+                                                        - 500234</h6>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex;
+                                            align-items: center;">
+                                                <img src="../IMAGES/homePage/Rectangle 16@3x.png" alt="" srcset=""
+                                                    style="width: 100%;
+                                                    padding: 1rem;
+                                                    height: 100%;;
+                                                    object-fit: cover;">
+                                            </div>
+                                        </div>
+                                        <div class="row three-row">
+                                            <div>
+                                                <h6 style="font-size: 14px; font-weight: 600;">Phone</h6>
+                                                <h6 style="font-size: 14px; color:#05753d; text-decoration: underline;">
+                                                    +91 - 9876543210</h6>
+                                            </div>
+                                            <div>
+                                                <h6 style="font-size: 14px; font-weight: 600;">Email</h6>
+                                                <h6 style="font-size: 14px; color:#05753d; text-decoration: underline;">
+                                                    JIH Hospitals Hyderabad</h6>
+                                            </div>
+                                            <div>
+                                                <h6 style="font-size: 14px; font-weight: 600;">Website</h6>
+                                                <h6 style="font-size: 14px; color:#05753d; text-decoration: underline;">
+                                                    www.jihhospitals.com</h6>
+                                            </div>
+                                        </div>
+                                        <div class="row four-row">
+                                            <h6 style="font-size: 14px; font-weight: 600;">About Hospital</h6>
+                                            <h6 style="font-size: 14px; color: #626466;">Lorem ipsum dolor sit amet,
+                                                consectetur
+                                                adipiscing elit. Etiam et libero tincidunt, facilisis felis sed, mattis
+                                                purus. Vestibulum quis euismod nunc. In varius quis nulla sed facilisis.
+                                            </h6>
+                                        </div>
+                                        <div class="row five-row">
+                                            <div class="services-offered">
+                                                <h6 style="font-size: 14px; font-weight: 600;">Services Offered</h6>
+                                                <div>
+                                                    <div class="blue-dot"></div>
+                                                    <h6 style="font-size: 14px; color: #626466;">Pediatric Intensive
+                                                        Care Unit</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="blue-dot"></div>
+                                                    <h6 style="font-size: 14px; color: #626466;">Intensive Care Unit
+                                                    </h6>
+                                                </div>
+                                                <div>
+                                                    <div class="blue-dot"></div>
+                                                    <h6 style="font-size: 14px; color: #626466;">Cardiology Department
+                                                    </h6>
+                                                </div>
+                                                <div>
+                                                    <div class="blue-dot"></div>
+                                                    <h6 style="font-size: 14px; color: #626466;">Emergency Department
+                                                    </h6>
+                                                </div>
+                                                <div>
+                                                    <div class="blue-dot"></div>
+                                                    <h6 style="font-size: 14px; color: #626466;">Pediatric Intensive
+                                                        Care Unit</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="blue-dot"></div>
+                                                    <h6 style="font-size: 14px; color: #626466;">Cardiovascular
+                                                        Intensive Care Unit</h6>
+                                                </div>
+                                                <div>
+                                                    <div class="blue-dot"></div>
+                                                    <h6 style="font-size: 14px; color: #626466;">Physical Therapy</h6>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 style="font-size: 14px; font-weight: 600;">Amenties</h6>
+                                                <div style="display: flex; flex-wrap: wrap;">
+                                                    <div class="amenities-btns">
+                                                        <img style="width: 16px;"
+                                                            src="../IMAGES/homePage/general@3x.png" alt="" srcset="">
+                                                        <h6>General</h6>
+                                                    </div>
+                                                    <div class="amenities-btns">
+                                                        <img style="width: 16px;"
+                                                            src="../IMAGES/homePage/emergency@3x.png" alt="" srcset="">
+                                                        <h6>Emergency</h6>
+                                                    </div>
+                                                    <div class="amenities-btns">
+                                                        <img style="width: 16px;"
+                                                            src="../IMAGES/homePage/pharmacy@3x.png" alt="" srcset="">
+                                                        <h6>Pharmacy</h6>
+                                                    </div>
+                                                    <div class="amenities-btns">
+                                                        <img style="width: 16px;"
+                                                            src="../IMAGES/homePage/ambulance@3x.png" alt="" srcset="">
+                                                        <h6>Ambulance</h6>
+                                                    </div>
+                                                    <div class="amenities-btns">
+                                                        <img style="width: 16px;"
+                                                            src="../IMAGES/homePage/advancedLabs@3x.png" alt=""
+                                                            srcset="">
+                                                        <h6>Advanced Labs</h6>
+                                                    </div>
+                                                    <div class="amenities-btns">
+                                                        <img style="width: 16px;"
+                                                            src="../IMAGES/homePage/bloodBankFacility@3x.png" alt=""
+                                                            srcset="">
+                                                        <h6>Blood Bank Facility</h6>
+                                                    </div>
+                                                    <div class="amenities-btns">
+                                                        <img style="width: 16px;"
+                                                            src="../IMAGES/homePage/247EmergencyAvailability@3x.png"
+                                                            alt="" srcset="">
+                                                        <h6>24 x 7 Emergency Availability</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="second-section-second">
+                                    <div class="row-item">
+                                        <div class="head-division">
+                                            <h6>Doctors</h6>
+                                            <div>
+                                                <h6
+                                                    style="cursor: pointer; color: #068f4b; text-decoration: underline;margin: 0;">
+                                                    See
+                                                    All
+                                                </h6>
+                                                <img src="../IMAGES/homePage/see_all@3x.png" alt=""
+                                                    style="width: 16px;">
+                                            </div>
+                                        </div>
+                                        <div class="list-of-docters">
+                                            <div class="list-of-docters-main">
+                                                <div>
+                                                    <div></div>
+                                                </div>
+                                                <div>
+                                                    <h6 style="margin: 0; font-weight: 600;">Dr. Vijayakanth Kumar</h6>
+                                                    <h6 style="margin: 0; color: 
+                                                    #7f8184;">Cardiologists | JIH Hospital</h6>
+                                                </div>
+                                            </div>
+                                            <div class="list-of-docters-main">
+                                                <div>
+                                                    <div></div>
+                                                </div>
+                                                <div>
+                                                    <h6 style="margin: 0; font-weight: 600;">Dr. Vijayakanth Kumar</h6>
+                                                    <h6 style="margin: 0; color: 
+                                                    #7f8184;">Cardiologists | JIH Hospital</h6>
+                                                </div>
+                                            </div>
+                                            <div class="list-of-docters-main">
+                                                <div>
+                                                    <div></div>
+                                                </div>
+                                                <div>
+                                                    <h6 style="margin: 0; font-weight: 600;">Dr. Vijayakanth Kumar</h6>
+                                                    <h6 style="margin: 0; color: 
+                                                    #7f8184;">Cardiologists | JIH Hospital</h6>
+                                                </div>
+                                            </div>
+                                            <div class="list-of-docters-main">
+                                                <div>
+                                                    <div></div>
+                                                </div>
+                                                <div>
+                                                    <h6 style="margin: 0; font-weight: 600;">Dr. Vijayakanth Kumar</h6>
+                                                    <h6 style="margin: 0; color: 
+                                                    #7f8184;">Cardiologists | JIH Hospital</h6>
+                                                </div>
+                                            </div>
+                                            <div class="list-of-docters-main">
+                                                <div>
+                                                    <div></div>
+                                                </div>
+                                                <div>
+                                                    <h6 style="margin: 0; font-weight: 600;">Dr. Vijayakanth Kumar</h6>
+                                                    <h6 style="margin: 0; color: 
+                                                    #7f8184;">Cardiologists | JIH Hospital</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hospital View -->
                 </div>
                 <!-- Hospital Management System End -->
 
@@ -670,13 +1002,18 @@
 
                 <!-- Configurations -->
                 <div class="configurations-dynamic-content">
+
+                    <!-- POPUP -->
                     <div class="configuration-popup">
                         <div class="row first-row">
                             <h6>Details</h6>
                             <div>
-                                <img src="../IMAGES/homePage/edit_banner@3x.png" alt="" srcset="" style="width: 24px; cursor: pointer;" onclick="editBanner('show')">
-                                <img src="../IMAGES/homePage/delete_banner@3x.png" alt="" srcset="" style="width: 24px; cursor: pointer; margin: 0 1rem;">
-                                <img src="../IMAGES/homePage/banner_edit_close@3x.png" alt="" srcset="" style="width: 24px; cursor: pointer;" onclick="editBanner('destroy')">
+                                <img src="../IMAGES/homePage/edit_banner@3x.png" alt="" srcset=""
+                                    style="width: 24px; cursor: pointer;" onclick="editBanner('show')">
+                                <img src="../IMAGES/homePage/delete_banner@3x.png" alt="" srcset=""
+                                    style="width: 24px; cursor: pointer; margin: 0 1rem;">
+                                <img src="../IMAGES/homePage/banner_edit_close@3x.png" alt="" srcset=""
+                                    style="width: 24px; cursor: pointer;" onclick="editBanner('destroy')">
                             </div>
                         </div>
                         <div class="row second-row">
@@ -702,35 +1039,45 @@
                             <h6>This banner is created for new year offers and will be live untill 30th Jan 2023.</h6>
                         </div>
                     </div>
+                    <!-- POPUP ENDS -->
+
                     <div class="configuration-popup-edit" style="display: none;">
                         <div class="row first-row">
                             <h6>Details</h6>
-                            <img src="../IMAGES/homePage/banner_edit_close@3x.png" alt="" srcset="" style="width: 24px; cursor: pointer;" onclick="editBanner('close')">
+                            <img src="../IMAGES/homePage/banner_edit_close@3x.png" alt="" srcset=""
+                                style="width: 24px; cursor: pointer;" onclick="editBanner('close')">
                         </div>
                         <div class="row second-row">
                             <h6>CampaignBanner.png</h6>
                             <img src="../IMAGES/homePage/banner@3x.png" alt="" srcset="" style="width: 240px;">
-                            <button type="button" class="btn" style="margin-top: 0.5rem; color: #046635; border: 2px solid #046635;">
+                            <button type="button" class="btn"
+                                style="margin-top: 0.5rem; color: #046635; border: 2px solid #046635;">
                                 <img src="../IMAGES/homePage/change_image@3x.png" alt="" style="width: 1rem;">
                                 Change Image
                             </button>
                         </div>
                         <div class="row third-row">
                             <h6>
-                                <span style="color: rgb(186 54 23); font-size: 21px; margin-right: 5px; position: relative; top: 5.2px;">*</span>
+                                <span
+                                    style="color: rgb(186 54 23); font-size: 21px; margin-right: 5px; position: relative; top: 5.2px;">*</span>
                                 Details
                             </h6>
-                            <textarea name="" id="" cols="30" rows="10" style="width: 100%; height: 100px; resize: none; padding: 0.5rem; color: #848485;">This banner is created for new year offers and will be live untill 30th Jan 2023.</textarea>
+                            <textarea name="" id="" cols="30" rows="10"
+                                style="width: 100%; height: 100px; resize: none; padding: 0.5rem; color: #848485;">This banner is created for new year offers and will be live untill 30th Jan 2023.</textarea>
                         </div>
                         <div class="row last-row">
-                            <button type="button" class="btn" style="flex: 1; margin-right: 5px; background-color: #fff; border: 1px solid #068f4b; color: #068f4b;" onclick="editBanner('close')">Cancel</button>
-                            <button type="button" class="btn" style="flex: 1; margin-left: 5px; background-color: #068f4b; color: #fff;" onclick="editBanner('save')">Save</button>
+                            <button type="button" class="btn"
+                                style="flex: 1; margin-right: 5px; background-color: #fff; border: 1px solid #068f4b; color: #068f4b;"
+                                onclick="editBanner('close')">Cancel</button>
+                            <button type="button" class="btn"
+                                style="flex: 1; margin-left: 5px; background-color: #068f4b; color: #fff;"
+                                onclick="editBanner('save')">Save</button>
                         </div>
                     </div>
                     <div class="main-doctorMS">
                         <div>
                             <div>
-                                <p onclick="sidebarToggle('overview')">Overview</p>
+                                <p style="cursor: pointer;" onclick="sidebarToggle('overview')">Overview</p>
                                 <span>/</span>
                                 <p>Banner Management System</p>
                             </div>
@@ -792,9 +1139,9 @@
             /* HMS Table Content */
             for (let i = 0; i < 11; i++) {
                 document.querySelector('.hms-table-content').innerHTML += `
-                <div class="hms-table-row" style="padding: 0.4rem 0; cursor: pointer;" onclick="hmsPopUp('show', 'Hospital Name');">
-                    <h6 style="width: 12%; color: #068f4b; text-decoration: underline;">HS00HYD001</h6>
-                    <h6 style="width: 24%;">JIH Hospitals Hyderabad</h6>
+                <div class="hms-table-row" style="padding: 0.4rem 0;">
+                    <h6 style="width: 12%; color: #068f4b; text-decoration: underline; cursor: pointer;" onclick="hmsPopUp('show', 'Hospital Name');">HS00HYD001</h6>
+                    <h6 style="width: 24%; cursor: pointer;" onclick="viewHospitalFull('show_view');">JIH Hospitals Hyderabad</h6>
                     <h6>23rd Mar 2021</h6>
                     <h6>+91 - 9876543210</h6>
                     <h6>hr@jihhospital.com</h6>
@@ -815,10 +1162,10 @@
             for (let i = 0; i < 10; i++) {
                 document.querySelector('.doctor-row').innerHTML += `
                 <div style="display: flex; height: 4.6rem; width: 100%; align-items: center;">
-                    <div style="width: 50%; padding-left: .7rem; display: flex; align-items: center;">
+                    <div style="width: 50%; padding-left: .7rem; display: flex; align-items: center;" onclick="editBanner('open')">
                         <img src="../IMAGES/homePage/placeholder@3x.png" alt="" srcset=""
-                            style="width: 120px; height: 48px; margin-right: 0.5rem;">
-                        <h6 style="margin: 0; color: #068f4b; text-docoration: underline;" onclick="editBanner('open')">CampaignBanner.png
+                            style="cursor: pointer; width: 120px; height: 48px; margin-right: 0.5rem;">
+                        <h6 style="cursor: pointer; margin: 0; color: #068f4b; text-docoration: underline;">CampaignBanner.png
                         </h6>
                     </div>
                     <div style="width: 15%; padding-left: .7rem;">Apr 6, 2021</div>
@@ -885,6 +1232,7 @@
             let id_list = ['overview', 'hospitalMS', 'doctorMS', 'configurations'];
             id_list.forEach(item => {
                 if (item == id_to_use) {
+                    if (item == 'hospitalMS') viewHospitalFull('hide_view')
                     document.getElementById(item).style.cssText = `
                     background-color: #ebfff5;
                     border-left: 4px solid #3eab75;
@@ -959,26 +1307,45 @@
         }
         const renameBanner = (type) => {
             if (type == 'rename-step1') document.querySelector('.rename-alert').style.display = 'flex';
-            if (type == 'rename'){
+            if (type == 'rename') {
                 // api call
                 document.querySelector('.rename-alert').style.display = 'none';
             }
             if (type == 'cancel') document.querySelector('.rename-alert').style.display = 'none';
         }
         const editBanner = (type) => {
-            if(type == 'show'){
+            if (type == 'show') {
                 document.querySelector('.configuration-popup-edit').style.display = 'block';
                 document.querySelector('.configuration-popup').style.display = 'none';
-            }else if(type == 'save'){
+            } else if (type == 'save') {
                 // save api
                 document.querySelector('.configuration-popup-edit').style.display = 'none';
                 document.querySelector('.configuration-popup').style.display = 'block';
-            }else if(type == 'open'){ // open
+            } else if (type == 'open') { // open
                 document.querySelector('.configuration-popup-edit').style.display = 'none';
                 document.querySelector('.configuration-popup').style.display = 'block';
-            }else{ // destroy
+            } else { // destroy
                 document.querySelector('.configuration-popup-edit').style.display = 'none';
                 document.querySelector('.configuration-popup').style.display = 'none';
+            }
+        }
+        const viewHospitalFull = (type) => {
+            let list_hospital = [
+                'hospital-content',
+                'hospital-row',
+                'main-hospitalMS'
+            ];
+
+            if (type == 'show_view') {
+                list_hospital.forEach(ele => {
+                    document.querySelector('.' + ele).style.display = 'none';
+                })
+                document.querySelector('.hospital-full-view').style.display = 'block';
+            } else {
+                list_hospital.forEach(ele => {
+                    document.querySelector('.' + ele).style.display = 'flex';
+                })
+                document.querySelector('.hospital-full-view').style.display = 'none';
             }
         }
     </script>

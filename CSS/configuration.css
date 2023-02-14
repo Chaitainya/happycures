@@ -51,7 +51,8 @@
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
+    padding: 1rem;
 }
 
 .doctor-row {
@@ -128,7 +129,7 @@
 }
 
 .configuration-popup,
-.configuration-popup-edit{
+.configuration-popup-edit {
     display: none;
     position: absolute;
     width: 504px;
@@ -141,7 +142,7 @@
 }
 
 .configuration-popup>.first-row,
-.configuration-popup-edit>.first-row{
+.configuration-popup-edit>.first-row {
     width: 100%;
     margin: 0;
     height: 48px;
@@ -153,7 +154,7 @@
 }
 
 .configuration-popup>.first-row>h6,
-.configuration-popup-edit>.first-row>h6{
+.configuration-popup-edit>.first-row>h6 {
     margin: 0;
     font-weight: 600;
 }
@@ -162,58 +163,58 @@
 .configuration-popup>.third-row,
 .configuration-popup>.fifth-row,
 .configuration-popup-edit>.second-row,
-.configuration-popup-edit>.third-row{
+.configuration-popup-edit>.third-row {
     width: 100%;
     margin: 0;
     padding: 1rem 2rem;
     flex-direction: column;
 }
 
-.configuration-popup>.second-row>h6{
+.configuration-popup>.second-row>h6 {
     color: #068f4b;
     text-decoration: underline;
 }
 
 .configuration-popup>.third-row>h6:first-child,
-.configuration-popup>.fifth-row>h6:first-child{
+.configuration-popup>.fifth-row>h6:first-child {
     font-weight: 600;
 }
 
 .configuration-popup>.third-row>h6:last-child,
-.configuration-popup>.fifth-row>h6:last-child{
+.configuration-popup>.fifth-row>h6:last-child {
     color: #626466;
 }
 
-.configuration-popup>.fourth-row{
+.configuration-popup>.fourth-row {
     width: 100%;
     margin: 0;
     padding: 1rem 2rem;
 }
 
-.configuration-popup>.fourth-row>div>h6:first-child{
+.configuration-popup>.fourth-row>div>h6:first-child {
     font-weight: 600;
 }
 
-.configuration-popup>.fourth-row>div>h6:last-child{
+.configuration-popup>.fourth-row>div>h6:last-child {
     color: #626466;
 }
 
-.configuration-popup-edit>.second-row{
+.configuration-popup-edit>.second-row {
     align-items: start;
 }
 
-.configuration-popup-edit>.third-row{
+.configuration-popup-edit>.third-row {
     width: 100%;
     margin: 0;
     padding: 1rem 2rem;
     flex-direction: column;
 }
 
-.configuration-popup-edit>.third-row>h6{
+.configuration-popup-edit>.third-row>h6 {
     font-weight: 600;
 }
 
-.configuration-popup-edit>.last-row{
+.configuration-popup-edit>.last-row {
     width: 100%;
     margin: 0;
     padding: 1rem 2rem;
