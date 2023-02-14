@@ -45,6 +45,7 @@
         }
     </style>
     <link rel="stylesheet" href="../CSS/header.css">
+    <!-- <link rel="stylesheet" href="../CSS/overview_old.css"> -->
     <link rel="stylesheet" href="../CSS/overview.css">
     <link rel="stylesheet" href="../CSS/hospital.css">
     <link rel="stylesheet" href="../CSS/doctor.css">
@@ -124,6 +125,7 @@
             </div>
             <!-- RENAME ALERT END -->
 
+            <!-- SIDEBAR STARTS -->
             <div class="side-bar">
                 <div class="sidebar-items" id="overview" onmouseover="sideHoverIn(this)" onmouseout="sideHoverOut(this)"
                     onclick="sidebarToggle(this);">
@@ -162,85 +164,104 @@
                     </div>
                 </div>
             </div>
+            <!-- SIDEBAR ENDS -->
+
             <div class="main-content">
+
                 <!-- Overview -->
                 <div class="overview-dynamic-content">
+
                     <div class="main-overview">
                         <p>Overview</p>
                         <h3>Overview</h3>
                     </div>
+
                     <div class="row row-status">
                         <div class="status-card">
-                            <img src="../IMAGES/homePage/hospitals@3x.png" alt="" srcset="">
                             <div>
-                                <h3>246</h3>
-                                <h5>Total Hospitals</h5>
+                                <img src="../IMAGES/homePage/hospitals@3x.png" alt="" srcset="" style="width: 40px;">
+                            </div>
+                            <div>
+                                <h5 style="font-weight: 600;">246</h5>
+                                <h6>Total Hospitals</h6>
                             </div>
                         </div>
                         <div class="status-card">
-                            <img src="../IMAGES/homePage/endusers@3x.png" alt="" srcset="">
                             <div>
-                                <h3>2,609</h3>
-                                <h5>Total End Users</h5>
+                                <img src="../IMAGES/homePage/endusers@3x.png" alt="" srcset="" style="width: 40px;">
+                            </div>
+                            <div>
+                                <h5 style="font-weight: 600;">2,609</h5>
+                                <h6>Total End Users</h6>
                             </div>
                         </div>
                         <div class="status-card">
-                            <img src="../IMAGES/homePage/doctors@3x.png" alt="" srcset="">
                             <div>
-                                <h3>20,281</h3>
-                                <h5>Total Doctors</h5>
+                                <img src="../IMAGES/homePage/doctors@3x.png" alt="" srcset="" style="width: 40px;">
+                            </div>
+                            <div>
+                                <h5 style="font-weight: 600;">20,281</h5>
+                                <h6>Total Doctors</h6>
                             </div>
                         </div>
                         <div class="status-card">
-                            <img src="../IMAGES/homePage/appointments@3x.png" alt="" srcset="">
                             <div>
-                                <h3>12,638</h3>
-                                <h5>Total Appointments</h5>
+                                <img src="../IMAGES/homePage/appointments@3x.png" alt="" srcset="" style="width: 40px;">
+                            </div>
+                            <div>
+                                <h5 style="font-weight: 600;">12,638</h5>
+                                <h6>Total Appointments</h6>
                             </div>
                         </div>
                     </div>
+
                     <div class="row row-content">
-                        <div class="graph-455">
+
+                        <div class="graph-p">
+
                             <div class="row graph-parent">
-                                <div class="col-md-4" style="margin-top: 0.3rem;">
-                                    <div class="dropdown">
-                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
-                                            Appointments Data
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <!-- <a class="dropdown-item" href="#">Link 1</a> -->
+                                <div class="row first-bar">
+                                    <div>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                                Appointments Data
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <!-- <a class="dropdown-item" href="#">Link 1</a> -->
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                                This Year
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <!-- <a class="dropdown-item" href="#">2023</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div style="display: flex; align-items: center; margin-right: 1.3rem;">
+                                            <div class="bookings_cancellations" id="green"></div>
+                                            <h6 style="margin: 0;">Bookings</h6>
+                                        </div>
+                                        <div style="display: flex; align-items: center;">
+                                            <div class="bookings_cancellations" id="red"></div>
+                                            <h6 style="margin: 0;">Cancellations</h6>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="dropdown">
-                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
-                                            This Year
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <!-- <a class="dropdown-item" href="#">2023</a> -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 bookings-cancellations">
-                                    <div>
-                                        <div class="green-red green"></div>
-                                        <h6>Bookings</h6>
-                                    </div>
-                                    <div>
-                                        <div class="green-red red"></div>
-                                        <h6>Cancellations</h6>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
+                                <div class="row second-bar">
                                     <img id="chai-chart" src="../IMAGES/homePage/chai-chart.svg" alt="" srcset="">
                                 </div>
                             </div>
+
                         </div>
-                        <div class="graph-677">
+
+                        <div class="empty-patches-p">
                             <div class="empty-patches"></div>
                             <div class="empty-patches"></div>
                         </div>
+
                     </div>
                 </div>
                 <!-- Overview End -->

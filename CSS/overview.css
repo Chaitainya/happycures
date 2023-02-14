@@ -1,8 +1,3 @@
-/* overview */
-/* .overview-dynamic-content {
-            display: none;
-        } */
-
 .main-overview {
     min-height: 70px;
     background-color: #fff;
@@ -25,250 +20,126 @@
 }
 
 .row-status {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    min-height: 6rem;
     width: 100%;
     margin: 0;
-    padding-top: 1.3rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .status-card {
     display: flex;
-    border-radius: 0.3rem;
     background-color: #fff;
-    width: 16rem;
+    border-radius: .3rem;
+    width: 24%;
     height: 6rem;
-    margin-bottom: 1.3rem;
-    padding: 1.4% 0 0 1%;
 }
 
-.status-card>img {
-    width: 40px;
-    height: 40px;
-    margin-right: 1rem;
+.status-card:last-child {
+    padding: 0
 }
+
+.status-card>div:first-child {
+    width: 30%;
+    height: 100%;
+    /* display: flex;
+    align-items: center; */
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    padding: 1.3rem 0.5rem;
+}
+
+.status-card>div:last-child {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*  */
 
 .row-content {
     width: 100%;
-    height: 487px;
     margin: 0;
-}
-
-.graph-455 {
-    display: flex;
-    /* justify-content: end;
-            padding-right: 2.2rem; */
-    width: 75.4%;
-}
-
-.bookings-cancellations {
-    display: flex;
-    justify-content: space-around;
-    height: 38.2118px;
-}
-
-.bookings-cancellations>div {
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.bookings-cancellations>div>h6 {
-    margin: 0;
-}
-
-.green-red {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 0.5rem;
-    margin-right: .5rem;
-}
-
-.green {
-    background-color: green;
-}
-
-.red {
-    background-color: red;
+    padding: 0 1rem 1rem 1rem;
+    justify-content: space-between;
 }
 
 .graph-parent {
-    /* background-color: #fff;
-            width: 96.4%;
-            height: 96%;
-            border-radius: .3rem;
-            display: flex;
-            justify-content: center;
-            align-items: end; */
-    background-color: #fff;
-    width: 94.9%;
-    margin-left: 1.4rem;
-    height: 96%;
-    border-radius: 0.3rem;
-    display: flex;
-    justify-content: center;
-    align-items: end;
+    width: 100%;
+    margin: 0;
 }
 
-.graph-677 {
-    width: 24.6%;
-    height: 96%;
+.graph-p {
+    width: 74.7%;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.empty-patches-p {
+    width: 24%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .empty-patches {
-    width: 100%;
-    height: 47.5%;
-    margin: 0;
     background-color: #fff;
-    border-radius: .3rem;
+    height: 48.3%;
+    border-radius: 0.3rem;
+}
+
+.first-bar,
+.second-bar {
+    width: 100%;
+    margin: 0;
+}
+
+.first-bar>div {
+    width: 50%;
+}
+
+.first-bar>div:first-child {
+    display: flex;
+    justify-content: space-around;
+}
+
+.first-bar>div:last-child {
+    display: flex;
+    justify-content: end;
+}
+
+.second-bar {
+    justify-content: center;
+}
+
+#chai-chart {
+    width: 100%;
+}
+
+.bookings_cancellations {
+    width: 6px;
+    height: 6px;
+    border-radius: 1rem;
+    margin-right: 0.3rem;
+}
+
+#green {
+    background-color: green;
+}
+
+#red {
+    background-color: red;
 }
 
 .dropdown-toggle {
     background-color: transparent;
-    border-color: #d5d5d5;
+    border: 1px solid #d5d5d5 !important;
 }
 
 .dropdown-toggle::after {
-    /* Using for both overview and HMS */
-    /* content: '^';
-            background-image: url(../IMAGES/homePage/arrow_down@3x.png);
-            top: 28px;
-            left: 10rem;
-            position: absolute;
-            border: none;
-            transform: rotate(180deg);
-            color: green; */
     color: rgb(62, 171, 117);
-}
-
-@media only screen and (max-width: 1440px) {
-    .graph-455 {
-        width: 75.9%;
-    }
-
-    .graph-parent {
-        width: 91.8%;
-        margin-left: 2.37rem;
-    }
-
-    .graph-677 {
-        width: 21.1%;
-    }
-}
-
-@media only screen and (max-width: 1321px) {
-    .graph-455 {
-        width: 75.5%;
-    }
-
-    .graph-parent {
-        width: 95.8%;
-        margin-left: 1.1rem;
-    }
-
-    .graph-677 {
-        width: 23.1%;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    .status-card {
-        padding: 1.8% 0 0 2%;
-    }
-
-    .bookings-cancellations {
-        display: block;
-    }
-
-    #chai-chart {
-        width: 34.5rem;
-    }
-
-    .graph-parent,
-    .graph-677 {
-        height: 74%;
-    }
-
-    .graph-parent {
-        width: 91.8%;
-        margin-left: 1.37rem;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .status-card {
-        padding: 2% 0 0 2%;
-    }
-
-    .graph-455,
-    .graph-677 {
-        width: 100%;
-    }
-
-    .graph-677 {
-        flex-direction: row;
-        justify-content: space-evenly;
-        height: 22%;
-    }
-
-    .graph-parent {
-        height: 21rem;
-    }
-
-    .empty-patches {
-        width: 45.4%;
-        height: auto;
-    }
-
-}
-
-@media only screen and (max-width: 425px) {
-
-    .status-card {
-        width: 23.6rem;
-        padding: 3.8% 0 0 10%;
-    }
-
-    .graph-parent {
-        margin-left: 0.6rem;
-    }
-
-    #chai-chart {
-        width: 22rem;
-    }
-
-    .happy-footer {
-        height: auto;
-    }
-
-    .empty-patches {
-        width: 46%;
-    }
-}
-
-@media only screen and (max-width: 375px) {
-    .status-card {
-        padding: 3.8% 0 0 4%;
-        width: 20.6rem;
-    }
-
-    #chai-chart {
-        width: 19rem;
-    }
-
-    .footer-left>h6,
-    .footer-right>h6 {
-        font-size: 11px;
-    }
-
-    .happy-footer>div {
-        justify-content: space-between;
-        width: 100%;
-    }
-
 }
