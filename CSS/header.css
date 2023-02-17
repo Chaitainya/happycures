@@ -38,6 +38,16 @@
     margin-left: 1.5rem;
 }
 
+.profile-styles:hover, .profile-styles:active{
+    color: transparent !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.profile-styles:focus{
+    box-shadow: none !important;
+}
+
 .search-field {
     display: none;
     border: none;

@@ -73,7 +73,15 @@
                     <img class="help-icon" src="../IMAGES/homePage/Help@3x.png" alt="help icon" srcset="">
                     <img class="alert-icon" src="../IMAGES/homePage/Alert Icon@3x.png" alt=""
                         srcset="notifications icon">
-                    <img class="profile-icon" src="../IMAGES/homePage/User@3x.png" alt="progile image" srcset="">
+                    
+                    <div class="btn-group dropleft">
+                        <button type="button" class="btn btn-secondary dropdown-toggle profile-styles" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="profile-icon" src="../IMAGES/homePage/User@3x.png" alt="progile image" srcset="">
+                        </button>
+                        <div class="dropdown-menu" style="left: -92px;">
+                            <a class="dropdown-item" href="#" onclick="happyLogout();">Logout</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -1155,6 +1163,7 @@
     <script>
         // When doucment and styles loads the below IIFE will trigger automatically
         (function () {
+            // $('.dropdown-toggle .profile-styles').dropdown();
             document.getElementById('overview').style.cssText = `
             background-color: #ebfff5;
             border-left: 4px solid #3eab75;
@@ -1170,90 +1179,109 @@
             })
 
             /* HMS Table Content */
-            for (let i = 0; i < 11; i++) {
+            fetch('../JSON/hospitalDetails.json')
+            .then(data => data.json())
+            .then(response => {
+                // console.log(response);
+                let hospitalData = "";
+                response.forEach(item => {
+                    hospitalData += `
+                        <div class="hms-table-row" style="padding: 1rem 0;">
+                            <h6 style="width: 12%; color: #068f4b; text-decoration: underline; cursor: pointer;" onclick="hmsPopUp('show', '${item.hospitalName}');">${item.hospitalId}</h6>
+                            <h6 style="width: 24%; cursor: pointer;" onclick="viewHospitalFull('show_view');">${item.hospitalName}</h6>
+                            <h6>${item.DateRegistered}</h6>
+                            <h6>${item.phone}</h6>
+                            <h6>${item.email}</h6>`;
+                            if(item.status == "Active") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="activeSpan"></span>${item.status}</h6>`;
+                            if(item.status == "In Active") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="inActiveSpan"></span>${item.status}</h6>`;
+                            if(item.status == "On Hold") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="holdSpan"></span>${item.status}</h6>`;
+                    hospitalData += `</div>`;
+                })
+                document.querySelector('.hms-table-content').innerHTML += hospitalData;
+                
                 document.querySelector('.hms-table-content').innerHTML += `
-                <div class="hms-table-row" style="padding: 0.4rem 0;">
-                    <h6 style="width: 12%; color: #068f4b; text-decoration: underline; cursor: pointer;" onclick="hmsPopUp('show', 'Hospital Name');">HS00HYD001</h6>
-                    <h6 style="width: 24%; cursor: pointer;" onclick="viewHospitalFull('show_view');">JIH Hospitals Hyderabad</h6>
-                    <h6>23rd Mar 2021</h6>
-                    <h6>+91 - 9876543210</h6>
-                    <h6>hr@jihhospital.com</h6>
-                    <h6 style="width: 12%;">Active</h6>
-                </div>
-                `;
-            }
-            document.querySelector('.hms-table-content').innerHTML += `
-            <ul class="pagination pagination-sm align-items-center" style="margin: 20px 0 20px 20px;">
-                <li class="page-item"><a class="page-link" href="#"><img style="width: 18px;" src="../IMAGES/homePage/Pagination Arrow Left@3x.png"></a></li>
-                <li class="page-item"><a class="page-link" href="#" style="background-color: #068f4b; color: #fff;">1</a></li>
-                <li class="page-item"><a class="page-link" href="#" style="color: #068f4b;">2</a></li>
-                <li class="page-item"><a class="page-link" href="#" style="color: #068f4b;">3</a></li>
-                <li class="page-item"><a class="page-link" href="#"><img style="width: 18px;" src="../IMAGES/homePage/Pagination Arrow Right@3x.png"></a></li>
-            </ul>`;
+                <ul class="pagination pagination-sm align-items-center" style="margin: 20px 0 20px 20px;">
+                    <li class="page-item"><a class="page-link" href="#"><img style="width: 18px;" src="../IMAGES/homePage/Pagination Arrow Left@3x.png"></a></li>
+                    <li class="page-item"><a class="page-link" href="#" style="background-color: #068f4b; color: #fff;">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#" style="color: #068f4b;">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#" style="color: #068f4b;">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#"><img style="width: 18px;" src="../IMAGES/homePage/Pagination Arrow Right@3x.png"></a></li>
+                </ul>`;
+            })
+            .catch(error => console.log(error.message))
 
-            /* Doctor Management */
-            for (let i = 0; i < 10; i++) {
-                document.querySelector('.doctor-row').innerHTML += `
-                <div style="display: flex; height: 4.6rem; width: 100%; align-items: center;">
-                    <div style="width: 50%; padding-left: .7rem; display: flex; align-items: center;" onclick="editBanner('open')">
-                        <img src="../IMAGES/homePage/placeholder@3x.png" alt="" srcset=""
-                            style="cursor: pointer; width: 120px; height: 48px; margin-right: 0.5rem;">
-                        <h6 style="cursor: pointer; margin: 0; color: #068f4b; text-docoration: underline;">CampaignBanner.png
-                        </h6>
-                    </div>
-                    <div style="width: 15%; padding-left: .7rem;">Apr 6, 2021</div>
-                    <div style="width: 15%; padding-left: .7rem;">25 KB</div>
-                    <div style="width: 15%; padding-left: .7rem; display: flex; align-items: center;">
-                        <div style="width: 0.4rem; height: 0.4rem; border-radius: 0.4rem; background-color: #08b760; margin-right: .4rem;"></div>
-                        Active
-                    </div>
-                    <div style="width: 5%; padding-left: .7rem;">
-                        <div class="btn-group">
-                            <div class="btn-group dropleft" role="group">
-                                <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="../IMAGES/homePage/left_menu@3x.png" alt="" srcset=""
-                                        style="width: 1.1rem; cursor: pointer;">
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#" style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;
-                                        border-bottom: 1px solid #d7dbe0;" onclick="deactivateBanner('deactivate-step1')">
-                                        <img src="../IMAGES/homePage/deactivate_icon@3x.png" alt="" srcset=""
-                                            style="width: 1rem; margin: 0 .6rem;">
-                                        Deactivate
-                                    </a>
-                                    <a class="dropdown-item" href="#" style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;
-                                        border-bottom: 1px solid #d7dbe0;">
-                                        <img src="../IMAGES/homePage/view_details@3x.png" alt="" srcset=""
-                                            style="width: 1rem; margin: 0 .6rem;">
-                                        View Details
-                                    </a>
-                                    <a class="dropdown-item" href="#" style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;
-                                        border-bottom: 1px solid #d7dbe0;" onclick="renameBanner('rename-step1')">
-                                        <img src="../IMAGES/homePage/rename_icon@3x.png" alt="" srcset=""
-                                            style="width: 1rem; margin: 0 .6rem;">
-                                        Rename
-                                    </a>
-                                    <a class="dropdown-item" href="#" style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;
-                                        border-bottom: 1px solid #d7dbe0;">
-                                        <img src="../IMAGES/homePage/download_icon@3x.png" alt="" srcset=""
-                                            style="width: 1rem; margin: 0 .6rem;">
-                                        Download
-                                    </a>
-                                    <a class="dropdown-item" href="#"
-                                        style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;">
-                                        <img src="../IMAGES/homePage/delete_icon@3x.png" alt="" srcset=""
-                                            style="width: 1rem; margin: 0 .6rem;">
-                                        Delete
-                                    </a>
+            /* Configurations */
+            fetch('../JSON/configurations.json')
+            .then(data => data.json())
+            .then(response => {
+                let configurationData = "";
+                response.forEach(element => {
+                    configurationData += `
+                    <div style="display: flex; height: 4.6rem; width: 100%; align-items: center;">
+                        <div style="width: 50%; padding-left: .7rem; display: flex; align-items: center;" onclick="editBanner('open')">
+                            <img src="../IMAGES/homePage/placeholder@3x.png" alt="" srcset=""
+                                style="cursor: pointer; width: 120px; height: 48px; margin-right: 0.5rem;">
+                            <h6 style="cursor: pointer; margin: 0; color: #068f4b; text-docoration: underline;">${element.name}</h6>
+                        </div>
+                        <div style="width: 15%; padding-left: .7rem;">${element.uploadedOn}</div>
+                        <div style="width: 15%; padding-left: .7rem;">${element.fileSize}</div>
+                        <div style="width: 15%; padding-left: .7rem; display: flex; align-items: center;">`;
+                    if(element.status == "Active") configurationData += `<div style="width: 0.4rem; height: 0.4rem; border-radius: 0.4rem; background-color: #08b760; margin-right: .4rem;"></div>`;
+                    if(element.status == "Deactivated") configurationData += `<div style="width: 0.4rem; height: 0.4rem; border-radius: 0.4rem; background-color: #b0b3b8; margin-right: .4rem;"></div>`;
+                    configurationData += `${element.status}
+                        </div>
+                        <div style="width: 5%; padding-left: .7rem;">
+                            <div class="btn-group">
+                                <div class="btn-group dropleft" role="group">
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="../IMAGES/homePage/left_menu@3x.png" alt="" srcset=""
+                                            style="width: 1.1rem; cursor: pointer;">
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#" style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;
+                                            border-bottom: 1px solid #d7dbe0;" onclick="deactivateBanner('deactivate-step1')">
+                                            <img src="../IMAGES/homePage/deactivate_icon@3x.png" alt="" srcset=""
+                                                style="width: 1rem; margin: 0 .6rem;">
+                                            Deactivate
+                                        </a>
+                                        <a class="dropdown-item" href="#" style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;
+                                            border-bottom: 1px solid #d7dbe0;">
+                                            <img src="../IMAGES/homePage/view_details@3x.png" alt="" srcset=""
+                                                style="width: 1rem; margin: 0 .6rem;">
+                                            View Details
+                                        </a>
+                                        <a class="dropdown-item" href="#" style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;
+                                            border-bottom: 1px solid #d7dbe0;" onclick="renameBanner('rename-step1')">
+                                            <img src="../IMAGES/homePage/rename_icon@3x.png" alt="" srcset=""
+                                                style="width: 1rem; margin: 0 .6rem;">
+                                            Rename
+                                        </a>
+                                        <a class="dropdown-item" href="#" style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;
+                                            border-bottom: 1px solid #d7dbe0;">
+                                            <img src="../IMAGES/homePage/download_icon@3x.png" alt="" srcset=""
+                                                style="width: 1rem; margin: 0 .6rem;">
+                                            Download
+                                        </a>
+                                        <a class="dropdown-item" href="#"
+                                            style="display: flex; align-items: center; padding: 0 1rem; height: 2.4rem;">
+                                            <img src="../IMAGES/homePage/delete_icon@3x.png" alt="" srcset=""
+                                                style="width: 1rem; margin: 0 .6rem;">
+                                            Delete
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                `;
-            }
-        })()
+                    `;
+                })
+                document.querySelector('.doctor-row').innerHTML = configurationData;
+            })
+            .catch(error => console.log(error.message))
+
+        })();
+
         // Header Search Logic
         const enableSearch = () => {
             document.querySelector('.search-icon').style.display = "none";
@@ -1380,6 +1408,9 @@
                 })
                 document.querySelector('.hospital-full-view').style.display = 'none';
             }
+        }
+        const happyLogout = () => {
+            window.location.href = "./login.html";
         }
     </script>
 </body>

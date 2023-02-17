@@ -1,0 +1,90 @@
+[
+    {
+      "hospitalId": "HS00HYD001",
+      "hospitalName": "JIH Hospitals Hyderabad",
+      "DateRegistered": "23rd Mar 2021",
+      "phone": "+91 - 9876543210",
+      "email": "hr@jihhospital.com",
+      "status": "Active"
+    },
+    {
+      "hospitalId": "HS00HYD002",
+      "hospitalName": "Apollo Hyderabad Speciality Hospital",
+      "DateRegistered": "28th Mar 2021",
+      "phone": "+91 - 9876543210",
+      "email": "apollohyd@apollo.com",
+      "status": "Active"
+    },
+    {
+      "hospitalId": "HS00HYD003",
+      "hospitalName": "Narayana Nursing Home",
+      "DateRegistered": "29th Mar 2021",
+      "phone": "+91 - 9876543210",
+      "email": "hr@jihhospital.com",
+      "status": "In Active"
+    },
+    {
+      "hospitalId": "HS00HYD004",
+      "hospitalName": "Keerthi Speciality Hospitals",
+      "DateRegistered": "23th Mar 2021",
+      "phone": "+91 - 9876543210",
+      "email": "hr@jihhospital.com",
+      "status": "On Hold"
+    },
+    {
+      "hospitalId": "HS00HYD005",
+      "hospitalName": "GHMC Goverment Hospital",
+      "DateRegistered": "23th Mar 2021",
+      "phone": "+91 - 9876543210",
+      "email": "hr@jihhospital.com",
+      "status": "In Active"
+    },
+    {
+      "hospitalId": "HS00HYD001",
+      "hospitalName": "HCI Hospital Hyderabad",
+      "DateRegistered": "23th Mar 2021",
+      "phone": "+91 - 9876543210",
+      "email": "hr@jihhospital.com",
+      "status": "Active"
+    },
+    {
+      "hospitalId": "HS00HYD006",
+      "hospitalName": "Hyderabad Super Spciality Hospital",
+      "DateRegistered": "23th Mar 2021",
+      "phone": "+91 - 9876543210",
+      "email": "hr@jihhospital.com",
+      "status": "Active"
+    },
+    {
+      "hospitalId": "HS00HYD007",
+      "hospitalName": "Hello Child Card Speciality Hospital",
+      "DateRegistered": "23th Mar 2021",
+      "phone": "+91 - 9876543210",
+      "email": "hr@jihhospital.com",
+      "status": "In Active"
+    },
+    {
+      "hospitalId": "HS00HYD008",
+      "hospitalName": "Rainbow Hospitals Hyderabad",
+      "DateRegistered": "23th Mar 2021",
+      "phone": "+91 - 9876543210",
+      "email": "hr@jihhospital.com",
+      "status": "On Hold"
+    },
+    {
+      "hospitalId": "HS00HYD009",
+      "hospitalName": "Rambabu Speciality Hospitals",
+      "DateRegistered": "23th Mar 2021",
+      "phone": "+91 - 9876543210",
+      "email": "hr@jihhospital.com",
+      "status": "Active"
+    },
+    {
+      "hospitalId": "HS00HYD010",
+      "hospitalName": "Narayana Nursing Home",
+      "DateRegistered": "29th Mar 2021",
+      "phone": "+91 - 9876543210",
+      "email": "hr@jihhospital.com",
+      "status": "Active"
+    }
+  ]
