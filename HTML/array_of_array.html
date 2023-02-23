@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="name">
+    <input type="text" name="" id="age">
+    <button onclick="onSave();">Save</button>
+    <script>
+        let arr = [];
+        function onSave(){
+            let name = document.getElementById('name').value;
+            let age = document.getElementById('age').value;
+            let new_arr = [
+                {
+                    "name" : name,
+                    "age" : age
+                }
+            ];
+            arr.push(new_arr);
+            console.log(arr);
+        }
+    </script>
+</body>
+</html>

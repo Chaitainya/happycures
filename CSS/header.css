@@ -1,6 +1,7 @@
 .navbar {
     min-height: 56px;
-    background-color: #063e8f;
+    /* background-color: #063e8f; */
+    background-color: #031b3d;
 }
 
 .navbar-brand {
@@ -16,29 +17,29 @@
     justify-content: end;
 }
 
-.search-icon,
-.help-icon,
-.alert-icon {
+/* .help-icon, */
+/* .alert-icon, */
+.search-icon, .logout-icon{
     cursor: pointer;
     width: 24px;
 }
 
-.profile-icon {
+/* .profile-icon {
     cursor: pointer;
     width: 32px;
-}
+} */
 
 .search-icon {
     display: block;
 }
 
-.help-icon,
-.alert-icon,
-.profile-icon {
+/* .help-icon, */
+/* .alert-icon, */
+/* .profile-icon {
     margin-left: 1.5rem;
-}
+} */
 
-.profile-styles:hover, .profile-styles:active{
+/* .profile-styles:hover, .profile-styles:active{
     color: transparent !important;
     background-color: transparent !important;
     border-color: transparent !important;
@@ -46,7 +47,7 @@
 
 .profile-styles:focus{
     box-shadow: none !important;
-}
+} */
 
 .search-field {
     display: none;
@@ -56,7 +57,7 @@
     outline: none;
 }
 
-.btn-search {
+.btn-search, .btn-logout {
     background-color: transparent;
     color: #fff;
 }
