@@ -1,0 +1,508 @@
+* {
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main-container {
+    padding: 0;
+}
+
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+    width: 100%;
+    background: #ffffff;
+}
+
+.navbar-brand {
+    color: #333399;
+}
+
+.type-container {
+    display: flex;
+    width: 85%;
+}
+
+#navbarTogglerDemo03 {
+    justify-content: end;
+}
+
+#navbarTogglerDemo03>ul {
+    width: 27%;
+    justify-content: space-between;
+}
+
+.users {
+    color: #00AD4A !important;
+    text-decoration: underline;
+    text-underline-position: from-font;
+}
+
+.doctors {
+    color: #000 !important;
+}
+
+.download-the-app {
+    background-color: #00AD4A;
+    color: #fff;
+}
+
+.display-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0fcf2;
+    width: 100%;
+    min-height: 36rem;
+}
+
+.display-first>.row {
+    height: 100%;
+}
+
+.first-column {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 20rem;
+    justify-content: space-between;
+}
+
+/* .left-content > div:first-child > h1{
+    font-size: 4rem;
+    font-weight: 600;
+    color: #333399;
+} */
+.medical-services {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #05184d;
+}
+
+.medical-services-left {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.playStore-appStore>img {
+    width: 9rem;
+    height: 2.8rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.second-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* .second-column > img{
+    width: 30rem;
+    height: 34rem;
+    margin-left: 3rem;
+} */
+.second-column>#mobile-pattern {
+    width: 30rem;
+}
+
+.second-column>#mobile-phone {
+    height: 34rem;
+    position: absolute;
+}
+
+#four-easy-steps {
+    margin-top: 4rem;
+    color: #05184d;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.four-cards-section {
+    display: flex;
+    margin: 4rem 0;
+}
+
+.first-cards {
+    align-items: center;
+    border: none;
+}
+
+.first-cards>p {
+    text-align: center;
+}
+
+.first-cards>h5 {
+    font-weight: 600;
+}
+
+/* .card-img{
+    width: 6rem;
+    height: 6rem;
+    background-color: #8080804f;
+    margin: 1rem;
+    border-radius: 6rem;
+} */
+.display-last {
+    /* min-height: 36rem; */
+    width: 100%;
+    padding: 0;
+    min-height: 40rem;
+    background-color: #00AD4A;
+    position: relative;
+}
+
+.last-patch-p>p {
+    margin: 0;
+}
+
+.round-obj {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    background-color: #fff;
+    border-radius: 3rem;
+}
+
+.round-obj-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.round {
+    width: 27%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round-content {
+    width: 73%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.round-content>h4 {
+    font-weight: 600;
+}
+
+.round-content>h4,
+p {
+    margin: 0;
+}
+
+/* .main-round{
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 2.4rem;
+    background-color: #d8d8d8;
+} */
+
+@media screen and (max-width: 1440px) {
+    .display-first>.row {
+        margin-bottom: 4rem;
+    }
+
+    .second-column>#mobile-pattern {
+        width: 25rem;
+    }
+
+    .second-column>#mobile-phone {
+        height: 28rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .download-the-app {
+        width: 11rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* .medical-services-left{
+        display: block;
+    } */
+    .type-container {
+        justify-content: space-between;
+    }
+
+    .download-the-app {
+        width: 8rem;
+        font-size: 12px;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .medical-services {
+        font-size: 2rem;
+    }
+
+    .playStore-appStore {
+        display: flex;
+        justify-content: center;
+    }
+
+    .left-content {
+        min-height: 17rem;
+    }
+
+    .main-heading-cures>h5 {
+        text-align: center;
+    }
+
+    .second-column>#mobile-pattern {
+        width: 18rem;
+    }
+
+    .second-column>#mobile-phone {
+        height: auto;
+        width: 16rem;
+    }
+
+    .second-column {
+        margin-top: 3.5rem;
+    }
+
+    .display-last>.container {
+        padding-bottom: 2rem;
+    }
+
+    .four-cards-section {
+        display: block;
+    }
+
+    .second-column>img {
+        width: 100%;
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    .round-obj-p {
+        margin-bottom: .5rem;
+    }
+}
+
+/*  */
+/*  */
+
+.container-fluid {
+    min-height: 100vh;
+}
+
+.main-container {
+    padding: 0;
+}
+
+#second-blue-head {
+    color: #05184d;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.person-card {
+    border-radius: 2rem;
+    border: none;
+    box-shadow: rgb(0 0 0 / 15%) 0px 3px 7px 0px;
+}
+
+.round-second-obj {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* height: 6rem; */
+    height: 2rem;
+    background-color: #fff;
+    border-radius: 3rem;
+}
+
+/* .main-round{
+    height: 3.4rem;
+    width: 3.4rem;
+    border-radius: 2.4rem;
+    background-color: #d8d8d8;
+} */
+.round-second-content {
+    /* width: 73%; */
+    width: 58%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.round-second-content>p {
+    font-weight: 600;
+    margin: 0;
+}
+
+.docter-row {
+    width: 100%;
+    min-height: 34rem;
+    display: flex;
+    align-items: end;
+}
+
+.playStore-second-appStore>img {
+    width: 9rem;
+    height: 2.8rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.docter-banner {
+    width: 100%;
+    height: 22.8rem;
+    background: #ced6ef;
+    display: flex;
+    align-items: end;
+}
+
+.docter-img-p {
+    width: 45%;
+    min-height: 20rem;
+}
+
+.docter-img-content {
+    width: 55%;
+    min-height: 20rem;
+}
+
+.faq {
+    width: 100%;
+    min-height: 36rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#accordion {
+    max-width: 50rem;
+}
+
+#accordion>.card {
+    border: none;
+    border-bottom: 1px solid #00AD4A;
+    cursor: pointer;
+}
+
+.footer-row {
+    width: 100%;
+    min-height: 36rem;
+    background-color: #09210b;
+    color: #fff;
+}
+
+.card-header {
+    cursor: pointer;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-header>img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.temp-row {
+    height: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+    .person-card {
+        margin-top: 1rem;
+    }
+
+    #second-blue-head {
+        font-size: 1.5rem;
+    }
+
+    .faq {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .round-second-obj {
+        height: 6rem;
+    }
+
+    .docter-row {
+        margin-top: 10rem;
+    }
+
+    .docter-img-p {
+        margin-top: -10.5rem;
+    }
+
+    .docter-banner {
+        height: initial;
+        min-height: 22.8rem;
+        display: block;
+    }
+
+    .docter-img-content {
+        min-height: 12rem;
+    }
+
+    .docter-img-p,
+    .docter-img-content {
+        width: 100%;
+    }
+
+    .docter-img-p>img {
+        width: 100%;
+    }
+
+    #second-blue-head {
+        text-align: center;
+    }
+
+    .playStore-second-appStore {
+        display: flex;
+        justify-content: center;
+    }
+
+    #accordion {
+        width: 25rem !important;
+    }
+
+    .footer-row {
+        min-height: 60rem !important;
+    }
+
+    .footer-row>.container {
+        padding-left: 2rem;
+    }
+
+    .temp-row {
+        height: 4%;
+    }
+}

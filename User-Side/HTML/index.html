@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Cures</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+
+<body>
+    <div class="container-fluid main-container">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="type-container">
+
+                <a class="navbar-brand" href="#"><img src="../Images/logo.png" alt="" srcset=""></a>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <!-- <div class="mr-auto"></div> -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link users" href="#" onclick="selectMenu('users')">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link doctors" href="#" onclick="selectMenu('doctors')">Doctors</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn download-the-app">Download The App</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="../Images/menu.png" style="width: 2rem;" alt="menue icon">
+                </button>
+
+            </div>
+        </nav>
+
+        <div class="container-fluid display-first">
+            <div class="row">
+                <div class="col-md-6 first-column">
+                    <div class="left-content">
+                        <div class="main-content">
+                            <h1 class="medical-services">Get quick</h1>
+                            <div class="medical-services-left">
+                                <div style="margin-right: 1rem;">
+                                    <h1 class="medical-services" style="margin-bottom: 0;">Medical</h1>
+                                    <img src="../Images/ellipse-95@2x.png" style="margin-left: 0.5rem;
+                                    width: 4.4rem;
+                                    margin-top: -1rem;" alt="" srcset="">
+                                </div>
+                                <h1 class="medical-services" style="margin-bottom: 0;"> Services</h1>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="main-heading-cures">
+                                <h5>Find everything you need at your fingertips. Find hospitals</h5>
+                                <h5>book apointment, shop online, etc.</h5>
+                            </div>
+                            <div class="playStore-appStore">
+                                <img src="../Images/elements-store-badges.png">
+                                <img src="../Images/elements-store-badges-apple.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 second-column">
+                    <img id="mobile-pattern" src="../Images/pattern@3x.png" alt="" srcset="">
+                    <img id="mobile-phone" src="../Images/mobile-app@3x.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 id="four-easy-steps">4 easy steps to get medical services</h1>
+            <div class="four-cards-section">
+                <div class="card first-cards">
+                    <!-- <div class="card-img"></div> -->
+                    <img style="padding: 1.5rem;" src="../Images/element-icons-set-01.png" alt="">
+                    <h5>Search Hospital</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint qui voluptatem.</p>
+                </div>
+                <div class="card first-cards">
+                    <!-- <div class="card-img"></div> -->
+                    <img style="padding: 1.5rem;" src="../Images/element-icons-set-02.png" alt="">
+                    <h5>Select and Check Doctors</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint qui voluptatem.</p>
+                </div>
+                <div class="card first-cards">
+                    <!-- <div class="card-img"></div> -->
+                    <img style="padding: 1.5rem;" src="../Images/element-icons-set-03.png" alt="">
+                    <h5>Choose Data and Time</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint qui voluptatem.</p>
+                </div>
+                <div class="card first-cards">
+                    <!-- <div class="card-img"></div> -->
+                    <img style="padding: 1.5rem;" src="../Images/element-icons-set-04.png" alt="">
+                    <h5>Schedule Appointment</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint qui voluptatem.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid display-last">
+            <div class="container">
+                <div style="padding: 3rem 0; color: #fff;">
+                    <div>
+                        <h1>Book an appointment today,</h1>
+                        <h1>explore services</h1>
+                    </div>
+                    <div class="last-patch-p">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, sequi maxime incidunt
+                            error.</p>
+                        <p>sequi maxime incidunt error amet dolor Inventore.</p>
+                    </div>
+                </div>
+                <div class="row" style="min-height: 17rem;">
+                    <div class="col-md-4 round-obj-p">
+                        <div class="round-obj">
+                            <div class="round">
+                                <!-- <div class="main-round" style="background-color: #00AD4A;"></div> -->
+                                <img src="../Images/element-icons-5.png" alt="" srcset="">
+                            </div>
+                            <div class="round-content">
+                                <h4>Hospitals</h4>
+                                <p>Lorem ipsum dolor sit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 round-obj-p">
+                        <div class="round-obj">
+                            <div class="round">
+                                <!-- <div class="main-round"></div> -->
+                                <img src="../Images/element-icons-6.png" alt="" srcset="">
+                            </div>
+                            <div class="round-content">
+                                <h4>Lab Tests</h4>
+                                <p>Lorem ipsum dolor sit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 round-obj-p">
+                        <div class="round-obj">
+                            <div class="round">
+                                <!-- <div class="main-round"></div> -->
+                                <img src="../Images/element-icons-7.png" alt="" srcset="">
+                            </div>
+                            <div class="round-content">
+                                <h4>Medicines</h4>
+                                <p>Lorem ipsum dolor sit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 round-obj-p">
+                        <div class="round-obj">
+                            <div class="round">
+                                <!-- <div class="main-round"></div> -->
+                                <img src="../Images/element-icons-8.png" alt="" srcset="">
+                            </div>
+                            <div class="round-content">
+                                <h4>Blood Banks</h4>
+                                <p>Lorem ipsum dolor sit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 round-obj-p">
+                        <div class="round-obj">
+                            <div class="round">
+                                <!-- <div class="main-round"></div> -->
+                                <img src="../Images/element-icons-9.png" alt="" srcset="">
+                            </div>
+                            <div class="round-content">
+                                <h4>Vaccines</h4>
+                                <p>Lorem ipsum dolor sit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 round-obj-p">
+                        <div class="round-obj">
+                            <div class="round">
+                                <!-- <div class="main-round"></div> -->
+                                <img src="../Images/element-icons-10.png" alt="" srcset="">
+                            </div>
+                            <div class="round-content">
+                                <h4>Ambulances</h4>
+                                <p>Lorem ipsum dolor sit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="position: absolute; width: 100%; bottom: 0;">
+                <img src="../Images/shapes@2x.png" alt="" srcset="" style="width: 100%;">
+            </div>
+        </div>
+
+        <!--  -->
+        <!--  -->
+
+        <div class="container">
+            <h1 id="second-blue-head" style="margin-top: 4rem; text-align: center;">We love our users - and</h1>
+            <h1 id="second-blue-head" style="text-align: center; margin-bottom: 3rem;">our users love us</h1>
+            <div class="row" style="justify-content: space-around;">
+                <div class="card person-card" style="width: 21rem;
+                padding: 0 1rem;">
+                    <div class="round-second-obj">
+                        <!-- <div class="main-round"></div> -->
+                        <img src="../Images/element-profile-picture.png" alt="">
+                        <div class="round-second-content">
+                            <p>Sive Karthikeyan Raj</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Card title</h5> -->
+                        <div style="padding: 1rem 0;">
+                            <img src="../Images/element-icons.png" alt="" srcset="">
+                            <img src="../Images/element-icons.png" alt="" srcset="">
+                            <img src="../Images/element-icons.png" alt="" srcset="">
+                            <img src="../Images/element-icons-half.png" alt="" srcset="">
+                            <img src="../Images/element-icons-empty.png" alt="" srcset="">
+                        </div>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veritatis,
+                            quas inventore quo repellat delectus expedita placeat ipsa sint minus perspiciatis
+                            blanditiis hic mollitia eius accusamus odio, odit, aut iste.</p>
+                    </div>
+                </div>
+                <div class="card person-card" style="width: 21rem;
+                padding: 0 1rem;">
+                    <div class="round-second-obj">
+                        <!-- <div class="main-round"></div> -->
+                        <img src="../Images/element-profile-picture.png" alt="">
+                        <div class="round-second-content">
+                            <p>Sive Karthikeyan Raj</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div style="padding: 1rem 0;">
+                            <img src="../Images/element-icons.png" alt="" srcset="">
+                            <img src="../Images/element-icons.png" alt="" srcset="">
+                            <img src="../Images/element-icons.png" alt="" srcset="">
+                            <img src="../Images/element-icons-half.png" alt="" srcset="">
+                            <img src="../Images/element-icons-empty.png" alt="" srcset="">
+                        </div>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto nihil,
+                            obcaecati aliquid minus architecto ea quidem aspernatur. Natus sit, distinctio tempora nisi,
+                            eius molestias explicabo consequatur fuga mollitia quas eaque.</p>
+                    </div>
+                </div>
+                <div class="card person-card" style="width: 21rem;
+                padding: 0 1rem;">
+                    <div class="round-second-obj">
+                        <!-- <div class="main-round"></div> -->
+                        <img src="../Images/element-profile-picture.png" alt="">
+                        <div class="round-second-content">
+                            <p>Sive Karthikeyan Raj</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div style="padding: 1rem 0;">
+                            <img src="../Images/element-icons.png" alt="" srcset="">
+                            <img src="../Images/element-icons.png" alt="" srcset="">
+                            <img src="../Images/element-icons.png" alt="" srcset="">
+                            <img src="../Images/element-icons-half.png" alt="" srcset="">
+                            <img src="../Images/element-icons-empty.png" alt="" srcset="">
+                        </div>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui atque facilis
+                            commodi nam voluptatum nemo nobis modi eligendi ratione sequi labore perspiciatis cum quod,
+                            nesciunt animi debitis praesentium, recusandae quisquam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row docter-row">
+            <div class="docter-banner">
+                <div class="docter-img-p">
+                    <img src="../Images/graphical-asset.png" alt="" srcset="">
+                </div>
+                <div class="docter-img-content">
+                    <div>
+                        <h1 id="second-blue-head" style="margin-top: 4rem;">Get Start your healthy</h1>
+                        <h1 id="second-blue-head">journey with happy cures</h1>
+                    </div>
+                    <div class="playStore-second-appStore">
+                        <img src="../Images/elements-store-badges.png" style="margin-right: 1rem;">
+                        <img src="../Images/elements-store-badges-apple.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row faq">
+            <h1>FAQ's</h1>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne" onclick="openTheAccord('collapseOne')">
+                        <h5 class="mb-0">
+                            How to get started with happy cures?
+                        </h5>
+                        <img src="../Images/up-arrow.png" alt="" srcset="">
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                            nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                            beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                            lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                            probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo" onclick="openTheAccord('collapseTwo')">
+                        <h5 class="mb-0">
+                            How to block appointments?
+                        </h5>
+                        <img src="../Images/down-arrow.png" alt="" srcset="">
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                            nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                            beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                            lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                            probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree" onclick="openTheAccord('collapseThree')">
+                        <h5 class="mb-0">
+                            Will I be able to cancel / reschedule appointments?
+                        </h5>
+                        <img src="../Images/down-arrow.png" alt="" srcset="">
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                            nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                            beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                            lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                            probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFour" onclick="openTheAccord('collapseFour')">
+                        <h5 class="mb-0">
+                            How to view product suggestions & reviews?
+                        </h5>
+                        <img src="../Images/down-arrow.png" alt="" srcset="">
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                            nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                            beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                            lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                            probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; color: #00AD4A; font-weight: 600;"><a style="cursor: pointer;">View All
+                    FAQ's</a></div>
+        </div>
+        <div class="row footer-row">
+            <div class="container">
+                <div class="row temp-row"></div>
+                <div class="row" style="height: 65%;">
+                    <div class="col-md-3">
+                        <!-- <h1>happy cures</h1> -->
+                        <img src="../Images/logo-fff.png" alt="" srcset="">
+                    </div>
+                    <div class="col-md-3">
+                        <h4 style="margin: .7rem 0 1rem;">Sitemap</h4>
+                        <h6>Home</h6>
+                        <h6>About</h6>
+                        <h6>Growers</h6>
+                        <h6>Merchants</h6>
+                        <h6>Contact</h6>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 style="margin: .7rem 0 1rem;">Socials</h4>
+                        <h6>Facebook</h6>
+                        <h6>LinkedIn</h6>
+                        <h6>Instagram</h6>
+                        <h6>Twitter</h6>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 style="margin: .7rem 0 1rem;">Head Office</h4>
+                        <h6>Xilliams Corner Wine © 2017. 1112 A Market St # Ste B22, Charlottesville, CA 45565</h6>
+                        <h4 style="margin-top: 1.7rem;">News Letter</h4>
+                        <div style="display: flex;">
+                            <input style="width: 100%;
+                        background: none;
+                        border: none;
+                        border-bottom: 1px solid #fff;
+                        outline: none;
+                        color: #fff;" type="text" placeholder="Enter your email address">
+                            <img style="width: 2rem;
+                        border-bottom: 1px solid #fff; cursor: pointer;" src="../Images/email@2x.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="height: 25%; justify-content: space-between;">
+                    <div class="col-md-3">contact@happycures.com</div>
+                    <div class="col-md-3"><img src="../Images/phone.png" alt="" srcset="">[123] - 456 - 7890</div>
+                    <div class="col-md-3">© 2023 happy cures. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const selectMenu = (type) => {
+            // let types = ['users', 'doctors'];
+            // types.forEach(ele => {
+            //     if(ele == type){
+            //         $('.' + type).css({
+            //             'text-decoration' : 'underline',
+            //             'text-underline-position' : 'from-font'
+            //         })
+            //     }else{
+            //         $('.' + type).css({
+            //             'text-decoration' : 'none',
+            //             'color' : '#000'
+            //         })
+            //     }
+            // })
+        }
+    </script>
+    <script>
+        const openTheAccord = (which_accord) => {
+            $('#' + which_accord).collapse('show')
+        }
+    </script>
+</body>
+
+</html>
