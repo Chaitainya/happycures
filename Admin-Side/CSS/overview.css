@@ -128,11 +128,13 @@
 }
 
 #green {
-    background-color: green;
+    /* background-color: green; */
+    background-color: #068f4b;
 }
 
 #red {
-    background-color: red;
+    /* background-color: red; */
+    background-color: #ffbdad;
 }
 
 .dropdown-toggle {

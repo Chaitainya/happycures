@@ -6,7 +6,8 @@
 
 .hospital-full-details > .header{
     width: 100%;
-    min-height: 71px;
+    /* min-height: 71px; */
+    min-height: 62px;
     background-color: #fff;
     display: flex;
     border-bottom: 1px solid #d5d5d6;
@@ -56,6 +57,7 @@
     width: 100%;
     min-height: 37.188rem;
     display: flex;
+    border-bottom: 1px solid #afafb1;
 }
 
 .left-container, .right-container{

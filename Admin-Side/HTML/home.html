@@ -89,7 +89,7 @@
                 </div>
             </div>
         </nav>
-        <div class="row main-row" style="display: none;">
+        <div class="row main-row">
 
             <!-- HMS POPUP ALERT -->
             <div class="hms-pop-edit-alert">
@@ -272,8 +272,63 @@
                         </div>
 
                         <div class="empty-patches-p">
-                            <div class="empty-patches"></div>
-                            <div class="empty-patches"></div>
+
+                            <div class="empty-patches" style="height: 100%; padding: 1rem;">
+                                <div class="dropdown">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                                        style="border: 1px solid #d5d5d5">
+                                        2022
+                                    </button>
+                                    <div class="dropdown-menu"></div>
+                                </div>
+                                <div style="padding: 1rem 0;">
+                                    <h6 style="color: #033d20;">Total Earnings</h6>
+                                    <div style="display: flex; align-items: center;">
+                                        <img style="height: 38px;
+                                        width: 32px;" src="../IMAGES/homePage/indian_paise_black@3x.png" alt="">
+                                        <h1 style="height: 47px;
+                                        margin: 0; color: #033d20;">5.60 L</h1>
+                                    </div>
+                                </div>
+                                <div style="width: 100%; display: flex; justify-content: center; padding-bottom: 1rem;">
+                                    <div style="width: 90%; border: 1px solid #d7dbe0;"></div>
+                                </div>
+                                <div>
+                                    <h6 style="color: #033d20; margin-bottom: 1.5rem;">Top Hospitals</h6>
+
+                                    <div style="height: 2.6rem; display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                        <img style="height: 38px; width: 38px; border-radius: 2rem; margin-left: 1rem;" src="../IMAGES/homePage/Hospital@3x.png" alt="">
+                                        <div style="height: 100%; margin-left: 1rem; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <h6 style="margin: 0;">JIH Hospitals, Hyde...</h6>
+                                            <h6 style="margin: 0; font-size: 13px; color: #7f8184;">Basic Product License</h6>
+                                        </div>
+                                    </div>
+                                    <div style="height: 2.6rem; display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                        <img style="height: 38px; width: 38px; border-radius: 2rem; margin-left: 1rem;" src="../IMAGES/homePage/Hospital@3x.png" alt="">
+                                        <div style="height: 100%; margin-left: 1rem; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <h6 style="margin: 0;">JIH Hospitals, Hyde...</h6>
+                                            <h6 style="margin: 0; font-size: 13px; color: #7f8184;">Basic Product License</h6>
+                                        </div>
+                                    </div>
+                                    <div style="height: 2.6rem; display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                        <img style="height: 38px; width: 38px; border-radius: 2rem; margin-left: 1rem;" src="../IMAGES/homePage/Hospital@3x.png" alt="">
+                                        <div style="height: 100%; margin-left: 1rem; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <h6 style="margin: 0;">JIH Hospitals, Hyde...</h6>
+                                            <h6 style="margin: 0; font-size: 13px; color: #7f8184;">Basic Product License</h6>
+                                        </div>
+                                    </div>
+                                    <div style="height: 2.6rem; display: flex; align-items: center; margin-bottom: 1.5rem;">
+                                        <img style="height: 38px; width: 38px; border-radius: 2rem; margin-left: 1rem;" src="../IMAGES/homePage/Hospital@3x.png" alt="">
+                                        <div style="height: 100%; margin-left: 1rem; display: flex; flex-direction: column; justify-content: space-between;">
+                                            <h6 style="margin: 0;">JIH Hospitals, Hyde...</h6>
+                                            <h6 style="margin: 0; font-size: 13px; color: #7f8184;">Basic Product License</h6>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="empty-patches" style="display: none;"></div>
                         </div>
 
                     </div>
@@ -472,7 +527,8 @@
                                             justify-content: space-between;
                                             align-items: center;
                                             font-size: 14px;
-                                            color: #495057;">
+                                            color: #495057;
+                                            border: 1px solid #ced4da;">
                                             Telangana
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -949,7 +1005,22 @@
                                     </div>
                                 </div>
                                 <div class="second-section-second">
-                                    <div class="row-item">
+
+                                    <div class="row-item" style="height: 16%; margin-bottom: 1rem;">
+                                    <div class="head-division">
+                                        <h6>Account</h6>
+                                    </div>
+                                    <div style="padding: 1rem;">
+                                        <h6>License Type: Basic Product</h6>
+                                        <h6 style="display: flex; align-items: center;">Status: <span style="background-color: #08b760;
+                                            width: 7px;
+                                            height: 7px;
+                                            border-radius: 6px;
+                                            margin: 0 4px 0 9px;"></span> Active</h6>
+                                    </div>
+                                </div>
+
+                                    <div class="row-item" style="height: 82%;">
                                         <div class="head-division">
                                             <h6>Doctors</h6>
                                             <div>
@@ -1079,12 +1150,13 @@
 
                     <div class="configuration-popup-edit" style="display: none;">
                         <div class="row first-row">
-                            <h6>Details</h6>
+                            <!-- <h6>Details</h6> -->
+                            <h6>CampaignBanner.png</h6>
                             <img src="../IMAGES/homePage/banner_edit_close@3x.png" alt="" srcset=""
                                 style="width: 24px; cursor: pointer;" onclick="editBanner('close')">
                         </div>
                         <div class="row second-row">
-                            <h6>CampaignBanner.png</h6>
+                            <!-- <h6>CampaignBanner.png</h6> -->
                             <img src="../IMAGES/homePage/banner@3x.png" alt="" srcset="" style="width: 240px;">
                             <button type="button" class="btn"
                                 style="margin-top: 0.5rem; color: #046635; border: 2px solid #046635;">
@@ -1092,6 +1164,35 @@
                                 Change Image
                             </button>
                         </div>
+
+                        <div class="row third-row">
+                            <h6>
+                                <span
+                                    style="color: rgb(186 54 23); font-size: 21px; margin-right: 5px; position: relative; top: 5.2px;">*</span>
+                                    Image Name
+                            </h6>
+                            <input id="" style="width: 100%; padding: 0.5rem; color: #000;" value="CampaignBanner">
+                        </div>
+                        <div class="row" style="flex-direction: column;
+                        padding: 1rem 2rem;
+                        width: 100%;
+                        margin: 0;">
+                            <h6 style="font-weight: 600;">Uploaded On</h6>
+                            <h6>Dec 12, 2022</h6>
+                        </div>
+                        <div class="row" style="width: 100%;
+                        margin: 0;
+                        padding: 1rem 2rem;">
+                            <div style="flex: 1;">
+                                <h6 style="font-weight: 600;">Type</h6>
+                                <h6>JPG</h6>
+                            </div>
+                            <div style="flex: 1;">
+                                <h6 style="font-weight: 600;">Size</h6>
+                                <h6>2.2 MB</h6>
+                            </div>
+                        </div>
+
                         <div class="row third-row">
                             <h6>
                                 <span
@@ -1099,7 +1200,7 @@
                                 Details
                             </h6>
                             <textarea name="" id="" cols="30" rows="10"
-                                style="width: 100%; height: 100px; resize: none; padding: 0.5rem; color: #848485;">This banner is created for new year offers and will be live untill 30th Jan 2023.</textarea>
+                                style="width: 100%; height: 100px; resize: none; padding: 0.5rem; color: #000;">This banner is created for new year offers and will be live untill 30th Jan 2023.</textarea>
                         </div>
                         <div class="row last-row">
                             <button type="button" class="btn"
@@ -1144,7 +1245,8 @@
             </div>
         </div>
 
-        <div class="hospital-full-details">
+        <!-- Hospital full view -->
+        <div class="hospital-full-details" style="display: none;">
             <div class="header">
                 <div class="header-left">
                     <h5>JIH Hospitals Hyderabad</h5>
@@ -1192,7 +1294,10 @@
                                     <label for="state" style="color: #000000; font-weight: 600;">Select State</label>
                                 </div>
                                 <div style="width: 100%; display: flex; flex-direction: column;">
-                                    <input type="text" name="" id="" style="height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px; margin-bottom: .5rem;" value="Telangana">
+                                    <!-- <input type="text" name="" id="" style="height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px; margin-bottom: .5rem;" value="Telangana"> -->
+                                    <select class="form-control" id="sel1" style="height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px; margin-bottom: .5rem;">
+                                        <option>Telangana</option>
+                                    </select>
                                 </div>
                             </div>
                             <div>
@@ -1208,7 +1313,154 @@
                         <!-- </div> -->
                     </div>
                 </div>
-                <div class="right-container"></div>
+                <div class="right-container">
+                    <div style="width: 100%; height: 40%;">
+                        <label for="" style="width: 63%;
+                        color: #000000;
+                        font-weight: 600;">Picture</label>
+                        <img src="../IMAGES/homePage/Rectangle 16-full-view@3x.png" alt="" style="width: 100%; height: 86%; object-fit: cover;">
+                    </div>
+                    <div style="width: 100%; height: 35%;">
+                        <label for="" style="width: 63%;
+                        color: #000000;
+                        font-weight: 600; margin: 0.5rem 0 0;">About Hospital</label>
+                        <p style="color: #626466; padding: 1rem;
+                        border: 1px solid #c4c7cc; border-radius: .3rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consectetur venenatis ex quis hendrerit. Donec blandit pulvinar libero, quis semper ex sollicitudin nec. Aenean sed vehicula eros. Duis augue nisl, congue laoreet sem at, pharetra consectetur lorem. Donec quis lectus sagittis, facilisis eros vel, mollis ante. Praesent a tincidunt massa. In non porttitor nisl, ut dignissim mi.</p>
+                    </div>
+                    <div style="width: 100%; height: 25%; display: flex;
+                    align-items: center;
+                    justify-content: space-evenly; background-color: #ffebe6;">
+                        <div style="width: 47%;">
+                            <label>Status of Hospital Account</label>
+                            <select class="form-control" id="sel1">
+                                <option>Active</option>
+                            </select>
+                        </div>
+                        <div style="width: 47%;">
+                            <label>License Type</label>
+                            <select class="form-control" id="sel1">
+                                <option>Basic Product</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-banner-second" style="display: flex;">
+                <div class="view-banner-second-left" style="flex: 1;
+                padding: 1rem;">
+
+                        <h5>Amenities</h5>
+                        <div style="padding-left: 2rem;">
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;" checked>
+                                <img style="width: 16px; margin-right: 0.2rem;"
+                                    src="../IMAGES/homePage/general@3x.png" alt="" srcset="">
+                                <h6 class="check-box-item">General</h6>
+                            </div>
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;" checked>
+                                <img style="width: 16px; margin-right: 0.2rem;"
+                                    src="../IMAGES/homePage/emergency@3x.png" alt="" srcset="">
+                                <h6 class="check-box-item">Emergency</h6>
+                            </div>
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;" checked>
+                                <img style="width: 16px; margin-right: 0.2rem;"
+                                    src="../IMAGES/homePage/pharmacy@3x.png" alt="" srcset="">
+                                <h6 class="check-box-item">Pharmacy</h6>
+                            </div>
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;" checked>
+                                <img style="width: 16px; margin-right: 0.2rem;"
+                                    src="../IMAGES/homePage/ambulance@3x.png" alt="" srcset="">
+                                <h6 class="check-box-item">Ambulance</h6>
+                            </div>
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;" checked>
+                                <img style="width: 16px; margin-right: 0.2rem;"
+                                    src="../IMAGES/homePage/advancedLabs@3x.png" alt="" srcset="">
+                                <h6 class="check-box-item">Advanced Labs</h6>
+                            </div>
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;" checked>
+                                <img style="width: 16px; margin-right: 0.2rem;"
+                                    src="../IMAGES/homePage/bloodBankFacility@3x.png" alt="" srcset="">
+                                <h6 class="check-box-item">Blood Bank Facility</h6>
+                            </div>
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;">
+                                <img style="width: 16px; margin-right: 0.2rem;"
+                                    src="../IMAGES/homePage/247EmergencyAvailability@3x.png" alt="" srcset="">
+                                <h6 class="check-box-item">24 x 7 Emergency Availability</h6>
+                            </div>
+                        </div>
+
+                </div>
+
+                <div class="view-banner-second-right" style="flex: 1;
+                padding: 1rem;">
+                    
+                    <h5>Services Offered</h5>
+                        <div style="padding-left: 2rem;">
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;" checked>
+                                <h6 class="check-box-item">Pediatric Intensive Care Unit</h6>
+                            </div>
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;" checked>
+                                <h6 class="check-box-item">Intensive Care Unit</h6>
+                            </div>
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;" checked>
+                                <h6 class="check-box-item">Cardiology Department</h6>
+                            </div>
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;">
+                                <h6 class="check-box-item">Emergency Department</h6>
+                            </div>
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;" checked>
+                                <h6 class="check-box-item">Pediatric Intensive Care Unit</h6>
+                            </div>
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;" checked>
+                                <h6 class="check-box-item">Cardiovascular Intensive Care Unit</h6>
+                            </div>
+                            <div
+                                style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                    style="margin-right: .5rem;">
+                                <h6 class="check-box-item">Physical Therapy</h6>
+                            </div>
+                        </div>
+
+                </div>
             </div>
         </div>
 
@@ -1555,18 +1807,21 @@
                 </div>`;
         
             for(let i = 1; i <= pagination_list.length; i++){
-                if(i > 5){
-                    if(pagination_list.length == i){
-                        paginate += `<div id="more0" onclick="blockThePages('more0', 'pageno${pagination_list.length - 1}');">...</div>`;
-                        paginate += `<div id="pageno${pagination_list.length - 1}" onclick="changeThePage(${pagination_list.length - 1}, this);">${pagination_list.length - 1}</div>`;
-                    }
-                    // moreThanFive = true;
-                    paginate += `<div id="pageno${i - 1}" style="display: none;" onclick="changeThePage(${i - 1}, this);">${i}</div>`;
-                    hidden_pages.push(`pageno${i - 1}`);
-                }else{
-                    if(i == selected_page) paginate += `<div id="pageno${i - 1}" style="background-color: #046635; color: #fff;" onclick="changeThePage(${i - 1}, this);">${i}</div>`;
-                    else paginate += `<div id="pageno${i - 1}" onclick="changeThePage(${i - 1}, this);">${i}</div>`;
-                }
+                // if(i > 5){
+                //     if(pagination_list.length == i){
+                //         paginate += `<div id="more0" onclick="blockThePages('more0', 'pageno${pagination_list.length - 1}');">...</div>`;
+                //         paginate += `<div id="pageno${pagination_list.length - 1}" onclick="changeThePage(${pagination_list.length - 1}, this);">${pagination_list.length - 1}</div>`;
+                //     }
+                //     // moreThanFive = true; already commented
+                //     paginate += `<div id="pageno${i - 1}" style="display: none;" onclick="changeThePage(${i - 1}, this);">${i}</div>`;
+                //     hidden_pages.push(`pageno${i - 1}`);
+                // }else{
+                //     if(i == selected_page) paginate += `<div id="pageno${i - 1}" style="background-color: #046635; color: #fff;" onclick="changeThePage(${i - 1}, this);">${i}</div>`;
+                //     else paginate += `<div id="pageno${i - 1}" onclick="changeThePage(${i - 1}, this);">${i}</div>`;
+                // }
+
+                if(i == selected_page) paginate += `<div id="pageno${i - 1}" style="background-color: #046635; color: #fff;" onclick="changeThePage(${i - 1}, this);">${i}</div>`;
+                else paginate += `<div id="pageno${i - 1}" onclick="changeThePage(${i - 1}, this);">${i}</div>`;
             }
 
             paginate += `<div id="next1" onclick="changeThePage('next', this);">
