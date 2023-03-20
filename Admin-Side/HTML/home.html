@@ -1847,6 +1847,34 @@
             document.getElementById("full-details-hospital-base64").innerHTML = "";
             document.getElementById("full-details-hospital-about").innerHTML = "";
 
+            let servicesOffered = [
+                "Pediatric-Intensive-Care-Unit",
+                "Intensive-Care-unit",
+                "Cardiology-Department",
+                "Emergency-Department",
+                "Pediatric-Intensive-Care-Unit",
+                "Cardiovascular-Intensive-Care-Unit",
+                "Physical-Therapy"
+            ];
+
+            servicesOffered.forEach(ele => {
+                document.getElementById(ele).checked = false;
+            })
+
+            let amenitiesOffered = [
+                "General",
+                "Emergency",
+                "Pharmacy",
+                "Ambulance",
+                "Advanced-Labs",
+                "Blood-Bank-Facility",
+                "24-x-7-Emergency-Availability"
+            ];
+
+            amenitiesOffered.forEach(ele => {
+                document.getElementById(ele).checked = false;
+            })
+
             document.querySelector('.main-row').style.display = 'none';
             document.querySelector('.hospital-full-details').style.display = 'block';
         }
