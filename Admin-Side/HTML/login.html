@@ -33,11 +33,11 @@
                     <div class="form">
                         <div class="form-group">
                           <label id="email-username" for="emailUsername"><span class="mandate-field">*</span>Email</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+                          <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="Enter Email" value="">
                         </div>
                         <div class="form-group">
                           <label id="password" for="loginPassword"><span class="mandate-field">*</span>Password</label>
-                          <input type="password" class="form-control" id="login-password" placeholder="Enter Password">
+                          <input type="password" class="form-control" id="login-password" placeholder="Enter Password" value="">
                         </div>
                         <div class="form-check remember-parent">
                           <div>
@@ -70,7 +70,44 @@
 
     <script>
         const happycures = () => {
-            window.location.href = "./home.html";
+
+            let user = document.getElementById('login-email').value;
+            let pass = document.getElementById('login-password').value;
+
+            if(user == "" && pass == ""){
+                alert("Fields cannot be empty.");
+                return;
+            }
+            if(user == ""){
+                alert("Email is empty.");
+                return;
+            }
+            if(pass == ""){
+                alert("Password is empty.");
+                return;
+            }
+
+            fetch('https://happycuresapi.nandeeshwaraseeds.com/app/bouserlogin',
+            {
+                method : "POST",
+                headers : {
+                    "Accept" : "application/json",
+                    "Content-type" : "application/json"
+                },
+                body : JSON.stringify(
+                    {
+                        username : user,
+                        password : pass
+                    }
+                )
+            })
+            .then(result => result.json())
+            .then(result => window.location.href = "./home.html")
+            .catch(e => {
+                console.log(e.message);
+                alert("Invalid Credentials.");
+            })
+
         }
     </script>
 

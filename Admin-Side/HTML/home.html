@@ -181,7 +181,7 @@
             <div class="main-content">
 
                 <!-- Overview -->
-                <div class="overview-dynamic-content">
+                <div class="overview-dynamic-content" style="display: none;">
 
                     <div class="main-overview">
                         <p>Overview</p>
@@ -729,7 +729,7 @@
                             width: 11rem;
                             display: flex;
                             justify-content: center;
-                            align-items: center;"><img style="width: 24px;" src="../IMAGES/homePage/add_hms@3x.png"
+                            align-items: center;" onclick="addNewHospital();"><img style="width: 24px;" src="../IMAGES/homePage/add_hms@3x.png"
                                     alt="" srcset=""><span>Add New Hospital</span></button>
                         </div>
                     </div>
@@ -753,10 +753,36 @@
                             </div>
                             <div>
                                 <!-- <button type="button" class="btn">More</button> -->
-                                <button type="button" class="btn hms-more-btn"
+                                <!-- <button type="button" class="btn hms-more-btn"
                                     style="border: 2px solid #068f4b; color: #068f4b; background-color: #fff; width: 6rem;">More<img
                                         style="width: 1rem; margin-left: 1rem;" src="../IMAGES/homePage/Vector@3x.png"
-                                        alt="" srcset=""></button>
+                                        alt="" srcset=""></button> -->
+
+                                <div class="dropdown dropleft">
+                                    <button class="btn dropdown-toggle" type="button" id="hms-more-btn"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        font-size: 14px;
+                                        color: #495057;
+                                        border: 2px solid #068f4b;
+                                        color: #068f4b;
+                                        background-color: #fff;
+                                        width: 6rem;">
+                                        
+                                        MORE
+
+                                        <img style="width: 1rem; margin-left: 1rem;" src="../IMAGES/homePage/Vector@3x.png" alt="" srcset="">
+
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="border: 1px solid #c4c7cc;">
+                                        <a class="dropdown-item active" id="keepOnHold" onclick="moreButtonHeader(this);" href="#"> <img src="../IMAGES/homePage/keeponhold@3x.png" alt="" style="width: 1.4rem; margin: 0 0.4rem 0.3rem;"> Keep On Hold</a>
+                                        <a class="dropdown-item" id="renewLicence" onclick="moreButtonHeader(this);" href="#"> <img src="../IMAGES/homePage/renewlicence@3x.png" alt="" style="width: 1.4rem; margin: 0 0.4rem 0.3rem;"> Renew License</a>
+                                        <a class="dropdown-item" id="deleteAccount" onclick="moreButtonHeader(this);" href="#"> <img src="../IMAGES/homePage/deleteaccount@3x.png" alt="" style="width: 1.4rem; margin: 0 0.4rem 0.3rem;"> Delete Account</a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                         <div class="hospital-view-content">
@@ -867,20 +893,20 @@
                                             <div>
                                                 <img src=" ../IMAGES/homePage/edit_black@3x.png" alt=""
                                                     style="cursor: pointer; width: 18.2px;">
-                                                <img src="../IMAGES/homePage/left_menu@3x.png" alt="" style="cursor: pointer; width: 18.2px; margin-left: 1.2rem;
-                                                    ">
+                                                <!-- <img src="../IMAGES/homePage/left_menu@3x.png" alt="" style="cursor: pointer; width: 18.2px; margin-left: 1.2rem;
+                                                    "> -->
                                             </div>
                                         </div>
                                         <div class="row two-row">
                                             <div class="two-row-left">
                                                 <div>
                                                     <h6 style="font-size: 14px; font-weight: 600;">Hospital Name</h6>
-                                                    <h6 style="font-size: 14px; color: #626466;">JIH Hospitals Hyderabad
+                                                    <h6 style="font-size: 14px; color: #626466;" id="hms-hospital-name">JIH Hospitals Hyderabad
                                                     </h6>
                                                 </div>
                                                 <div>
                                                     <h6 style="font-size: 14px; font-weight: 600;">Address</h6>
-                                                    <h6 style="font-size: 14px; color: #626466;">#63-242, Street
+                                                    <h6 style="font-size: 14px; color: #626466;" id="hms-hospital-address">#63-242, Street
                                                         Details, Address Line
                                                         02, City Name, State Name
                                                         - 500234</h6>
@@ -888,7 +914,7 @@
                                             </div>
                                             <div style="display: flex;
                                             align-items: center;">
-                                                <img src="../IMAGES/homePage/Rectangle 16@3x.png" alt="" srcset=""
+                                                <img src="../IMAGES/homePage/Rectangle 16@3x.png" alt="" srcset="" id="hms-hospital-image"
                                                     style="width: 100%;
                                                     padding: 1rem;
                                                     height: 100%;;
@@ -898,31 +924,31 @@
                                         <div class="row three-row">
                                             <div>
                                                 <h6 style="font-size: 14px; font-weight: 600;">Phone</h6>
-                                                <h6 style="font-size: 14px; color:#05753d; text-decoration: underline;">
+                                                <h6 style="font-size: 14px; color:#05753d; text-decoration: underline;" id="hms-hospital-phone">
                                                     +91 - 9876543210</h6>
                                             </div>
                                             <div>
                                                 <h6 style="font-size: 14px; font-weight: 600;">Email</h6>
-                                                <h6 style="font-size: 14px; color:#05753d; text-decoration: underline;">
+                                                <h6 style="font-size: 14px; color:#05753d; text-decoration: underline;" id="hms-hospital-email">
                                                     JIH Hospitals Hyderabad</h6>
                                             </div>
                                             <div>
                                                 <h6 style="font-size: 14px; font-weight: 600;">Website</h6>
-                                                <h6 style="font-size: 14px; color:#05753d; text-decoration: underline;">
+                                                <h6 style="font-size: 14px; color:#05753d; text-decoration: underline;" id="hms-hospital-website">
                                                     www.jihhospitals.com</h6>
                                             </div>
                                         </div>
                                         <div class="row four-row">
                                             <h6 style="font-size: 14px; font-weight: 600;">About Hospital</h6>
-                                            <h6 style="font-size: 14px; color: #626466;">Lorem ipsum dolor sit amet,
+                                            <h6 style="font-size: 14px; color: #626466;" id="hms-hospital-about">Lorem ipsum dolor sit amet,
                                                 consectetur
                                                 adipiscing elit. Etiam et libero tincidunt, facilisis felis sed, mattis
                                                 purus. Vestibulum quis euismod nunc. In varius quis nulla sed facilisis.
                                             </h6>
                                         </div>
                                         <div class="row five-row">
-                                            <div class="services-offered">
-                                                <h6 style="font-size: 14px; font-weight: 600;">Services Offered</h6>
+                                            <div class="services-offered" id="hms-hospital-services-offered">
+                                                <!-- <h6 style="font-size: 14px; font-weight: 600;">Services Offered</h6>
                                                 <div>
                                                     <div class="blue-dot"></div>
                                                     <h6 style="font-size: 14px; color: #626466;">Pediatric Intensive
@@ -956,12 +982,12 @@
                                                 <div>
                                                     <div class="blue-dot"></div>
                                                     <h6 style="font-size: 14px; color: #626466;">Physical Therapy</h6>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div>
                                                 <h6 style="font-size: 14px; font-weight: 600;">Amenties</h6>
-                                                <div style="display: flex; flex-wrap: wrap;">
-                                                    <div class="amenities-btns">
+                                                <div style="display: flex; flex-wrap: wrap;" id="hms-hospital-amenities">
+                                                    <!-- <div class="amenities-btns">
                                                         <img style="width: 16px;"
                                                             src="../IMAGES/homePage/general@3x.png" alt="" srcset="">
                                                         <h6>General</h6>
@@ -998,7 +1024,7 @@
                                                             src="../IMAGES/homePage/247EmergencyAvailability@3x.png"
                                                             alt="" srcset="">
                                                         <h6>24 x 7 Emergency Availability</h6>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -1012,11 +1038,7 @@
                                     </div>
                                     <div style="padding: 1rem;">
                                         <h6>License Type: Basic Product</h6>
-                                        <h6 style="display: flex; align-items: center;">Status: <span style="background-color: #08b760;
-                                            width: 7px;
-                                            height: 7px;
-                                            border-radius: 6px;
-                                            margin: 0 4px 0 9px;"></span> Active</h6>
+                                        <h6 style="display: flex; align-items: center;" id="hms-hospital-status"></h6>
                                     </div>
                                 </div>
 
@@ -1157,12 +1179,17 @@
                         </div>
                         <div class="row second-row">
                             <!-- <h6>CampaignBanner.png</h6> -->
-                            <img src="../IMAGES/homePage/banner@3x.png" alt="" srcset="" style="width: 240px;">
-                            <button type="button" class="btn"
-                                style="margin-top: 0.5rem; color: #046635; border: 2px solid #046635;">
+                            <img src="../IMAGES/homePage/banner@3x.png" id="change_banner_ground" alt="" srcset="" style="width: 240px; height: 96px;">
+                            
+                            <button type="button" class="btn" onclick="change_banner_image('click');"
+                            style="margin-top: 0.5rem; color: #046635; border: 2px solid #046635;">
                                 <img src="../IMAGES/homePage/change_image@3x.png" alt="" style="width: 1rem;">
                                 Change Image
                             </button>
+                        
+                            <input type="file" id="change_banner_image" onchange="change_banner_image('upload', this);" style="display: none;" accept="image/*">
+
+                            <div style="display: none;" id="change_banner-base64"></div>
                         </div>
 
                         <div class="row third-row">
@@ -1222,11 +1249,15 @@
                         </div>
                         <div>
                             <button type="button" class="btn uploadBanner"
-                                style="color: #046635; border: 1px solid #046635">
+                                style="color: #046635; border: 1px solid #046635" onclick="upload_bannner('click');">
                                 <img style="width: 16px;" src="../IMAGES/homePage/upload_banner@3x.png" alt=""
                                     srcset="">
                                 Upload Banner
                             </button>
+
+                            <input type="file" id="upload_bannner" onchange="upload_bannner('upload', this);" style="display: none;" accept="image/*">
+                            
+                            <div style="display: none;" id="uploadBanner-base64"></div>
                         </div>
                     </div>
                     <div class="row docter-container">
@@ -1252,8 +1283,8 @@
                     <h5>JIH Hospitals Hyderabad</h5>
                 </div>
                 <div class="header-right">
-                    <button type="button" class="btn" id="save-full-view">Save</button>
-                    <button type="button" class="btn" id="cancel-full-view" style="margin-left: 1rem;">Cancel</button>
+                    <button type="button" class="btn" id="save-full-view" onclick="saveTheHospital();">Save</button>
+                    <button type="button" class="btn" id="cancel-full-view" onclick="hmsPopUp('hide')" style="margin-left: 1rem;">Cancel</button>
                 </div>
             </div>
             <div class="view-banner">
@@ -1266,8 +1297,8 @@
                                     <label for="website" style="width: 32%; color: #000000; font-weight: 600;">Website</label>
                                 </div>
                                 <div style="width: 100%; display: flex; justify-content: space-between;">
-                                    <input type="text" name="" id="" style="width: 63%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="JIH Hospital Hyderabad">
-                                    <input type="text" name="" id="" style="width: 32%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="www.jihhospitals.com">
+                                    <input type="text" name="" id="full-details-hospital-name" style="width: 63%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="">
+                                    <input type="text" name="" id="full-details-hospital-website" style="width: 32%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="">
                                 </div>
                             </div>
                             <div style="margin-bottom: 1rem;">
@@ -1276,8 +1307,8 @@
                                     <label for="9876543210" style="width: 32%; color: #000000; font-weight: 600;">Phone</label>
                                 </div>
                                 <div style="width: 100%; display: flex; justify-content: space-between;">
-                                    <input type="text" name="" id="" style="width: 63%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="support@jihhospitals.com">
-                                    <input type="text" name="" id="" style="width: 32%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="9876543210">
+                                    <input type="text" name="" id="full-details-hospital-email" style="width: 63%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="">
+                                    <input type="text" name="" id="full-details-hospital-phone" style="width: 32%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="">
                                 </div>
                             </div>
                             <div style="margin-bottom: 1rem;">
@@ -1285,8 +1316,8 @@
                                     <label for="address" style="color: #000000; font-weight: 600;">Address</label>
                                 </div>
                                 <div style="width: 100%; display: flex; flex-direction: column;">
-                                    <input type="text" name="" id="" style="height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px; margin-bottom: .5rem;" value="#63-242, Street Line">
-                                    <input type="text" name="" id="" style="height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="Street Line 2 Details">
+                                    <input type="text" name="" id="full-details-hospital-address-1" style="height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px; margin-bottom: .5rem;" value="">
+                                    <input type="text" name="" id="full-details-hospital-address-2" style="height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="">
                                 </div>
                             </div>
                             <div style="margin-bottom: 1rem;">
@@ -1296,50 +1327,59 @@
                                 <div style="width: 100%; display: flex; flex-direction: column;">
                                     <!-- <input type="text" name="" id="" style="height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px; margin-bottom: .5rem;" value="Telangana"> -->
                                     <select class="form-control" id="sel1" style="height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px; margin-bottom: .5rem;">
-                                        <option>Telangana</option>
+                                        <!-- <option>Telangana</option> -->
                                     </select>
                                 </div>
                             </div>
                             <div>
                                 <div style="width: 100%; display: flex; justify-content: space-between;">
-                                    <label for="hospitalName" style="width: 50%; color: #000000; font-weight: 600;">Hospital Name</label>
-                                    <label for="website" style="width: 50%; color: #000000; font-weight: 600;">Website</label>
+                                    <label for="city name" style="width: 48%; color: #000000; font-weight: 600;">Enter City</label>
+                                    <label for="pin code" style="width: 48%; color: #000000; font-weight: 600;">Enter Pin Code</label>
                                 </div>
                                 <div style="width: 100%; display: flex; justify-content: space-between;">
-                                    <input type="text" name="" id="" style="width: 50%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="JIH Hospital Hyderabad">
-                                    <input type="text" name="" id="" style="width: 50%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="www.jihhospitals.com">
+                                    <input type="text" name="" id="" style="width: 48%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="">
+                                    <input type="text" name="" id="" style="width: 48%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="">
                                 </div>
                             </div>
                         <!-- </div> -->
                     </div>
                 </div>
+
                 <div class="right-container">
-                    <div style="width: 100%; height: 40%;">
+                    <div style="width: 100%; height: 40%; position: relative;">
                         <label for="" style="width: 63%;
                         color: #000000;
                         font-weight: 600;">Picture</label>
-                        <img src="../IMAGES/homePage/Rectangle 16-full-view@3x.png" alt="" style="width: 100%; height: 86%; object-fit: cover;">
+                        
+                        <img style="position: absolute; top: 3rem; right: 1rem; width: 3rem; cursor: pointer;" onclick="upload_hos_image('click');" src="../IMAGES/homePage/editwhite@3x.png" alt="">
+                        
+                        <input type="file" id="upload_hospital_image" onchange="upload_hos_image('upload', this);" style="display: none;" accept="image/*">
+                        
+                        <!-- was: id="upload-ground" -->
+                        <img src="../IMAGES/homePage/banner@3x.png" id="full-details-hospital-image" alt="" style="width: 100%; height: 86%; object-fit: cover;">
+                        <div style="display: none;" id="full-details-hospital-base64"></div>
                     </div>
                     <div style="width: 100%; height: 35%;">
                         <label for="" style="width: 63%;
                         color: #000000;
                         font-weight: 600; margin: 0.5rem 0 0;">About Hospital</label>
-                        <p style="color: #626466; padding: 1rem;
-                        border: 1px solid #c4c7cc; border-radius: .3rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consectetur venenatis ex quis hendrerit. Donec blandit pulvinar libero, quis semper ex sollicitudin nec. Aenean sed vehicula eros. Duis augue nisl, congue laoreet sem at, pharetra consectetur lorem. Donec quis lectus sagittis, facilisis eros vel, mollis ante. Praesent a tincidunt massa. In non porttitor nisl, ut dignissim mi.</p>
+                        <p contenteditable="true" style="color: #626466; padding: 1rem;
+                        border: 1px solid #c4c7cc; border-radius: .3rem;" id="full-details-hospital-about"></p>
                     </div>
                     <div style="width: 100%; height: 25%; display: flex;
                     align-items: center;
                     justify-content: space-evenly; background-color: #ffebe6;">
                         <div style="width: 47%;">
                             <label>Status of Hospital Account</label>
-                            <select class="form-control" id="sel1">
-                                <option>Active</option>
+                            <select class="form-control" id="full-details-hospital-status">
+                                <option value="true">Active</option>
+                                <option value="false">In-Active</option>
                             </select>
                         </div>
                         <div style="width: 47%;">
                             <label>License Type</label>
                             <select class="form-control" id="sel1">
-                                <option>Basic Product</option>
+                                <!-- <option>Basic Product</option> -->
                             </select>
                         </div>
                     </div>
@@ -1350,58 +1390,58 @@
                 padding: 1rem;">
 
                         <h5>Amenities</h5>
-                        <div style="padding-left: 2rem;">
+                        <div style="padding-left: 2rem;" id="full-details-hospital-amenities">
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
-                                    style="margin-right: .5rem;" checked>
+                                <input class="green-checkboxes" type="checkbox" name="" id="General"
+                                    style="margin-right: .5rem;">
                                 <img style="width: 16px; margin-right: 0.2rem;"
                                     src="../IMAGES/homePage/general@3x.png" alt="" srcset="">
                                 <h6 class="check-box-item">General</h6>
                             </div>
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
-                                    style="margin-right: .5rem;" checked>
+                                <input class="green-checkboxes" type="checkbox" name="" id="Emergency"
+                                    style="margin-right: .5rem;">
                                 <img style="width: 16px; margin-right: 0.2rem;"
                                     src="../IMAGES/homePage/emergency@3x.png" alt="" srcset="">
                                 <h6 class="check-box-item">Emergency</h6>
                             </div>
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
-                                    style="margin-right: .5rem;" checked>
+                                <input class="green-checkboxes" type="checkbox" name="" id="Pharmacy"
+                                    style="margin-right: .5rem;">
                                 <img style="width: 16px; margin-right: 0.2rem;"
                                     src="../IMAGES/homePage/pharmacy@3x.png" alt="" srcset="">
                                 <h6 class="check-box-item">Pharmacy</h6>
                             </div>
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
-                                    style="margin-right: .5rem;" checked>
+                                <input class="green-checkboxes" type="checkbox" name="" id="Ambulance"
+                                    style="margin-right: .5rem;">
                                 <img style="width: 16px; margin-right: 0.2rem;"
                                     src="../IMAGES/homePage/ambulance@3x.png" alt="" srcset="">
                                 <h6 class="check-box-item">Ambulance</h6>
                             </div>
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
-                                    style="margin-right: .5rem;" checked>
+                                <input class="green-checkboxes" type="checkbox" name="" id="Advanced-Labs"
+                                    style="margin-right: .5rem;">
                                 <img style="width: 16px; margin-right: 0.2rem;"
                                     src="../IMAGES/homePage/advancedLabs@3x.png" alt="" srcset="">
                                 <h6 class="check-box-item">Advanced Labs</h6>
                             </div>
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
-                                    style="margin-right: .5rem;" checked>
+                                <input class="green-checkboxes" type="checkbox" name="" id="Blood-Bank-Facility"
+                                    style="margin-right: .5rem;">
                                 <img style="width: 16px; margin-right: 0.2rem;"
                                     src="../IMAGES/homePage/bloodBankFacility@3x.png" alt="" srcset="">
                                 <h6 class="check-box-item">Blood Bank Facility</h6>
                             </div>
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                <input class="green-checkboxes" type="checkbox" name="" id="24-x-7-Emergency-Availability"
                                     style="margin-right: .5rem;">
                                 <img style="width: 16px; margin-right: 0.2rem;"
                                     src="../IMAGES/homePage/247EmergencyAvailability@3x.png" alt="" srcset="">
@@ -1415,46 +1455,46 @@
                 padding: 1rem;">
                     
                     <h5>Services Offered</h5>
-                        <div style="padding-left: 2rem;">
+                        <div style="padding-left: 2rem;" id="full-details-hospital-services-offered">
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
-                                    style="margin-right: .5rem;" checked>
+                                <input class="green-checkboxes" type="checkbox" name="" id="Pediatric-Intensive-Care-Unit"
+                                    style="margin-right: .5rem;">
                                 <h6 class="check-box-item">Pediatric Intensive Care Unit</h6>
                             </div>
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
-                                    style="margin-right: .5rem;" checked>
+                                <input class="green-checkboxes" type="checkbox" name="" id="Intensive-Care-unit"
+                                    style="margin-right: .5rem;">
                                 <h6 class="check-box-item">Intensive Care Unit</h6>
                             </div>
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
-                                    style="margin-right: .5rem;" checked>
+                                <input class="green-checkboxes" type="checkbox" name="" id="Cardiology-Department"
+                                    style="margin-right: .5rem;">
                                 <h6 class="check-box-item">Cardiology Department</h6>
                             </div>
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                <input class="green-checkboxes" type="checkbox" name="" id="Emergency-Department"
                                     style="margin-right: .5rem;">
                                 <h6 class="check-box-item">Emergency Department</h6>
                             </div>
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
-                                    style="margin-right: .5rem;" checked>
+                                <input class="green-checkboxes" type="checkbox" name="" id="Pediatric-Intensive-Care-Unit"
+                                    style="margin-right: .5rem;">
                                 <h6 class="check-box-item">Pediatric Intensive Care Unit</h6>
                             </div>
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
-                                    style="margin-right: .5rem;" checked>
+                                <input class="green-checkboxes" type="checkbox" name="" id="Cardiovascular-Intensive-Care-Unit"
+                                    style="margin-right: .5rem;">
                                 <h6 class="check-box-item">Cardiovascular Intensive Care Unit</h6>
                             </div>
                             <div
                                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
-                                <input class="green-checkboxes" type="checkbox" name="" id=""
+                                <input class="green-checkboxes" type="checkbox" name="" id="Physical-Therapy"
                                     style="margin-right: .5rem;">
                                 <h6 class="check-box-item">Physical Therapy</h6>
                             </div>
@@ -1479,13 +1519,122 @@
     <script>
         // When doucment and styles loads the below IIFE will trigger automatically
         let pagination_list = [];
+        let hospital_list = [];
+        let amenities = [];
+        let servicesOffered = [];
+
+        // Sidebar toggling logic
+        const sidebarToggle = (self) => {
+            let id_to_use = (self.id == undefined) ? self : self.id
+            let id_list = ['overview', 'hospitalMS', 'configurations']; // 'doctorMS' removed
+            id_list.forEach(item => {
+                if (item == id_to_use) {
+                    if (item == 'hospitalMS') viewHospitalFull('hide_view')
+                    document.getElementById(item).style.cssText = `
+                    background-color: #ebfff5;
+                    border-left: 4px solid #3eab75;
+                    `;
+                    document.getElementById(item + '-heading').style.color = '#3eab75';
+                    document.querySelector('.' + item + '-dynamic-content').style.display = 'block';
+                    sessionStorage.setItem("whichSideSelection", item);
+                } else {
+                    document.getElementById(item).style.cssText = `
+                    background-color: #fff;
+                    border: none;
+                    `;
+                    document.getElementById(item + '-heading').style.color = '#000';
+                    document.querySelector('.' + item + '-dynamic-content').style.display = 'none';
+                }
+            })
+        }
+        // Sidebar Hovering Effect
+        const sideHoverIn = (self) => {
+            document.getElementById(self.id).style.backgroundColor = '#ebfff5';
+        }
+        const sideHoverOut = (self) => {
+            document.getElementById(self.id).style.backgroundColor = '#fff';
+        }
+        const dropHoverIn = (self) => {
+            document.getElementById(self.id).style.backgroundColor = '#ebf3ff';
+        }
+        const dropHoverOut = (self) => {
+            document.getElementById(self.id).style.backgroundColor = '#fff';
+        }
+
+        const viewHospitalFull = (type, id) => {
+
+            let list_hospital = [
+                'hospital-content',
+                'hospital-row',
+                'main-hospitalMS'
+            ];
+
+            if (type == 'show_view') {
+            list_hospital.forEach(ele => {
+                document.querySelector('.' + ele).style.display = 'none';
+            })
+            document.querySelector('.hospital-full-view').style.display = 'block';
+
+            // id = id - 1;
+
+            document.getElementById("hms-hospital-name").innerHTML = hospital_list[id].name;
+            document.getElementById("hms-hospital-address").innerHTML = hospital_list[id].address;
+            document.getElementById("hms-hospital-phone").innerHTML = hospital_list[id].contact;
+            document.getElementById("hms-hospital-email").innerHTML = "-";
+            document.getElementById("hms-hospital-website").innerHTML = "-";
+            document.getElementById("hms-hospital-image").src = hospital_list[id].image;
+            document.getElementById("hms-hospital-about").innerHTML = hospital_list[id].description;
+
+            document.getElementById("hms-hospital-services-offered").innerHTML = '<h6 style="font-size: 14px; font-weight: 600;">Services Offered</h6>';
+            hospital_list[id].services.forEach(ele => {
+                document.getElementById("hms-hospital-services-offered").innerHTML += `<div>
+                                                                                            <div class="blue-dot"></div>
+                                                                                            <h6 style="font-size: 14px; color: #626466;">${ele}</h6>
+                                                                                        </div>`;
+            })
+
+            document.getElementById("hms-hospital-amenities").innerHTML = "";
+            hospital_list[id].amenities.forEach(ele => {
+                document.getElementById("hms-hospital-amenities").innerHTML += `<div class="amenities-btns">
+                                                                                    <img style="width: 16px;"
+                                                                                        src="../IMAGES/homePage/general@3x.png" alt="" srcset="">
+                                                                                    <h6>${ele}</h6>
+                                                                                </div>`;
+            })
+
+            if(hospital_list[id].is_active){
+                document.getElementById("hms-hospital-status").innerHTML = `
+                Status: <span style="background-color: #08b760; width: 7px; height: 7px; border-radius: 6px; margin: 0 4px 0 9px;"></span> Active
+                `;
+            }else{
+                document.getElementById("hms-hospital-status").innerHTML = `
+                Status: <span style="background-color: #08b760; width: 7px; height: 7px; border-radius: 6px; margin: 0 4px 0 9px;"></span> In-Active
+                `;
+            }
+            // pagination_list.forEach(ele => {})
+
+            } else {
+            list_hospital.forEach(ele => {
+                document.querySelector('.' + ele).style.display = 'flex';
+            })
+            document.querySelector('.hospital-full-view').style.display = 'none';
+            }
+        }
+
         (function () {
             // $('.dropdown-toggle .profile-styles').dropdown();
-            document.getElementById('overview').style.cssText = `
-            background-color: #ebfff5;
-            border-left: 4px solid #3eab75;
-            `;
-            document.getElementById('overview-heading').style.color = '#3eab75';
+
+            let whichSide = sessionStorage.getItem('whichSideSelection');
+            if(whichSide == null){
+                document.getElementById('overview').style.cssText = `
+                    background-color: #ebfff5;
+                    border-left: 4px solid #3eab75;
+                `;
+                document.getElementById('overview-heading').style.color = '#3eab75';
+                document.querySelector('.overview-dynamic-content').style.display = "block";
+            }else{
+                sidebarToggle(whichSide);
+            }
 
             document.querySelector('.navbar').addEventListener('click', (event) => {
                 console.log(event.target.id);
@@ -1496,23 +1645,40 @@
             })
 
             /* HMS Table Content */
-            fetch('../JSON/hospitalDetails.json')
+            // fetch('../JSON/hospitalDetails.json')
+            fetch('https://happycuresapi.nandeeshwaraseeds.com/app/hospitals',
+            {
+                method : "GET",
+                headers : {
+                    "Accept" : "application/json",
+                    "Content-type" : "application/json"
+                }
+            })
             .then(data => data.json())
             .then(response => {
                 // console.log(response);
+                let index = 0;
+                let infoLength = response['info'].length;
+                let responseData = response['info'];
+                hospital_list = response['info'];
+                // hospital_list.sort();
                 let hospitalData = "";
-                for(index = 0; index <= 10; index++){
+
+                for(index; index < infoLength; index++){
                 // response.forEach(item => {
+                    let dateRegistered = responseData[index].creation_date;
+                    dateRegistered = dateRegistered.split("T");
+
                     hospitalData += `
                         <div class="hms-table-row" style="padding: 1rem 0;">
-                            <h6 style="width: 12%; color: #068f4b; text-decoration: underline; cursor: pointer;" onclick="hmsPopUp('show', '${response[index].hospitalName}');">${response[index].hospitalId}</h6>
-                            <h6 style="width: 24%; cursor: pointer;" onclick="viewHospitalFull('show_view');">${response[index].hospitalName}</h6>
-                            <h6>${response[index].DateRegistered}</h6>
-                            <h6>${response[index].phone}</h6>
-                            <h6>${response[index].email}</h6>`;
-                            if(response[index].status == "Active") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="activeSpan"></span>${response[index].status}</h6>`;
-                            if(response[index].status == "In Active") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="inActiveSpan"></span>${response[index].status}</h6>`;
-                            if(response[index].status == "On Hold") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="holdSpan"></span>${response[index].status}</h6>`;
+                            <h6 style="width: 12%; color: #068f4b; text-decoration: underline; cursor: pointer;" onclick="hmsPopUp('show', ${index});">${responseData[index].id}</h6>
+                            <h6 style="width: 24%; cursor: pointer;" onclick="viewHospitalFull('show_view', ${index});">${responseData[index].name}</h6>
+                            <h6>${dateRegistered[0]}</h6>
+                            <h6>${responseData[index].contact}</h6>
+                            <h6>-</h6>`;
+                            if(responseData[index].is_active == true) hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="activeSpan"></span>ACTIVE</h6>`;
+                            // if(responseData.is_active == "In Active") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="inActiveSpan"></span>${responseData.status}</h6>`;
+                            // if(responseData.is_active == "On Hold") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="holdSpan"></span>${responseData.status}</h6>`;
                     hospitalData += `</div>`;
                 // })
                 }
@@ -1533,7 +1699,7 @@
                 let count = 10;
                 let pagination_clone = [];
 
-                response.forEach((ele, ind) => {
+                responseData.forEach((ele, ind) => {
                     pagination_clone.push(ele)
                     if((ind + 1) == count){
                         count = count + 10;
@@ -1633,56 +1799,129 @@
 
         })();
 
+        const saveTheHospital = () => {
+            let hospitalName = document.getElementById("full-details-hospital-name").value;
+            let addressOne = document.getElementById("full-details-hospital-address-1").value;
+            let addressTwo = document.getElementById("full-details-hospital-address-2").value;
+            let mobileNumber = document.getElementById("full-details-hospital-phone").value;
+            let hospitalImage = document.getElementById("full-details-hospital-base64").innerHTML;
+            let description = document.getElementById("full-details-hospital-about").innerHTML;
+
+            fetch("https://happycuresapi.nandeeshwaraseeds.com/app/hospitals",
+            {
+                method : "POST",
+                headers : {
+                    "Accept" : "application/json",
+                    "Content-type" : "application/json"
+                },
+                body : JSON.stringify({
+                    image : hospitalImage,
+                    amenities : amenities,
+                    services : servicesOffered,
+                    name : hospitalName,
+                    tag : "",
+                    description : description,
+                    landline : "",
+                    address : addressOne + " " + addressTwo,
+                    contact : mobileNumber
+                })
+            })
+            .then(data => data.json())
+            .then(response => console.log(response))
+            .catch(e => console.log(e.message))
+        }
+
         // Header Search Logic
         const enableSearch = () => {
             document.querySelector('.search-icon').style.display = "none";
             document.querySelector('.search-field').style.display = "block";
         }
-        // Sidebar toggling logic
-        const sidebarToggle = (self) => {
-            let id_to_use = (self.id == undefined) ? self : self.id
-            let id_list = ['overview', 'hospitalMS', 'configurations']; // 'doctorMS' removed
-            id_list.forEach(item => {
-                if (item == id_to_use) {
-                    if (item == 'hospitalMS') viewHospitalFull('hide_view')
-                    document.getElementById(item).style.cssText = `
-                    background-color: #ebfff5;
-                    border-left: 4px solid #3eab75;
-                    `;
-                    document.getElementById(item + '-heading').style.color = '#3eab75';
-                    document.querySelector('.' + item + '-dynamic-content').style.display = 'block';
-                } else {
-                    document.getElementById(item).style.cssText = `
-                    background-color: #fff;
-                    border: none;
-                    `;
-                    document.getElementById(item + '-heading').style.color = '#000';
-                    document.querySelector('.' + item + '-dynamic-content').style.display = 'none';
-                }
-            })
-        }
-        // Sidebar Hovering Effect
-        const sideHoverIn = (self) => {
-            document.getElementById(self.id).style.backgroundColor = '#ebfff5';
-        }
-        const sideHoverOut = (self) => {
-            document.getElementById(self.id).style.backgroundColor = '#fff';
-        }
-        const dropHoverIn = (self) => {
-            document.getElementById(self.id).style.backgroundColor = '#ebf3ff';
-        }
-        const dropHoverOut = (self) => {
-            document.getElementById(self.id).style.backgroundColor = '#fff';
+
+        const addNewHospital = () => {
+
+            document.getElementById("full-details-hospital-name").value = "";
+            document.getElementById("full-details-hospital-address-1").value = "";
+            document.getElementById("full-details-hospital-address-2").value = "";
+            document.getElementById("full-details-hospital-phone").value = "";
+            document.getElementById("full-details-hospital-image").src = "../IMAGES/homePage/banner@3x.png";
+            document.getElementById("full-details-hospital-base64").innerHTML = "";
+            document.getElementById("full-details-hospital-about").innerHTML = "";
+
+            document.querySelector('.main-row').style.display = 'none';
+            document.querySelector('.hospital-full-details').style.display = 'block';
         }
 
-        const hmsPopUp = (type) => {
+        const hmsPopUp = (type, id) => {
             if (type == 'show') {
-                document.querySelector('.hms-popup-parent').style.display = 'block';
-                document.querySelector('.hospital-content').style.height = '56.6rem';
+
+                // Old pop-up
+                // document.querySelector('.hms-popup-parent').style.display = 'block';
+                // document.querySelector('.hospital-content').style.height = '56.6rem';
+
+                document.querySelector('.main-row').style.display = 'none';
+                document.querySelector('.hospital-full-details').style.display = 'block';
+
+                let address = hospital_list[id].address;
+                address = address.split(',');
+
+                document.getElementById("full-details-hospital-name").value = hospital_list[id].name;
+                document.getElementById("full-details-hospital-address-1").value = address[0].trim() + " " + address[1].trim();
+                document.getElementById("full-details-hospital-address-2").value = address[2].trim();
+                document.getElementById("full-details-hospital-phone").value = hospital_list[id].contact;
+                document.getElementById("full-details-hospital-email").value = "-";
+                document.getElementById("full-details-hospital-website").value = "-";
+                document.getElementById("full-details-hospital-image").src = hospital_list[id].image;
+                document.getElementById("full-details-hospital-about").innerHTML = hospital_list[id].description;
+
+                // document.getElementById("full-details-hospital-services-offered").innerHTML = "";
+                // hospital_list[id].services.forEach(ele => {
+                //     document.getElementById("full-details-hospital-services-offered").innerHTML += `<div
+                //                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                //                 <input class="green-checkboxes" type="checkbox" name="" id=""
+                //                     style="margin-right: .5rem;" checked>
+                //                 <h6 class="check-box-item">${ele}</h6>
+                //             </div>`;
+                // })
+
+                hospital_list[id].services.forEach(ele => {
+                    // console.log(ele);
+                    let replaceWithHyfen = ele.replaceAll(" ", "-");
+                    if(document.getElementById(replaceWithHyfen) != null) document.getElementById(replaceWithHyfen).checked = true;
+                    // document.getElementById('General').checked = true;
+                    // console.log(replaceWithHyfen);
+                })
+
+                // document.getElementById("full-details-hospital-amenities").innerHTML = "";
+                // hospital_list[id].amenities.forEach(ele => {
+                //     document.getElementById("full-details-hospital-amenities").innerHTML += `<div
+                //                 style="height: 37px; display: flex; align-items: center; border-bottom: solid 0.4px #c4c7cc;">
+                //                 <input class="green-checkboxes" type="checkbox" name="" id=""
+                //                     style="margin-right: .5rem;" checked>
+                //                 <img style="width: 16px; margin-right: 0.2rem;"
+                //                     src="../IMAGES/homePage/general@3x.png" alt="" srcset="">
+                //                 <h6 class="check-box-item">${ele}</h6>
+                //             </div>`;
+                // })
+
+                hospital_list[id].amenities.forEach(ele => {
+                    // console.log(ele);
+                    let replaceWithHyfen = ele.replaceAll(" ", "-");
+                    if(document.getElementById(replaceWithHyfen) != null) document.getElementById(replaceWithHyfen).checked = "true";
+                    // console.log(replaceWithHyfen);
+                })
+                
+                if(hospital_list[id].is_active) document.getElementById("full-details-hospital-status").value = "true";
+                else document.getElementById("full-details-hospital-status").value = "false";
             }
             else {
-                document.querySelector('.hms-popup-parent').style.display = 'none';
-                document.querySelector('.hospital-content').style.height = '84%';
+
+                // New pop-up
+                // document.querySelector('.hms-popup-parent').style.display = 'none';
+                // document.querySelector('.hospital-content').style.height = '84%';
+
+                document.querySelector('.hospital-full-details').style.display = 'none';
+                document.querySelector('.main-row').style.display = 'flex';
+
             }
         }
         const editHospitalDetails = () => {
@@ -1741,28 +1980,12 @@
                 document.querySelector('.configuration-popup').style.display = 'none';
             }
         }
-        const viewHospitalFull = (type) => {
-            let list_hospital = [
-                'hospital-content',
-                'hospital-row',
-                'main-hospitalMS'
-            ];
-
-            if (type == 'show_view') {
-                list_hospital.forEach(ele => {
-                    document.querySelector('.' + ele).style.display = 'none';
-                })
-                document.querySelector('.hospital-full-view').style.display = 'block';
-            } else {
-                list_hospital.forEach(ele => {
-                    document.querySelector('.' + ele).style.display = 'flex';
-                })
-                document.querySelector('.hospital-full-view').style.display = 'none';
-            }
-        }
+        
         const happyLogout = () => {
+            sessionStorage.clear();
             window.location.href = "./login.html";
         }
+
         const changeThePage = (pageno, self) => {
             let index = 0;
             let hospitalData = "";
@@ -1837,6 +2060,72 @@
             })
             document.getElementById(more).style.display = "none";
             document.getElementById(last).style.display = "none";
+        }
+
+        function upload_hos_image(type, self){
+            if(type == 'click') document.getElementById('upload_hospital_image').click();
+            else{
+                var _URL = window.URL || window.webkitURL;
+                var selectedFile = self.files[0];
+                var url = _URL.createObjectURL(selectedFile);
+                document.getElementById('full-details-hospital-image').src = url; // upload
+                toBase64(self, 'full-details-hospital-base64');
+            }
+        }
+
+        function upload_bannner(type, self){
+            if(type == 'click') document.getElementById('upload_bannner').click();
+            else{
+                var _URL = window.URL || window.webkitURL;
+                var selectedFile = self.files[0];
+                var url = _URL.createObjectURL(selectedFile);
+                // document.getElementById('upload_bannner').src = url; // upload
+                toBase64(self, 'uploadBanner-base64');
+            }
+        }
+
+        function change_banner_image(type, self){
+            if(type == 'click') document.getElementById('change_banner_image').click();
+            else{
+                var base64code;
+                var _URL = window.URL || window.webkitURL;
+                var selectedFile = self.files[0];
+                var url = _URL.createObjectURL(selectedFile);
+                document.getElementById('change_banner_ground').src = url; // upload
+                toBase64(self, 'change_banner-base64');
+            }
+        }
+
+        function toBase64(self, divId){
+            const selectedfile = self.files;
+            if (selectedfile.length > 0) {
+                const [imageFile] = selectedfile;
+                const fileReader = new FileReader();
+                fileReader.onload = () => {
+                    const srcData = fileReader.result;
+                    console.log('base64:', srcData);
+                    document.getElementById(divId).innerHTML = srcData;
+                };
+                fileReader.readAsDataURL(imageFile);
+            }
+        }
+
+        function moreButtonHeader(self){
+            let classes = [
+                "keepOnHold",
+                "renewLicence",
+                "deleteAccount"
+            ];
+
+            classes.forEach(ele => {
+                if(self.class != ele){
+                    let clas = document.getElementById(ele).classList;
+                    clas.remove('active');
+                }
+            })
+
+            let clas = document.getElementById(self.id).classList;
+            clas.add('active');
         }
     </script>
 </body>
