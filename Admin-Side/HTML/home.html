@@ -1582,8 +1582,8 @@
             document.getElementById("hms-hospital-name").innerHTML = hospital_list[id].name;
             document.getElementById("hms-hospital-address").innerHTML = hospital_list[id].address;
             document.getElementById("hms-hospital-phone").innerHTML = hospital_list[id].contact;
-            document.getElementById("hms-hospital-email").innerHTML = "-";
-            document.getElementById("hms-hospital-website").innerHTML = "-";
+            document.getElementById("hms-hospital-email").innerHTML = "";
+            document.getElementById("hms-hospital-website").innerHTML = "";
             document.getElementById("hms-hospital-image").src = hospital_list[id].image;
             document.getElementById("hms-hospital-about").innerHTML = hospital_list[id].description;
 
@@ -1898,8 +1898,8 @@
                 document.getElementById("full-details-hospital-address-1").value = address[0].trim() + " " + address[1].trim();
                 document.getElementById("full-details-hospital-address-2").value = address[2].trim();
                 document.getElementById("full-details-hospital-phone").value = hospital_list[id].contact;
-                document.getElementById("full-details-hospital-email").value = "-";
-                document.getElementById("full-details-hospital-website").value = "-";
+                document.getElementById("full-details-hospital-email").value = "";
+                document.getElementById("full-details-hospital-website").value = "";
                 document.getElementById("full-details-hospital-image").src = hospital_list[id].image;
                 document.getElementById("full-details-hospital-about").innerHTML = hospital_list[id].description;
 
