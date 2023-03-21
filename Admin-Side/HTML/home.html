@@ -1913,11 +1913,12 @@
                 //             </div>`;
                 // })
 
-                servicesOffered = hospital_list[id].services;
+                // servicesOffered = hospital_list[id].services;
 
                 hospital_list[id].services.forEach(ele => {
                     // console.log(ele);
                     let replaceWithHyfen = ele.replaceAll(" ", "-");
+                    servicesOffered.push(replaceWithHyfen);
                     if(document.getElementById(replaceWithHyfen) != null) document.getElementById(replaceWithHyfen).checked = true;
                     // document.getElementById('General').checked = true;
                     // console.log(replaceWithHyfen);
@@ -1935,11 +1936,12 @@
                 //             </div>`;
                 // })
 
-                amenities = hospital_list[id].amenities;
+                // amenities = hospital_list[id].amenities;
 
                 hospital_list[id].amenities.forEach(ele => {
                     // console.log(ele);
                     let replaceWithHyfen = ele.replaceAll(" ", "-");
+                    amenities.push(replaceWithHyfen);
                     if(document.getElementById(replaceWithHyfen) != null) document.getElementById(replaceWithHyfen).checked = "true";
                     // console.log(replaceWithHyfen);
                 })
