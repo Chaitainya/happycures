@@ -1337,8 +1337,8 @@
                                     <label for="pin code" style="width: 48%; color: #000000; font-weight: 600;">Enter Pin Code</label>
                                 </div>
                                 <div style="width: 100%; display: flex; justify-content: space-between;">
-                                    <input type="text" name="" id="" style="width: 48%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="">
-                                    <input type="text" name="" id="" style="width: 48%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="">
+                                    <input type="text" name="" id="full-details-hospital-city" style="width: 48%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="">
+                                    <input type="text" name="" id="full-details-hospital-pincode" style="width: 48%; height: 48px; border: 1px solid #c4c7cc; outline: none; padding: 0.8rem; border-radius: 4px;" value="">
                                 </div>
                             </div>
                         <!-- </div> -->
@@ -1808,6 +1808,9 @@
             let mobileNumber = document.getElementById("full-details-hospital-phone").value;
             let hospitalImage = document.getElementById("full-details-hospital-base64").innerHTML;
             let description = document.getElementById("full-details-hospital-about").innerHTML;
+            let emailAddress = document.getElementById('full-details-hospital-email').value;
+            let statePin = document.getElementById('full-details-hospital-pincode').value;
+            let webApplication = document.getElementById('full-details-hospital-website').value;
 
             fetch("https://happycuresapi.nandeeshwaraseeds.com/app/hospitals",
             {
@@ -1817,15 +1820,18 @@
                     "Content-type" : "application/json"
                 },
                 body : JSON.stringify({
-                    image : hospitalImage,
-                    amenities : amenities,
-                    services : servicesOffered,
                     name : hospitalName,
                     tag : "",
                     description : description,
                     landline : "",
+                    contact : mobileNumber,
                     address : addressOne + " " + addressTwo,
-                    contact : mobileNumber
+                    amenities : amenities,
+                    image : hospitalImage,
+                    services : servicesOffered,
+                    email : emailAddress,
+                    pincode : statePin,
+                    website : webApplication,
                 })
             })
             .then(data => data.json())
@@ -2165,20 +2171,28 @@
         }
 
         const amenitiesArray = (self) => {
-            if(document.getElementById(self.id).checked == true) amenities.push(self.id)
+            if(document.getElementById(self.id).checked == true){
+                let splitDash = self['id'].replaceAll("-", " ");
+                amenities.push(splitDash);
+            }
             if(document.getElementById(self.id).checked == false){
-                if(amenities.includes(self.id)){
-                    let index = amenities.indexOf(self.id);
+                let splitDash = self['id'].replaceAll("-", " ");
+                if(amenities.includes(splitDash)){
+                    let index = amenities.indexOf(splitDash);
                     amenities.splice(index, 1);
                 }
             }
         }
 
         const servicesOfferedArray = (self) => {
-            if(document.getElementById(self.id).checked == true) servicesOffered.push(self.id)
+            if(document.getElementById(self.id).checked == true){
+                let splitDash = self['id'].replaceAll("-", " ");
+                servicesOffered.push(splitDash);
+            }
             if(document.getElementById(self.id).checked == false){
-                if(servicesOffered.includes(self.id)){
-                    let index = servicesOffered.indexOf(self.id);
+                let splitDash = self['id'].replaceAll("-", " ");
+                if(servicesOffered.includes(splitDash)){
+                    let index = servicesOffered.indexOf(splitDash);
                     servicesOffered.splice(index, 1);
                 }
             }
