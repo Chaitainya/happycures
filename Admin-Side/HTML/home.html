@@ -2031,19 +2031,35 @@
         const changeThePage = (pageno, self) => {
             let index = 0;
             let hospitalData = "";
-            let response = pagination_list[pageno];
+            let responseData = pagination_list[pageno];
             let len_page = pagination_list[pageno].length;
             for(index; index < len_page; index++){
+
+                // Backup
+                // hospitalData += `
+                //     <div class="hms-table-row" style="padding: 1rem 0;">
+                //         <h6 style="width: 12%; color: #068f4b; text-decoration: underline; cursor: pointer;" onclick="hmsPopUp('show', '${response[index].hospitalName}');">${response[index].hospitalId}</h6>
+                //         <h6 style="width: 24%; cursor: pointer;" onclick="viewHospitalFull('show_view');">${response[index].hospitalName}</h6>
+                //         <h6>${response[index].DateRegistered}</h6>
+                //         <h6>${response[index].phone}</h6>
+                //         <h6>${response[index].email}</h6>`;
+                //         if(response[index].status == "Active") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="activeSpan"></span>${response[index].status}</h6>`;
+                //         if(response[index].status == "In Active") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="inActiveSpan"></span>${response[index].status}</h6>`;
+                //         if(response[index].status == "On Hold") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="holdSpan"></span>${response[index].status}</h6>`;
+                // hospitalData += `</div>`;
+                // Backup end
+
+                let dateRegistered = responseData[index].creation_date;
+                    dateRegistered = dateRegistered.split("T");
+
                 hospitalData += `
                     <div class="hms-table-row" style="padding: 1rem 0;">
-                        <h6 style="width: 12%; color: #068f4b; text-decoration: underline; cursor: pointer;" onclick="hmsPopUp('show', '${response[index].hospitalName}');">${response[index].hospitalId}</h6>
-                        <h6 style="width: 24%; cursor: pointer;" onclick="viewHospitalFull('show_view');">${response[index].hospitalName}</h6>
-                        <h6>${response[index].DateRegistered}</h6>
-                        <h6>${response[index].phone}</h6>
-                        <h6>${response[index].email}</h6>`;
-                        if(response[index].status == "Active") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="activeSpan"></span>${response[index].status}</h6>`;
-                        if(response[index].status == "In Active") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="inActiveSpan"></span>${response[index].status}</h6>`;
-                        if(response[index].status == "On Hold") hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="holdSpan"></span>${response[index].status}</h6>`;
+                        <h6 style="width: 12%; color: #068f4b; text-decoration: underline; cursor: pointer;" onclick="hmsPopUp('show', ${index});">${responseData[index].id}</h6>
+                        <h6 style="width: 24%; cursor: pointer;" onclick="viewHospitalFull('show_view', ${index});">${responseData[index].name}</h6>
+                        <h6>${dateRegistered[0]}</h6>
+                        <h6>${responseData[index].contact}</h6>
+                        <h6>-</h6>`;
+                        if(responseData[index].is_active == true) hospitalData += `<h6 style="width: 12%; display: flex; align-items: center;"><span class="activeSpan"></span>ACTIVE</h6>`;
                 hospitalData += `</div>`;
             }
             document.querySelector('.hms-table-content').innerHTML = `
