@@ -440,7 +440,8 @@ p {
 
 .footer-row {
     width: 100%;
-    min-height: 36rem;
+    /* min-height: 36rem; */
+    min-height: 24rem;
     background-color: #09210b;
     color: #fff;
 }
