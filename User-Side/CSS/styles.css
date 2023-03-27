@@ -26,6 +26,16 @@ body {
     color: #333399;
 }
 
+.clickable >h6{
+    cursor: pointer;
+    border: none;
+    transition: .3s ease;
+}
+
+.clickable h6:hover{
+    border: 1px solid rgb(73, 73, 73);
+}
+
 .type-container {
     display: flex;
     width: 85%;
