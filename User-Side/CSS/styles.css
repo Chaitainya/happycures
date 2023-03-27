@@ -29,6 +29,7 @@ body {
 .clickable >h6{
     cursor: pointer;
     border: none;
+    border-radius: 0.2rem;
     transition: .3s ease;
 }
 

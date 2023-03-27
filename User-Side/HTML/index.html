@@ -390,8 +390,8 @@
                         <h6>About</h6>
                         <!-- <h6>Growers</h6>
                         <h6>Merchants</h6> -->
-                        <h6>Terms and Conditions</h6>
-                        <h6>Privacy Policy</h6>
+                        <h6 onclick="footerNavigate(this)">Terms and Conditions</h6>
+                        <h6 onclick="footerNavigate(this)">Privacy Policy</h6>
                         <h6>Contact</h6>
                     </div>
                     <div class="col-md-3 clickable">
@@ -447,6 +447,13 @@
     <script>
         const openTheAccord = (which_accord) => {
             $('#' + which_accord).collapse('show')
+        }
+    </script>
+    <script>
+        function footerNavigate(self){
+            if(self.innerHTML == 'Terms and Conditions') location.href = "./termsAndConditions.html";
+            if(self.innerHTML == 'Privacy Policy') location.href = "./privacyPolicy.html";
+            // console.log(self);
         }
     </script>
 </body>
