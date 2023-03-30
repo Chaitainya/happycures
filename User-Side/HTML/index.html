@@ -451,8 +451,12 @@
     </script>
     <script>
         function footerNavigate(self){
-            if(self.innerHTML == 'Terms and Conditions') location.href = "./termsAndConditions.html";
-            if(self.innerHTML == 'Privacy Policy') location.href = "./privacyPolicy.html";
+            // if(self.innerHTML == 'Terms and Conditions') location.href = "./termsAndConditions.html";
+            // if(self.innerHTML == 'Privacy Policy') location.href = "./privacyPolicy.html";
+
+            if(self.innerHTML == 'Terms and Conditions') window.open('./termsAndConditions.html', '_blank');
+            if(self.innerHTML == 'Privacy Policy') window.open('./privacyPolicy.html', '_blank');
+            
             // console.log(self);
         }
     </script>
